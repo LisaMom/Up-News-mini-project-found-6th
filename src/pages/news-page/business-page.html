@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Up News | Ultimate Corporate & Business News Portal</title>
+    <meta name="description" content="Up News is dedicated to bringing you transparent, fast, and deeply meaningful coverage of today's most critical headlines in business, sports, lifestyle, and world events.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandRed: '#E53E3E',
+                        brandLightRed: '#FEE2E2',
+                        darkBg: '#1A1A1A'
+                    }
+                }
+            }
+        }
+        
+        // Simple client-side interaction toggles
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebarMenu');
+            sidebar.classList.toggle('hidden');
+        }
+    </script>
+</head>
+<body class="bg-white text-gray-900 font-sans antialiased">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="bg-[#1A1A1A] text-white sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <div class="flex items-center space-x-3">
+                <div class="border-2 border-white rounded-full p-1.5 flex flex-col items-center justify-center w-14 h-14 leading-none">
+                    <span class="text-[10px] font-bold tracking-widest uppercase">Up</span>
+                    <span class="text-xs font-black tracking-tighter uppercase">News</span>
+                </div>
+            </div>
+
+            <!-- Main Desktop Navigation -->
+            <nav class="hidden md:flex space-x-12 font-medium">
+                <a href="#" class="hover:text-brandRed transition-colors">Home</a>
+                <a href="#" class="hover:text-brandRed transition-colors">News</a>
+                <a href="#" class="hover:text-brandRed transition-colors">About Us</a>
+            </nav>
+
+            <!-- Utility Controls & Actions -->
+            <div class="flex items-center space-x-6">
+                <button aria-label="Search" class="hover:text-brandRed transition-colors">
+                    <i class="fa-solid fa-magnifying-glass text-lg"></i>
+                </button>
+                <button aria-label="Toggle Dark Mode" class="hover:text-brandRed transition-colors">
+                    <i class="fa-solid fa-moon text-lg"></i>
+                </button>
+                <a href="#" class="hidden sm:inline-block bg-[#3B82F6] hover:bg-blue-600 text-white font-semibold px-5 py-2.5 rounded text-sm transition-all">
+                    Contact us
+                </a>
+                <!-- Mobile Menu Button -->
+                <button onclick="toggleSidebar()" class="md:hidden text-white focus:outline-none" aria-label="Open Navigation Menu">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            
+            <!-- LEFT NAVIGATION SIDEBAR -->
+            <aside id="sidebarMenu" class="hidden lg:block w-full lg:w-64 flex-shrink-0">
+                <div class="sticky top-28 space-y-2">
+                    <div class="flex items-center justify-between px-4 py-3 text-gray-500 font-medium border-b lg:border-none">
+                        <span>Type of News</span>
+                        <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </div>
+                    
+                    <nav class="space-y-1">
+                        <a href="#" class="flex items-center justify-between px-4 py-3 bg-brandLightRed text-brandRed font-semibold rounded-lg">
+                            <span>All News</span>
+                        </a>
+                        <a href="#" class="flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors group">
+                            <span>Sports</span>
+                            <i class="fa-solid fa-chevron-down text-xs text-gray-400 group-hover:text-gray-600"></i>
+                        </a>
+                        <a href="#" class="flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors group">
+                            <span>Business</span>
+                            <i class="fa-solid fa-chevron-down text-xs text-gray-400 group-hover:text-gray-600"></i>
+                        </a>
+                        <a href="#" class="flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors group">
+                            <span>Lifestyle</span>
+                            <i class="fa-solid fa-chevron-down text-xs text-gray-400 group-hover:text-gray-600"></i>
+                        </a>
+                        <a href="#" class="flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">
+                            <span>World</span>
+                        </a>
+                        <a href="#" class="flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">
+                            <span>National</span>
+                        </a>
+                        <a href="#" class="flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">
+                            <span>Socialite</span>
+                        </a>
+                    </nav>
+                </div>
+            </aside>
+
+            <!-- MAIN NEWS CONTENT AREA -->
+            <section class="flex-1">
+                
+                <!-- FIND NEWS HEADER -->
+                <div class="mb-6">
+                    <h1 class="text-3xl font-serif font-semibold text-gray-900 mb-1">Find News</h1>
+                    <p class="text-gray-400 font-medium">Find your news types</p>
+                </div>
+
+                <!-- HORIZONTAL SCROLL BADGES -->
+                <div class="flex items-center space-x-3 overflow-x-auto pb-4 mb-10 no-scrollbar">
+                    <span class="px-5 py-1.5 border border-brandRed text-gray-800 rounded-full text-sm font-medium cursor-pointer whitespace-nowrap">Sports</span>
+                    <span class="px-5 py-1.5 border border-brandRed text-gray-800 rounded-full text-sm font-medium cursor-pointer whitespace-nowrap">Sports</span>
+                    <span class="px-5 py-1.5 border border-brandRed text-gray-800 rounded-full text-sm font-medium cursor-pointer whitespace-nowrap">Business</span>
+                    <span class="px-5 py-1.5 border border-brandRed text-gray-800 rounded-full text-sm font-medium cursor-pointer whitespace-nowrap">Lifestyle</span>
+                    <span class="px-5 py-1.5 border border-brandRed text-gray-800 rounded-full text-sm font-medium cursor-pointer whitespace-nowrap">World</span>
+                    <span class="px-5 py-1.5 border border-brandRed text-gray-800 rounded-full text-sm font-medium cursor-pointer whitespace-nowrap">Sports</span>
+                    <span class="px-5 py-1.5 border border-brandRed text-gray-800 rounded-full text-sm font-medium cursor-pointer whitespace-nowrap">Sports</span>
+                </div>
+
+                <!-- SECTION CATEGORY LABEL -->
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl font-serif font-bold tracking-wide">Business <span class="text-brandRed">News</span></h2>
+                </div>
+
+                <!-- MAIN FEATURED STORY -->
+                <article class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start pb-12 border-b border-gray-200">
+                    <div class="md:col-span-5 order-2 md:order-1">
+                        <h3 class="text-xl sm:text-2xl font-bold font-sans text-gray-900 leading-tight mb-4">
+                            Foxconn second-quarter revenue jumps, company cautions on geopolitics
+                        </h3>
+                        <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+                            Taiwan's Foxconn, the world's largest contract electronics maker, reported a 39.8% year-on-year rise in second-quarter revenue that beat market forecasts on strong demand for AI products, though it cautioned about "volatile" global politics.
+                        </p>
+                    </div>
+                    <div class="md:col-span-7 order-1 md:order-2">
+                        <img src="image_c25223.jpg" alt="Foxconn smart bus presentation" class="w-full h-auto object-cover rounded shadow-sm">
+                    </div>
+                </article>
+
+                <!-- THREE COLUMN NEWS GRID (SCREEN 2) -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 py-12 border-b border-gray-200">
+                    
+                    <!-- Column 1 -->
+                    <div class="space-y-6">
+                        <article class="space-y-3">
+                            <img src="image_c2527e.jpg" alt="US Flag and Pump Jack" class="w-full h-44 object-cover rounded">
+                            <h4 class="font-bold text-gray-900 text-base leading-snug hover:text-brandRed transition-colors">
+                                <a href="#">US oil companies see big profit jump, gird for clash over pump prices with Trump</a>
+                            </h4>
+                            <p class="text-xs text-gray-400">Updated July 3, 2026</p>
+                        </article>
+                        <hr class="border-gray-200">
+                        <article class="space-y-2">
+                            <h4 class="font-bold text-gray-900 text-base leading-snug hover:text-brandRed transition-colors">
+                                <a href="#">UK's Next plans takeover bid for Harvey Nichols, Sky News reports</a>
+                            </h4>
+                            <p class="text-xs text-gray-400">22 hours ago</p>
+                        </article>
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div class="space-y-6">
+                        <article class="space-y-3">
+                            <img src="image_c25588.jpg" alt="SK Hynix Logo Visual" class="w-full h-44 object-cover rounded">
+                            <h4 class="font-bold text-gray-900 text-base leading-snug hover:text-brandRed transition-colors">
+                                <a href="#">SK Hynix considering 0.5% fee payout in ADR offering, Bloomberg News reports</a>
+                            </h4>
+                            <p class="text-xs text-gray-400">Updated July 4, 2026</p>
+                        </article>
+                        <hr class="border-gray-200">
+                        <article class="space-y-2">
+                            <span class="text-xs font-bold text-orange-600 tracking-wide block uppercase">Exclusive</span>
+                            <h4 class="font-bold text-gray-900 text-base leading-snug hover:text-brandRed transition-colors">
+                                <a href="#">Iran exploring oil sales to Japan, buyers seek longer sanctions waiver</a>
+                            </h4>
+                            <p class="text-xs text-gray-400">Updated July 3, 2026</p>
+                        </article>
+                    </div>
+
+                    <!-- Column 3 -->
+                    <div class="space-y-6">
+                        <article class="space-y-3">
+                            <img src="image_c255e0.jpg" alt="Global Trading Control Room Center" class="w-full h-44 object-cover rounded">
+                            <h4 class="font-bold text-gray-900 text-base leading-snug hover:text-brandRed transition-colors">
+                                <a href="#">Global stocks head for best week since May; US jobs data shifts rate outlook</a>
+                            </h4>
+                            <p class="text-xs text-gray-400">Updated July 3, 2026</p>
+                        </article>
+                        <hr class="border-gray-200">
+                        <article class="space-y-2">
+                            <h4 class="font-bold text-gray-900 text-base leading-snug hover:text-brandRed transition-colors">
+                                <a href="#">EU trade with US hits record high despite tariff tensions, study shows</a>
+                            </h4>
+                            <p class="text-xs text-gray-400">Updated July 3, 2026</p>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- LIST STORIES ROW BLOCK (SCREEN 3) -->
+                <div class="py-12 space-y-12">
+                    <!-- Row Article 1 -->
+                    <article class="flex flex-col md:flex-row items-start gap-6">
+                        <div class="flex-1 order-2 md:order-1">
+                            <div class="text-xs text-gray-400 mb-2">Business. July 4, 2026</div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-3 hover:text-brandRed transition-colors">
+                                <a href="#">JPMorgan sees $4,500 gold price in fourth quarter, says risks to downside</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                JPMorgan said demand for gold from key sectors would not be as strong as it had expected, limiting the rise in gold prices this year to $4,300/oz in the third quarter and $4,500/oz in the fourth quarter.
+                            </p>
+                        </div>
+                        <div class="w-full md:w-72 flex-shrink-0 order-1 md:order-2">
+                            <div class="bg-gray-100 rounded overflow-hidden h-40 flex items-center justify-center text-gray-400 text-xs font-mono">
+                                [JPMorgan Corporate Signage Image Placeholder]
+                            </div>
+                        </div>
+                    </article>
+
+                    <hr class="border-gray-200">
+
+                    <!-- Row Article 2 -->
+                    <article class="flex flex-col md:flex-row items-start gap-6">
+                        <div class="flex-1 order-2 md:order-1">
+                            <div class="text-xs text-gray-400 mb-2">July 4, 2026</div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-3 hover:text-brandRed transition-colors">
+                                <a href="#">China's Chery takes over former Nissan car factory in South Africa</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                China's Chery formally took over Nissan's car manufacturing plant in Rosslyn on Friday under a deal that was announced in January, and executives said the company will spend millions of dollars upgrading and adding machinery ahead of starting vehicle production in South Africa in mid-2027.
+                            </p>
+                        </div>
+                        <div class="w-full md:w-72 flex-shrink-0 order-1 md:order-2">
+                            <div class="bg-gray-100 rounded overflow-hidden h-40 flex items-center justify-center text-gray-400 text-xs font-mono">
+                                [Chery Group Automotive Exhibition Showcase Placeholder]
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER (SCREEN 4) -->
+    <footer class="bg-[#1A1A1A] text-gray-300 pt-16 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-gray-800">
+                
+                <!-- Left Column Branding -->
+                <div class="md:col-span-4 space-y-4">
+                    <div class="flex items-center space-x-3 text-white">
+                        <div class="border-2 border-white rounded-full p-1.5 flex flex-col items-center justify-center w-14 h-14 leading-none">
+                            <span class="text-[10px] font-bold tracking-widest uppercase">Up</span>
+                            <span class="text-xs font-black tracking-tighter uppercase">News</span>
+                        </div>
+                    </div>
+                    <p class="text-sm leading-relaxed text-gray-400">
+                        Up News is dedicated to bringing you transparent, fast, and deeply meaningful coverage of today's most critical headlines. We bridge the gap between unfolding events and insightful analysis to keep you thoroughly informed.
+                    </p>
+                </div>
+
+                <!-- Middle Column Quick Links -->
+                <div class="md:col-span-2 space-y-4 md:pl-6">
+                    <h4 class="text-white text-sm font-bold uppercase tracking-wider">Quick Link</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">News</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Address & Contacts -->
+                <div class="md:col-span-3 space-y-4">
+                    <h4 class="text-white text-sm font-bold uppercase tracking-wider">Address & Contact</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li class="flex items-start space-x-2.5">
+                            <i class="fa-solid fa-location-dot mt-0.5 text-white"></i>
+                            <span>#40, St 273, Sangkat Boeung Kak II, Khan Toul Kork, Phnom Penh, Cambodia</span>
+                        </li>
+                        <li class="flex items-center space-x-2.5">
+                            <i class="fa-solid fa-mobile-screen text-white"></i>
+                            <span>(+855) 95-990-910</span>
+                        </li>
+                        <li class="flex items-center space-x-2.5">
+                            <i class="fa-solid fa-envelope text-white"></i>
+                            <span>info.istad@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Sponsors -->
+                <div class="md:col-span-3 space-y-4">
+                    <h4 class="text-white text-sm font-bold uppercase tracking-wider">Our Sponsors</h4>
+                    <div class="flex items-center space-x-2 bg-zinc-900 p-3 rounded border border-gray-800 w-fit">
+                        <div class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center font-bold text-white text-xs">
+                            CST
+                        </div>
+                        <span class="text-xl font-black text-white tracking-tight">iSTAD</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom Copyright & Social Row -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
+                <p>&copy; 2026 Up News. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="flex items-center space-x-1.5 hover:text-white transition-colors">
+                        <i class="fa-brands fa-telegram text-base"></i>
+                        <span>Telegram</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-1.5 hover:text-white transition-colors">
+                        <i class="fa-solid fa-envelope text-base"></i>
+                        <span>Email</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-1.5 hover:text-white transition-colors">
+                        <i class="fa-brands fa-facebook text-base"></i>
+                        <span>Facebook</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
