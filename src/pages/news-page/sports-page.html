@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Sports Hub | VP NEWS</title>
+    <title>Sports | UP NEWS</title>
     <meta name="description" content="Get the latest global sports analysis, breaking updates, and collaborative team insights across multi-disciplinary sports coverage.">
-    
+    <!-- link cdn for icon  -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Tailwind CSS & Flowbite CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
@@ -24,34 +25,94 @@
         }
     </script>
 </head>
-<body class="bg-white text-gray-900 dark:bg-zinc-950 dark:text-gray-100 font-sans antialiased">
+<body class="bg-gray-50 text-gray-900 dark:bg-zinc-950 dark:text-gray-100 font-sans antialiased transition-colors duration-200">
 
-    <!-- Header Navigation Platform -->
-    <header class="sticky top-0 z-50 bg-zinc-900 text-white border-b border-zinc-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <div class="flex items-center space-x-2">
-                <div class="bg-white text-zinc-900 font-black px-3 py-1 rounded-sm tracking-tighter text-xl">
-                    VP NEWS
+    <!-- Header Navigation with Theme Toggle -->
+    <header class="border-b border-gray-200 dark:border-gray-800 sticky top-0 bg-white/80 dark:bg-gray-950/80 backdrop-blur-md z-50">
+     <!-- Main Navigation Bar -->
+    <nav class="bg-brandDark border-b border-zinc-800 relative z-50 select-none bg-[#1C1C1C]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Left Side: Brand Logo -->
+                <div class="flex-shrink-0 flex items-center space-x-2">
+                    <img class="h-16 w-auto" src="../../image/white-logo-up_news-removebg-preview.png" alt="up news logo">
                 </div>
-            </div>
-            
-            <nav class="hidden md:flex space-x-8 text-sm font-medium tracking-wide">
-                <a href="#" class="text-gray-300 hover:text-white transition">Home</a>
-                <a href="#" class="text-white border-b-2 border-accentOrange pb-1">News</a>
-                <a href="#" class="text-gray-300 hover:text-white transition">About Us</a>
-            </nav>
 
-            <div class="flex items-center space-x-4">
-                <button aria-label="Search Feed" class="p-2 text-gray-400 hover:text-white transition">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                </button>
-                <button aria-label="Toggle Interface Mode" class="p-2 text-gray-400 hover:text-white transition">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
-                </button>
-                <a href="#" class="bg-accentBlue hover:bg-blue-700 text-white text-xs font-semibold px-4 py-2 rounded transition">Log In</a>
+                <!-- Center Section: Menu Links with Dropdown Menu -->
+                <div class="hidden md:flex items-center space-x-1 h-full">
+                    
+                    <!-- Home Link -->
+                    <a href="#" class="px-5 py-2 text-lg font-semibold tracking-wide text-gray-300 hover:text-white transition-colors">
+                        Home
+                    </a>
+
+                    <!-- News Dropdown Trigger Container via CSS Group-Hover -->
+                    <div class="relative group h-full flex items-center">
+                        <button class="px-5 py-2 text-lg font-semibold tracking-wide text-white flex items-center space-x-1 focus:outline-none">
+                            <span>News</span>
+                            <svg class="w-4 h-4 ml-0.5 text-gray-400 group-hover:text-white group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+
+                        <!-- Hover Dropdown Menu Structure -->
+                        <div class="absolute top-[100%] left-0 w-48 bg-[#252525] border border-zinc-800 shadow-xl rounded-md py-2 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:invisible-none group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50">
+                            <a href="./business-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">
+                                Business
+                            </a>
+                            <a href="./sports-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">
+                                Sports
+                            </a>
+                            <a href="./world-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">
+                                World
+                            </a>
+                            <a href="./lifestyle-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">
+                                Lifestyle
+                            </a>
+                            <a href="./socialite-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">
+                                Socialite
+                            </a>
+                            <a href="./national-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">
+                                National
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- About Us Link -->
+                    <a href="#" class="px-5 py-2 text-lg font-semibold tracking-wide text-gray-300 hover:text-white transition-colors">
+                        About Us
+                    </a>
+                </div>
+
+                <!-- Right Side Elements: Search, Dark Theme Icon, CTA Button -->
+                <div class="flex items-center space-x-6">
+                    
+                    <!-- Search Icon Button -->
+                    <button type="button" class="text-gray-400 hover:text-white p-1 transition-colors focus:outline-none" aria-label="Search">
+                        <svg class="w-5 h-5 stroke-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </button>
+
+                    <!-- Theme Moon Icon Trigger Toggle Indicator -->
+                    <button type="button" class="text-gray-400 hover:text-white p-1 transition-colors focus:outline-none" aria-label="Toggle dark mode">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                    </button>
+
+                    <!-- Call To Action Button -->
+                    <a href="#" class="bg-red-600 hover:bg-red-700 text-white font-bold text-lg px-6 py-2.5 rounded-md shadow transition-all duration-150 transform active:scale-95">
+                        Subscribe
+                    </a>
+                </div>
+
             </div>
         </div>
+    </nav>
     </header>
+
 
     <!-- Main Workspace Container -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -66,20 +127,22 @@
         <!-- MODULE A: Primary Asymmetric Split Feature -->
         <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pb-12 border-b border-gray-200 dark:border-zinc-800">
             <div class="lg:col-span-5 space-y-4 order-2 lg:order-1">
-                <div class="flex items-center space-x-2 text-accentOrange font-bold text-xs uppercase tracking-wider">
-                    <span>🏆</span> <span>Category Classification</span>
+                <div class="flex items-center space-x-2 text-accentOrange font-bold text-lg uppercase tracking-wider">
+                    <span>
+                        <i class="fa-solid fa-trophy"></i>
+                    </span> <span>FIFA World Cup 2026</span>
                 </div>
-                <h2 class="text-2xl sm:text-3xl font-black leading-tight text-gray-900 dark:text-white hover:text-accentOrange transition duration-200">
-                    <a href="#">Primary Editorial Headline For Leading Breaking News Highlight</a>
+                <h2 class="text-2xl sm:text-4xl font-black leading-tight text-gray-900 dark:text-white hover:text-accentOrange transition duration-200">
+                    <a href="#">Lionel Messi's Sublime First Touch Leads To Historic FIFA World Cup Goal</a>
                 </h2>
-                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                    A comprehensive descriptive narrative summarizing key performance markers, teamwork metrics, game-winning actions, and strategic developments.
+                <p class="text-gray-600 dark:text-gray-400 text-2xl leading-relaxed">
+                    Lionel Messi produced another moment of magic with a brilliant goal as Argentina survived a huge scare to beat Cape Verde after extra time at FIFA World Cup 2026.
                 </p>
             </div>
             <div class="lg:col-span-7 order-1 lg:order-2">
-                <div class="overflow-hidden rounded-lg shadow-md aspect-[16/10]">
-                    <!-- Referenced verbatim structural placeholder -->
-                    <img src="image_c2b0b4.jpg" alt="Primary visual display banner showcasing active sport competition" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                <div class="overflow-hidden rounded-lg shadow-sm aspect-[16/10] bg-gray-200 dark:bg-zinc-800">
+                    <!-- Referenced verbatim structural placeholder from layout image -->
+                    <img src="./image/sport-1.jpg" alt="Primary visual display banner showcasing active sport competition" class="w-full h-full object-cover hover:scale-105 transition duration-500 ">
                 </div>
             </div>
         </section>
@@ -89,189 +152,247 @@
             
             <!-- Item Grid Node 1 -->
             <article class="space-y-3">
-                <div class="overflow-hidden rounded-lg aspect-[16/10] bg-gray-100 dark:bg-zinc-800">
-                    <img src="image_c2b0b4.jpg" alt="Dynamic Sports Action Grid Visual" class="w-full h-full object-cover">
+                <div class="overflow-hidden rounded-lg aspect-[16/10] bg-gray-200 dark:bg-zinc-800">
+                    <img src="./image/sport-2.webp" alt="Dynamic Sports Action Grid Visual" class="w-full h-full object-cover">
                 </div>
-                <span class="text-accentOrange font-bold text-xs uppercase tracking-widest block">Sub-Category Tag</span>
-                <h3 class="font-bold text-lg leading-snug"><a href="#" class="hover:underline">Primary report headline for supporting item 1</a></h3>
-                <p class="text-xs text-gray-500 dark:text-gray-400">Essential structural contextual details explaining tactical team breakdowns and secondary results data.</p>
-                <time class="text-[11px] text-gray-400 block">June 28, 2026 at 9:45 PM</time>
+                <span class="text-accentOrange font-bold text-lg uppercase tracking-widest block">FIFA WOULD CUP</span>
+                <h3 class="font-bold text-2xl leading-snug"><a href="#" class="hover:underline">Mbappe strikes again to send France through</a></h3>
+                <p class="text-lg text-gray-500 dark:text-gray-400">Kylian Mbappe's purple patch continued as France ground out a hard-fought victory over Paraguay in the Round of 16.</p>
+                <time class="text-base text-gray-400 block">June 28, 2026 at 9:45 PM</time>
             </article>
 
             <!-- Item Grid Node 2 -->
             <article class="space-y-3">
-                <div class="overflow-hidden rounded-lg aspect-[16/10] bg-gray-100 dark:bg-zinc-800">
-                    <img src="image_c2b0b4.jpg" alt="Dynamic Sports Action Grid Visual" class="w-full h-full object-cover">
+                <div class="overflow-hidden rounded-lg aspect-[16/10] bg-gray-200 dark:bg-zinc-800">
+                    <img src="./image/sport-3.webp" alt="Dynamic Sports Action Grid Visual" class="w-full h-full object-cover">
                 </div>
-                <span class="text-accentOrange font-bold text-xs uppercase tracking-widest block">Sub-Category Tag</span>
-                <h3 class="font-bold text-lg leading-snug"><a href="#" class="hover:underline">Primary report headline for supporting item 2</a></h3>
-                <p class="text-xs text-gray-500 dark:text-gray-400">Essential structural contextual details explaining tactical team breakdowns and secondary results data.</p>
-                <time class="text-[11px] text-gray-400 block">June 28, 2026 at 10:10 PM</time>
+                <span class="text-accentOrange font-bold text-lg uppercase tracking-widest block">FIFA WOULD CUP</span>
+                <h3 class="font-bold text-2xl leading-snug"><a href="#" class="hover:underline">PFarewell Cape Verde - the underdogs the World Cup will never forget</a></h3>
+                <p class="text-lg text-gray-500 dark:text-gray-400">Cape Verde may have been the World Cup's second-smallest nation but they leave the largest impact.</p>
+                <time class="text-base text-gray-400 block">June 29, 2026 at 10:10 PM</time>
             </article>
 
             <!-- Item Grid Node 3 -->
             <article class="space-y-3">
-                <div class="overflow-hidden rounded-lg aspect-[16/10] bg-gray-100 dark:bg-zinc-800">
-                    <img src="image_c2b0b4.jpg" alt="Dynamic Sports Action Grid Visual" class="w-full h-full object-cover">
+                <div class="overflow-hidden rounded-lg aspect-[16/10] bg-gray-200 dark:bg-zinc-800">
+                    <img src="./image/sport-5.webp" alt="Dynamic Sports Action Grid Visual" class="w-full h-full object-cover">
                 </div>
-                <span class="text-accentOrange font-bold text-xs uppercase tracking-widest block">Sub-Category Tag</span>
-                <h3 class="font-bold text-lg leading-snug"><a href="#" class="hover:underline">Primary report headline for supporting item 3</a></h3>
-                <p class="text-xs text-gray-500 dark:text-gray-400">Essential structural contextual details explaining tactical team breakdowns and secondary results data.</p>
-                <time class="text-[11px] text-gray-400 block">June 28, 2026 at 8:55 PM</time>
+                <span class="text-accentOrange font-bold text-lg uppercase tracking-widest block">FIFA WOULD CUP</span>
+                <h3 class="font-bold text-2xl leading-snug"><a href="#" class="hover:underline">Morocco reach quarter-finals as co-hosts Canada out of World Cup</a></h3>
+                <p class="text-lg text-gray-500 dark:text-gray-400">Azzedine Ounahi scores twice as Morocco become the first team to reach the World Cup quarter-finals.</p>
+                <time class="text-base text-gray-400 block">June 30, 2026 at 8:55 PM</time>
+            </article>
+        </section>
+                <!-- MODULE B: 3-Column Uniform Modular Layout Matrix -->
+        <section class="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 border-b border-gray-200 dark:border-zinc-800">
+            
+            <!-- Item Grid Node 1 -->
+            <article class="space-y-3">
+                <div class="overflow-hidden rounded-lg aspect-[16/10] bg-gray-200 dark:bg-zinc-800">
+                    <img src="./image/sport-6.jpeg" alt="Dynamic Sports Action Grid Visual" class="w-full h-full object-cover">
+                </div>
+                <span class="text-accentOrange font-bold text-lg uppercase tracking-widest block">FIFA WOULD CUP</span>
+                <h3 class="font-bold text-2xl leading-snug"><a href="#" class="hover:underline">Unbeaten in 34 matches - why Morocco are World Cup contenders</a></h3>
+                <p class="text-lg text-gray-500 dark:text-gray-400">As Morocco beat Canada to book their place in the last-8, their World Cup campaign can no longer be seen as a fairytale.</p>
+                <time class="text-base text-gray-400 block">July 1, 2026 at 12:05 PM</time>
             </article>
 
-            <!-- Item Grid Node 4 -->
+            <!-- Item Grid Node 2 -->
             <article class="space-y-3">
-                <div class="overflow-hidden rounded-lg aspect-[16/10] bg-gray-100 dark:bg-zinc-800">
-                    <img src="image_c2b0b4.jpg" alt="Dynamic Sports Action Grid Visual" class="w-full h-full object-cover">
+                <div class="overflow-hidden rounded-lg aspect-[16/10] bg-gray-200 dark:bg-zinc-800">
+                    <img src="./image/sport-7.jpeg" alt="Dynamic Sports Action Grid Visual" class="w-full h-full object-cover">
                 </div>
-                <span class="text-accentOrange font-bold text-xs uppercase tracking-widest block">Sub-Category Tag</span>
-                <h3 class="font-bold text-lg leading-snug"><a href="#" class="hover:underline">Primary report headline for supporting item 4</a></h3>
-                <p class="text-xs text-gray-500 dark:text-gray-400">Essential structural contextual details explaining tactical team breakdowns and secondary results data.</p>
-                <time class="text-[11px] text-gray-400 block">July 1, 2026 at 12:00 PM</time>
+                <span class="text-accentOrange font-bold text-lg uppercase tracking-widest block">FIFA WOULD CUP</span>
+                <h3 class="font-bold text-2xl leading-snug"><a href="#" class="hover:underline">Colombia's World Cup run stays alive. Ghana fall short</a></h3>
+                <p class="text-lg text-gray-500 dark:text-gray-400">As Colombia beat Ghana 1-0 to reach the Round of 16, Jhon Arias' early goal proved enough to seal qualification.</p>
+                <time class="text-base text-gray-400 block">June 28, 2026 at 9:20 PM</time>
             </article>
 
-            <!-- Item Grid Node 5 -->
+            <!-- Item Grid Node 3 -->
             <article class="space-y-3">
-                <div class="overflow-hidden rounded-lg aspect-[16/10] bg-gray-100 dark:bg-zinc-800">
-                    <img src="image_c2b0b4.jpg" alt="Dynamic Sports Action Grid Visual" class="w-full h-full object-cover">
+                <div class="overflow-hidden rounded-lg aspect-[16/10] bg-gray-200 dark:bg-zinc-800">
+                    <img src="./image/sport-8.jpeg" alt="Dynamic Sports Action Grid Visual" class="w-full h-full object-cover">
                 </div>
-                <span class="text-accentOrange font-bold text-xs uppercase tracking-widest block">Sub-Category Tag</span>
-                <h3 class="font-bold text-lg leading-snug"><a href="#" class="hover:underline">Primary report headline for supporting item 5</a></h3>
-                <p class="text-xs text-gray-500 dark:text-gray-400">Essential structural contextual details explaining tactical team breakdowns and secondary results data.</p>
-                <time class="text-[11px] text-gray-400 block">June 28, 2026 at 9:20 PM</time>
-            </article>
-
-            <!-- Item Grid Node 6 -->
-            <article class="space-y-3">
-                <div class="overflow-hidden rounded-lg aspect-[16/10] bg-gray-100 dark:bg-zinc-800">
-                    <img src="image_c2b0b4.jpg" alt="Dynamic Sports Action Grid Visual" class="w-full h-full object-cover">
-                </div>
-                <span class="text-accentOrange font-bold text-xs uppercase tracking-widest block">Sub-Category Tag</span>
-                <h3 class="font-bold text-lg leading-snug"><a href="#" class="hover:underline">Primary report headline for supporting item 6</a></h3>
-                <p class="text-xs text-gray-500 dark:text-gray-400">Essential structural contextual details explaining tactical team breakdowns and secondary results data.</p>
-                <time class="text-[11px] text-gray-400 block">June 23, 2026 at 7:40 PM</time>
+                <span class="text-accentOrange font-bold text-lg uppercase tracking-widest block">FIFA WOULD CUP</span>
+                <h3 class="font-bold text-2xl leading-snug"><a href="#" class="hover:underline">Canada rescue historic point against Bosnia and Herzegovina</a></h3>
+                <p class="text-lg text-gray-500 dark:text-gray-400">As Canada drew 1-1 with Bosnia and Herzegovina in their World Cup opener, Cyle Larin's late equaliser secured the co-hosts' first-ever FIFA World Cup point.</p>
+                <time class="text-base text-gray-400 block">June 23, 2026 at 7:40 PM</time>
             </article>
         </section>
 
         <!-- MODULE C: Secondary Horizontal Showcase Feature -->
         <section class="py-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border-b border-gray-200 dark:border-zinc-800">
             <div class="lg:col-span-7">
-                <div class="overflow-hidden rounded-lg shadow-md aspect-[16/10]">
-                    <img src="image_c2b0b4.jpg" alt="High speed racing or athletic group action frame" class="w-full h-full object-cover">
+                <div class="overflow-hidden rounded-lg shadow-sm aspect-[16/10] bg-gray-200 dark:bg-zinc-800">
+                    <img src="./image/f1.jpeg" alt="High speed racing or athletic group action frame" class="w-full h-full object-cover">
                 </div>
             </div>
             <div class="lg:col-span-5 space-y-4">
-                <div class="flex items-center space-x-2 text-red-600 font-bold text-xs uppercase tracking-wider">
+                <div class="flex items-center space-x-2 text-red-600 font-bold text-lg uppercase tracking-wider">
                     <span>🏎️</span> <span>Motorsport Segment</span>
                 </div>
-                <h2 class="text-2xl sm:text-3xl font-black leading-tight text-gray-900 dark:text-white hover:text-red-600 transition duration-200">
-                    <a href="#">Analytical Summary Heading Explaining Technical Event Outcomes</a>
+                <h2 class="text-2xl sm:text-4xl font-black leading-tight text-gray-900 dark:text-white hover:text-red-600 transition duration-200">
+                    <a href="#">REPORT: Leclerc wins dramatic British Grand Prix from Russell and Hamilton</a>
                 </h2>
-                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                    The layout design leverages strategic spacing and modular components to seamlessly support teamwork and flexible real-time edits for modern digital newsrooms.
+                <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
+                    The composition perfectly conveys the spirit of competition, teamwork, and celebration that defines Formula 1 — a sport where precision, courage, and passion meet on the world’s fastest tracks.
                 </p>
-                <time class="text-[11px] text-gray-400 block">June 25, 2026 at 8:02 PM</time>
+                <time class="text-base text-gray-400 block">June 25, 2026 at 9:40 PM</time>
             </div>
         </section>
-
-        <!-- MODULE D: Multi-Tier Analysis Sub-Grid -->
+                <!-- MODULE B: 3-Column Uniform Modular Layout Matrix -->
         <section class="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 border-b border-gray-200 dark:border-zinc-800">
             
-            <!-- Analysis Block 1 -->
+            <!-- Item Grid Node 1 -->
             <article class="space-y-3">
-                <div class="overflow-hidden rounded-lg aspect-[16/10] bg-gray-100 dark:bg-zinc-800">
-                    <img src="image_c2b0b4.jpg" alt="Technical sport analysis showcase" class="w-full h-full object-cover">
+                <div class="overflow-hidden rounded-lg aspect-[16/10] bg-gray-200 dark:bg-zinc-800">
+                    <img src="./image/f1-2.jpeg" alt="Dynamic Sports Action Grid Visual" class="w-full h-full object-cover">
                 </div>
-                <h3 class="font-bold text-base leading-snug"><a href="#" class="hover:underline">Multi-organization dynamic status report heading detail</a></h3>
-                <p class="text-xs text-gray-500 dark:text-gray-400">Detailed reporting feedback received directly from corporate structural elements or sporting entities.</p>
-                <time class="text-[11px] text-gray-400 block">Jul 04, 2026 (22 hours ago)</time>
+                <h3 class="font-bold text-2xl leading-snug"><a href="#" class="hover:underline">MercedesFerrariMcLaren
+What the teams said – Sprint day and Qualifying in Great Britain</a></h3>
+                <p class="text-lg text-gray-500 dark:text-gray-400">The drivers and teams report back on all the action from the Sprint and Qualifying at Silverstone ahead of the British Grand Prix..</p>
+                <time class="text-base text-gray-400 block">Jul 04, 2026 7:54pm UTC (22 hours ago)</time>
             </article>
 
-            <!-- Analysis Block 2 -->
+            <!-- Item Grid Node 2 -->
             <article class="space-y-3">
-                <div class="overflow-hidden rounded-lg aspect-[16/10] bg-gray-100 dark:bg-zinc-800">
-                    <img src="image_c2b0b4.jpg" alt="Technical sport analysis showcase" class="w-full h-full object-cover">
+                <div class="overflow-hidden rounded-lg aspect-[16/10] bg-gray-200 dark:bg-zinc-800">
+                    <img src="./image/f1-3.jpeg" alt="Dynamic Sports Action Grid Visual" class="w-full h-full object-cover">
                 </div>
-                <h3 class="font-bold text-base leading-snug text-blue-600 dark:text-blue-400"><a href="#" class="hover:underline underline">Hyperlinked specific structural division championship report title</a></h3>
-                <p class="text-xs text-gray-500 dark:text-gray-400">Detailed reporting feedback received directly from corporate structural elements or sporting entities.</p>
-                <time class="text-[11px] text-gray-400 block">Jul 05, 2026 (5 hours ago)</time>
+                <h3 class="font-bold text-2xl leading-snug"><a href="#" class="hover:underline">F1 ACADEMY: Palmowski reigns triumphant on home soil in Silverstone Feature Race</a></h3>
+                <p class="text-lg text-gray-500 dark:text-gray-400">Alisha Palmowski triumphed on home soil as she extended her lead at the top of the F1 ACADEMY standings.</p>
+                <time class="text-base text-gray-400 block">Jul 05, 2026 12:03pm UTC (6 hours ago)</time>
             </article>
 
-            <!-- Analysis Block 3 -->
+            <!-- Item Grid Node 3 -->
             <article class="space-y-3">
-                <div class="overflow-hidden rounded-lg aspect-[16/10] bg-gray-100 dark:bg-zinc-800">
-                    <img src="image_c2b0b4.jpg" alt="Technical sport analysis showcase" class="w-full h-full object-cover">
+                <div class="overflow-hidden rounded-lg aspect-[16/10] bg-gray-200 dark:bg-zinc-800">
+                    <img src="./image/f1-4.jpeg" alt="Dynamic Sports Action Grid Visual" class="w-full h-full object-cover">
                 </div>
-                <h3 class="font-bold text-base leading-snug"><a href="#" class="hover:underline">Audience voting metric award highlight tracking title</a></h3>
-                <p class="text-xs text-gray-500 dark:text-gray-400">Detailed reporting feedback received directly from corporate structural elements or sporting entities.</p>
-                <time class="text-[11px] text-gray-400 block">Jul 05, 2026 (2 hours ago)</time>
+                <h3 class="font-bold text-2xl leading-snug"><a href="#" class="hover:underline">DRIVER OF THE DAY: Leclerc gets your vote after popular Silverstone win</a></h3>
+                <p class="text-lg text-gray-500 dark:text-gray-400">Back on the top step of the podium - and back on top in our fan vote...</p>
+                <time class="text-base text-gray-400 block">Jul 05, 2026 4:29pm UTC (2 hours ago)</time>
             </article>
         </section>
+        <!-- Horse Racing News Section Container -->
+<section class="py-8 border-t border-gray-200 dark:border-zinc-800">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left Side: Large Featured Article -->
+        <article class="lg:col-span-8 group space-y-4">
+            <div class="overflow-hidden rounded-lg aspect-[16/10] bg-gray-200 dark:bg-zinc-800">
+                <!-- Referenced verbatim from image_d074c4.jpg as the main racing visual -->
+                <img src="./image/horse.jpeg" alt="Horses racing down the track at Grand Prix de Saint-Cloud" class="w-full h-full object-cover group-hover:scale-102 transition duration-300">
+            </div>
+            <div class="space-y-2">
+                <h3 class="text-xl sm:text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white leading-tight">
+                    <a href="#" class="hover:text-accentOrange transition">
+                        Grand Prix de Saint-Cloud: 'What a horse, he accelerates and never stops' - superstar Calandagan returns to form with hardy success
+                    </a>
+                </h3>
+                <div class="flex items-center space-x-1 text-lg text-gray-400 dark:text-gray-500">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <time>1 hours ago</time>
+                </div>
+            </div>
+        </article>
 
-        <!-- MODULE E: Cinematic Landscape & Side Widget Split -->
-        <section class="py-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            <div class="lg:col-span-8">
-                <div class="overflow-hidden rounded-lg aspect-[21/9] shadow-sm mb-4">
-                    <img src="image_c2b0b4.jpg" alt="Cinematic panoramic sport presentation" class="w-full h-full object-cover">
+        <!-- Right Side: Two Smaller Sidebar Articles Stacked -->
+        <div class="lg:col-span-4 space-y-6">
+            
+            <!-- Sidebar Article 1 -->
+            <article class="group space-y-3">
+                <div class="overflow-hidden rounded-lg aspect-[16/9] bg-gray-200 dark:bg-zinc-800">
+                    <img src="./image/horse-1.jpeg" alt="Champion European miler Field Of Gold running on the turf" class="w-full h-full object-cover group-hover:scale-102 transition duration-300">
                 </div>
-            </div>
-            <div class="lg:col-span-4 space-y-3">
-                <div class="overflow-hidden rounded-lg aspect-[16/10] bg-gray-100 dark:bg-zinc-800">
-                    <img src="image_c2b0b4.jpg" alt="Secondary focus widget display" class="w-full h-full object-cover">
+                <div class="space-y-1">
+                    <h4 class="font-bold text-lg text-gray-900 dark:text-white leading-snug">
+                        <a href="#" class="hover:text-accentOrange transition">
+                            Champion European miler Field Of Gold retired from racing
+                        </a>
+                    </h4>
+                    <div class="flex items-center space-x-1 text-base text-gray-400 dark:text-gray-500">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <time>25 min ago</time>
+                    </div>
                 </div>
-                <h3 class="font-bold text-base leading-snug"><a href="#" class="hover:underline">Final comprehensive structural summary column heading text</a></h3>
-            </div>
-        </section>
+            </article>
+
+            <!-- Sidebar Article 2 -->
+            <article class="group space-y-3">
+                <div class="overflow-hidden rounded-lg aspect-[16/9] bg-gray-200 dark:bg-zinc-800">
+                    <img src="./image/horse-3.jpeg" alt="Jockey riding a winning horse being led by team handlers" class="w-full h-full object-cover group-hover:scale-102 transition duration-300">
+                </div>
+                <div class="space-y-1">
+                    <h4 class="font-bold text-lg text-gray-900 dark:text-white leading-snug">
+                        <a href="#" class="hover:text-accentOrange transition">
+                            William Haggas to unleash strong hand in search of first July Cup win - and predicts a 'sharper' Almeraq at Newmarket
+                        </a>
+                    </h4>
+                    <div class="flex items-center space-x-1 text-base text-gray-400 dark:text-gray-500">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <time>25 min ago</time>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
 
     </main>
 
-    <!-- Structural Platform Footer -->
-<!-- Footer Section -->
+    <!-- Structural Platform Footer matching image_c2c2dc.png exactly -->
     <footer class="bg-[#1C1C1C] text-gray-300 pt-16 pb-8 border-t border-zinc-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <!-- Main Grid Split -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 xl:gap-12 pb-12 border-b border-zinc-700">
                 
                 <!-- Column 1: Brand Info -->
                 <div class="lg:col-span-4 space-y-6">
                     <div class="flex items-center space-x-2">
-                        <!-- Up News Branding -->
-                        <div class="text-white font-black tracking-tighter text-2xl flex flex-col items-center border-2 border-white px-3 py-1 rounded-full w-20 h-20 justify-center">
-                            <span class="text-xs leading-none">UP</span>
-                            <span class="text-sm leading-none font-extrabold tracking-normal">NEWS</span>
-                        </div>
+                        <!-- <div class="text-white font-black tracking-tighter text-3xl flex flex-col items-center border-2 border-white px-3 py-1 rounded-full w-20 h-20 justify-center">
+                            <span class="text-base leading-none">UP</span>
+                            <span class="text-lg leading-none font-extrabold tracking-normal">NEWS</span>
+
+                        </div> -->
+                    <img class="h-32 w-auto object-contain" src="../../image/white-logo-up_news-removebg-preview.png" alt="white logo up news">
                     </div>
-                    <p class="text-sm text-gray-400 leading-relaxed max-w-sm">
-                        Up News is dedicated to bringing you transparent, fast, and deeply meaningful coverage of today's most critical headlines. We bridge the gap between unfolding events and insightful analysis to keep you thoroughly informed.
+                    <p class="text-lg text-gray-400 leading-relaxed max-w-sm">
+                        Up News is dedicated to bringing you transparent, fast, and deeply meaningful coverage of today's most critical headlines.
                     </p>
                 </div>
 
                 <!-- Column 2: Quick Links -->
                 <div class="lg:col-span-2 space-y-4">
-                    <h4 class="text-white font-bold uppercase tracking-wider text-sm">Quick Link</h4>
-                    <ul class="space-y-3 text-sm">
-                        <li><a href="#" class="hover:text-white transition">Home</a></li>
-                        <li><a href="#" class="hover:text-white transition">News</a></li>
-                        <li><a href="#" class="hover:text-white transition">About Us</a></li>
+                    <h4 class="text-white font-bold uppercase tracking-wider text-lg">Quick Link</h4>
+                    <ul class="space-y-3 text-lg">
+                        <li><a href="../../../index.html" class="hover:text-white transition">Home</a></li>
+                        <li><a href="../news-page.html" class="hover:text-white transition">News</a></li>
+                        <li><a href="../about-page.html" class="hover:text-white transition">About Us</a></li>
                     </ul>
                 </div>
 
                 <!-- Column 3: Contact Details -->
                 <div class="lg:col-span-3 space-y-4">
-                    <h4 class="text-white font-bold uppercase tracking-wider text-sm">Address & Contact</h4>
-                    <ul class="space-y-4 text-sm">
+                    <h4 class="text-white font-bold uppercase tracking-wider text-lg">Address & Contact</h4>
+                    <ul class="space-y-4 text-lg">
                         <li class="flex items-start space-x-3">
-                            <svg class="w-5 h-5 text-gray-400 mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            <i class="fa-solid fa-location-dot"></i>
                             <span class="text-gray-400">#40, St 273, Sangkat Boeung Kak II, Khan Toul Kork, Phnom Penh, Cambodia</span>
                         </li>
                         <li class="flex items-center space-x-3">
-                            <svg class="w-5 h-5 text-gray-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                            <i class="fa-solid fa-mobile"></i>
                             <span class="text-gray-400">(+855) 95-990-910</span>
                         </li>
                         <li class="flex items-center space-x-3">
-                            <svg class="w-5 h-5 text-gray-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <i class="fa-solid fa-envelope"></i>
                             <span class="text-gray-400">info.istad@gmail.com</span>
                         </li>
                     </ul>
@@ -279,17 +400,17 @@
 
                 <!-- Column 4: Sponsors -->
                 <div class="lg:col-span-3 space-y-4">
-                    <h4 class="text-white font-bold uppercase tracking-wider text-sm">Our Sponsors</h4>
+                    <h4 class="text-white font-bold uppercase tracking-wider text-lg">Our Sponsors</h4>
                     <div class="flex items-center space-x-3 pt-2">
-                        <!-- Sponsors Image Layout component references the file image_c2c2dc.png -->
-                        <img src="image_c2c2dc.png" alt="CSTAD and iSTAD Sponsors Logos" class="h-12 w-auto object-contain">
+                        <!-- References the file image_c2c2dc.png verbatim -->
+                        <img src="../../image/istad-logo.png" alt="iSTAD Sponsors Logos" class="h-48 w-auto object-contain">
                     </div>
                 </div>
 
             </div>
 
             <!-- Bottom Sub-Footer Bar -->
-            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-lg">
                 <div class="text-gray-500">
                     &copy; 2026 Up News. All rights reserved.
                 </div>
@@ -297,15 +418,15 @@
                 <!-- Social Channels Links -->
                 <div class="flex items-center space-x-6">
                     <a href="#" class="flex items-center space-x-2 text-gray-400 hover:text-white transition">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-1-.65-.35-1 .22-1.62.15-.15 2.73-2.5 2.78-2.7.01-.03.01-.15-.06-.21-.07-.06-.17-.04-.25-.02-.11.02-1.83 1.16-5.16 3.42-.49.34-.93.5-1.33.49-.44-.01-1.29-.25-1.92-.45-.77-.25-1.39-.39-1.34-.83.03-.23.35-.46.97-.71 3.82-1.66 6.37-2.75 7.63-3.27 3.63-1.49 4.38-1.75 4.87-1.76.11 0 .35.03.51.16.13.11.17.26.19.37z"/></svg>
+                       <i class="fa-brands fa-telegram"></i>
                         <span>Telegram</span>
                     </a>
                     <a href="#" class="flex items-center space-x-2 text-gray-400 hover:text-white transition">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        <i class="fa-solid fa-envelope"></i>
                         <span>Email</span>
                     </a>
                     <a href="#" class="flex items-center space-x-2 text-gray-400 hover:text-white transition">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8.02 9.71v-6.87H7.54V12h2.48V9.8c0-2.45 1.45-3.81 3.69-3.81 1.08 0 2.2.19 2.2.19v2.42h-1.24c-1.21 0-1.59.75-1.59 1.52V12h2.73l-.44 2.84h-2.29v6.87C18.56 20.87 22 16.84 22 12z"/></svg>
+                        <i class="fa-brands fa-facebook"></i>
                         <span>Facebook</span>
                     </a>
                 </div>
@@ -313,6 +434,27 @@
 
         </div>
     </footer>
+
+    <!-- Toggle Theme Inline Controller -->
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const textElement = document.getElementById('theme-text');
+            const iconElement = document.getElementById('theme-icon');
+
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                textElement.innerText = "Dark Mode";
+                // Sun Icon representation for light mode status
+                iconElement.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M14 12a2 2 0 11-4 0 2 2 0 014 0z"></path>';
+            } else {
+                html.classList.add('dark');
+                textElement.innerText = "Light Mode";
+                // Moon Icon representation for dark mode status
+                iconElement.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>';
+            }
+        }
+    </script>
 
     <!-- Flowbite Dynamic Element Trigger Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
