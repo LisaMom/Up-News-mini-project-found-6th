@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+/* Dark mode is toggled via a `.dark` class on <html> (see src/components/main.js),
+   not by OS preference, so tell Tailwind to compile dark: using the class strategy. */
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* Preline UI */
 @source "./node_modules/preline/dist/*.js";
 @import "../node_modules/preline/variants.css";

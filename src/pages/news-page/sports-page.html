@@ -7,23 +7,11 @@
     <meta name="description" content="Get the latest global sports analysis, breaking updates, and collaborative team insights across multi-disciplinary sports coverage.">
     <!-- link cdn for icon  -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Tailwind CSS & Flowbite CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Flowbite CDN (component behaviors only; visual styling comes from the site theme below) -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
-    
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        accentOrange: '#FF4500',
-                        accentBlue: '#2563EB',
-                    }
-                }
-            }
-        }
-    </script>
+
+    <!-- Site theme stylesheet (built from src/input.css via Tailwind CLI, contains the custom brand colors/fonts) -->
+    <link rel="stylesheet" href="../../output.css">
 </head>
 <body class="bg-gray-50 text-gray-900 dark:bg-zinc-950 dark:text-gray-100 font-sans antialiased transition-colors duration-200">
 
@@ -139,7 +127,7 @@
         <!-- Portal Dynamic Title -->
         <div class="text-center mb-8">
             <h1 class="text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-white">
-                Sport <span class="text-accentOrange">News</span>
+                Sport <span class="text-secondary-color">News</span>
             </h1>
         </div>
 
@@ -151,12 +139,12 @@
 <!-- MODULE A: Primary Asymmetric Split Feature -->
         <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pb-12 border-b border-gray-200 dark:border-zinc-800">
             <div class="lg:col-span-5 space-y-4 order-2 lg:order-1">
-                <div class="flex items-center space-x-2 text-accentOrange font-bold text-lg uppercase tracking-wider">
+                <div class="flex items-center space-x-2 text-secondary-color font-bold text-lg uppercase tracking-wider">
                     <span>
                         <i class="fa-solid fa-trophy"></i>
                     </span> <span>FIFA World Cup 2026</span>
                 </div>
-                <h2 class="text-2xl sm:text-4xl font-black leading-tight text-gray-900 dark:text-white hover:text-accentOrange transition duration-200">
+                <h2 class="text-2xl sm:text-4xl font-black leading-tight text-gray-900 dark:text-white hover:text-secondary-color transition duration-200">
                     <a href="#">Lionel Messi's Sublime First Touch Leads To Historic FIFA World Cup Goal</a>
                 </h2>
                 <p class="text-gray-600 dark:text-gray-400 text-2xl leading-relaxed">
@@ -179,7 +167,7 @@
                 <div class="overflow-hidden rounded-lg aspect-[16/10] bg-gray-200 dark:bg-zinc-800">
                     <img src="./image/sport-2.webp" alt="Dynamic Sports Action Grid Visual" class="w-full h-full object-cover">
                 </div>
-                <span class="text-accentOrange font-bold text-lg uppercase tracking-widest block">FIFA WOULD CUP</span>
+                <span class="text-secondary-color font-bold text-lg uppercase tracking-widest block">FIFA WOULD CUP</span>
                 <h3 class="font-bold text-2xl leading-snug"><a href="#" class="hover:underline">Mbappe strikes again to send France through</a></h3>
                 <p class="text-lg text-gray-500 dark:text-gray-400">Kylian Mbappe's purple patch continued as France ground out a hard-fought victory over Paraguay in the Round of 16.</p>
                 <time class="text-base text-gray-400 block">June 28, 2026 at 9:45 PM</time>
@@ -190,7 +178,7 @@
                 <div class="overflow-hidden rounded-lg aspect-[16/10] bg-gray-200 dark:bg-zinc-800">
                     <img src="./image/sport-3.webp" alt="Dynamic Sports Action Grid Visual" class="w-full h-full object-cover">
                 </div>
-                <span class="text-accentOrange font-bold text-lg uppercase tracking-widest block">FIFA WOULD CUP</span>
+                <span class="text-secondary-color font-bold text-lg uppercase tracking-widest block">FIFA WOULD CUP</span>
                 <h3 class="font-bold text-2xl leading-snug"><a href="#" class="hover:underline">PFarewell Cape Verde - the underdogs the World Cup will never forget</a></h3>
                 <p class="text-lg text-gray-500 dark:text-gray-400">Cape Verde may have been the World Cup's second-smallest nation but they leave the largest impact.</p>
                 <time class="text-base text-gray-400 block">June 29, 2026 at 10:10 PM</time>
@@ -201,7 +189,7 @@
                 <div class="overflow-hidden rounded-lg aspect-[16/10] bg-gray-200 dark:bg-zinc-800">
                     <img src="./image/sport-5.webp" alt="Dynamic Sports Action Grid Visual" class="w-full h-full object-cover">
                 </div>
-                <span class="text-accentOrange font-bold text-lg uppercase tracking-widest block">FIFA WOULD CUP</span>
+                <span class="text-secondary-color font-bold text-lg uppercase tracking-widest block">FIFA WOULD CUP</span>
                 <h3 class="font-bold text-2xl leading-snug"><a href="#" class="hover:underline">Morocco reach quarter-finals as co-hosts Canada out of World Cup</a></h3>
                 <p class="text-lg text-gray-500 dark:text-gray-400">Azzedine Ounahi scores twice as Morocco become the first team to reach the World Cup quarter-finals.</p>
                 <time class="text-base text-gray-400 block">June 30, 2026 at 8:55 PM</time>
@@ -215,7 +203,7 @@
                 <div class="overflow-hidden rounded-lg aspect-[16/10] bg-gray-200 dark:bg-zinc-800">
                     <img src="./image/sport-6.jpeg" alt="Dynamic Sports Action Grid Visual" class="w-full h-full object-cover">
                 </div>
-                <span class="text-accentOrange font-bold text-lg uppercase tracking-widest block">FIFA WOULD CUP</span>
+                <span class="text-secondary-color font-bold text-lg uppercase tracking-widest block">FIFA WOULD CUP</span>
                 <h3 class="font-bold text-2xl leading-snug"><a href="#" class="hover:underline">Unbeaten in 34 matches - why Morocco are World Cup contenders</a></h3>
                 <p class="text-lg text-gray-500 dark:text-gray-400">As Morocco beat Canada to book their place in the last-8, their World Cup campaign can no longer be seen as a fairytale.</p>
                 <time class="text-base text-gray-400 block">July 1, 2026 at 12:05 PM</time>
@@ -226,7 +214,7 @@
                 <div class="overflow-hidden rounded-lg aspect-[16/10] bg-gray-200 dark:bg-zinc-800">
                     <img src="./image/sport-7.jpeg" alt="Dynamic Sports Action Grid Visual" class="w-full h-full object-cover">
                 </div>
-                <span class="text-accentOrange font-bold text-lg uppercase tracking-widest block">FIFA WOULD CUP</span>
+                <span class="text-secondary-color font-bold text-lg uppercase tracking-widest block">FIFA WOULD CUP</span>
                 <h3 class="font-bold text-2xl leading-snug"><a href="#" class="hover:underline">Colombia's World Cup run stays alive. Ghana fall short</a></h3>
                 <p class="text-lg text-gray-500 dark:text-gray-400">As Colombia beat Ghana 1-0 to reach the Round of 16, Jhon Arias' early goal proved enough to seal qualification.</p>
                 <time class="text-base text-gray-400 block">June 28, 2026 at 9:20 PM</time>
@@ -237,7 +225,7 @@
                 <div class="overflow-hidden rounded-lg aspect-[16/10] bg-gray-200 dark:bg-zinc-800">
                     <img src="./image/sport-8.jpeg" alt="Dynamic Sports Action Grid Visual" class="w-full h-full object-cover">
                 </div>
-                <span class="text-accentOrange font-bold text-lg uppercase tracking-widest block">FIFA WOULD CUP</span>
+                <span class="text-secondary-color font-bold text-lg uppercase tracking-widest block">FIFA WOULD CUP</span>
                 <h3 class="font-bold text-2xl leading-snug"><a href="#" class="hover:underline">Canada rescue historic point against Bosnia and Herzegovina</a></h3>
                 <p class="text-lg text-gray-500 dark:text-gray-400">As Canada drew 1-1 with Bosnia and Herzegovina in their World Cup opener, Cyle Larin's late equaliser secured the co-hosts' first-ever FIFA World Cup point.</p>
                 <time class="text-base text-gray-400 block">June 23, 2026 at 7:40 PM</time>
@@ -310,7 +298,7 @@ What the teams said – Sprint day and Qualifying in Great Britain</a></h3>
             </div>
             <div class="space-y-2">
                 <h3 class="text-xl sm:text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white leading-tight">
-                    <a href="#" class="hover:text-accentOrange transition">
+                    <a href="#" class="hover:text-secondary-color transition">
                         Grand Prix de Saint-Cloud: 'What a horse, he accelerates and never stops' - superstar Calandagan returns to form with hardy success
                     </a>
                 </h3>
@@ -333,7 +321,7 @@ What the teams said – Sprint day and Qualifying in Great Britain</a></h3>
                 </div>
                 <div class="space-y-1">
                     <h4 class="font-bold text-lg text-gray-900 dark:text-white leading-snug">
-                        <a href="#" class="hover:text-accentOrange transition">
+                        <a href="#" class="hover:text-secondary-color transition">
                             Champion European miler Field Of Gold retired from racing
                         </a>
                     </h4>
@@ -353,7 +341,7 @@ What the teams said – Sprint day and Qualifying in Great Britain</a></h3>
                 </div>
                 <div class="space-y-1">
                     <h4 class="font-bold text-lg text-gray-900 dark:text-white leading-snug">
-                        <a href="#" class="hover:text-accentOrange transition">
+                        <a href="#" class="hover:text-secondary-color transition">
                             William Haggas to unleash strong hand in search of first July Cup win - and predicts a 'sharper' Almeraq at Newmarket
                         </a>
                     </h4>
