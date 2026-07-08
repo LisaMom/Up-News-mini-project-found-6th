@@ -1,11 +1,500 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Up News - Homepage</title>
+  <link rel="stylesheet" href="./src/output.css" />
+  <script>
+    (function () {
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'dark' || (!saved && prefersDark)) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
 </head>
-<body>
-    
+<body class="bg-white text-gray-900 antialiased dark:bg-gray-950 transition-colors">
+
+  <!-- ============ NAVBAR  ============ -->
+  <header class="sticky top-0 bg-white/80 dark:bg-gray-950/80 backdrop-blur-md z-50">
+    <!-- Main Navigation Bar -->
+    <nav class="border-b border-zinc-800 relative z-50 select-none bg-[#1C1C1C]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <!-- Left Side: Brand Logo -->
+          <div class="shrink-0 flex items-center space-x-2">
+            <img class="h-16 w-auto" src="..." alt="Up News logo" />
+          </div>
+
+          <!-- Center Section: Menu Links with Dropdown Menu -->
+          <div class="hidden md:flex items-center space-x-1 h-full">
+            <!-- Home Link -->
+            <a href="#" class="px-5 py-2 text-lg font-semibold tracking-wide text-gray-300 hover:text-white transition-colors">
+              Home
+            </a>
+
+            <!-- News Dropdown Trigger Container via CSS Group-Hover -->
+            <div class="relative group h-full flex items-center">
+              <button class="cursor-pointer px-5 py-2 text-lg font-semibold tracking-wide text-white flex items-center space-x-1 focus:outline-none">
+                <span>News</span>
+                <svg class="w-4 h-4 ml-0.5 text-gray-400 group-hover:text-white group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+
+              <!-- Hover Dropdown Menu Structure -->
+              <div class="absolute top-full left-0 w-48 bg-[#252525] border border-zinc-800 shadow-xl rounded-md py-2 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50">
+                <a href="./business-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">Business</a>
+                <a href="./sports-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">Sports</a>
+                <a href="./world-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">World</a>
+                <a href="./lifestyle-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">Lifestyle</a>
+                <a href="./socialite-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">Socialite</a>
+                <a href="./national-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">National</a>
+              </div>
+            </div>
+
+            <!-- About Us Link -->
+            <a href="#" class="px-5 py-2 text-lg font-semibold tracking-wide text-gray-300 hover:text-white transition-colors">
+              About Us
+            </a>
+          </div>
+
+          <!-- Right Side Elements: Search, Dark Theme Icon, CTA Button, Mobile Menu -->
+          <div class="flex items-center space-x-4 sm:space-x-6">
+            <!-- Search Icon Button -->
+            <button type="button" id="search-toggle" class="cursor-pointer text-gray-400 hover:text-white p-1 transition-colors focus:outline-none" aria-label="Search" aria-expanded="false" aria-controls="search-panel">
+              <svg class="w-5 h-5 stroke-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+              </svg>
+            </button>
+
+            <!-- Theme Toggle: swaps moon/sun icon based on current theme, wired to toggleTheme() -->
+            <button type="button" onclick="toggleTheme()" class="cursor-pointer text-gray-400 hover:text-white p-1 transition-colors focus:outline-none" aria-label="Toggle dark mode">
+              <svg class="w-5 h-5 fill-current dark:hidden" viewBox="0 0 20 20">
+                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+              </svg>
+              <svg class="w-5 h-5 fill-current hidden dark:block" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path>
+              </svg>
+            </button>
+
+            <!-- Call To Action Button -->
+            <a href="#" class="hidden sm:inline-block bg-red-600 hover:bg-red-700 text-white font-bold text-lg px-6 py-2.5 rounded-sm shadow transition-all duration-150 transform active:scale-95">
+              Subscribe
+            </a>
+
+            <!-- Mobile Menu Toggle (nav links are hidden below md:, this is the only way to reach them there) -->
+            <button type="button" id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white p-1 focus:outline-none" aria-label="Toggle menu" aria-expanded="false">
+              <svg id="mobile-menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+              <svg id="mobile-menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Search panel -->
+      <div id="search-panel" class="search-panel hidden">
+        <form id="search-form" class="search-form" role="search">
+          <label for="search-input" class="search-label">Search news</label>
+          <input id="search-input" type="search" placeholder="Search news..." class="search-input" />
+          <button type="submit" class="search-submit">Search</button>
+          <button type="button" id="search-close" class="search-close" aria-label="Close search">
+            <svg class="search-close-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </form>
+      </div>
+
+      <!-- Mobile menu panel -->
+      <div id="mobile-menu" class="md:hidden hidden border-t border-zinc-800 bg-[#1C1C1C]">
+        <div class="px-4 py-3 space-y-1">
+          <a href="#" class="block px-3 py-2 text-base font-semibold text-gray-300 hover:text-white hover:bg-zinc-800 rounded-md transition-colors">Home</a>
+          <a href="./business-page.html" class="block px-3 py-2 text-base font-semibold text-gray-300 hover:text-white hover:bg-zinc-800 rounded-md transition-colors">Business</a>
+          <a href="./sports-page.html" class="block px-3 py-2 text-base font-semibold text-gray-300 hover:text-white hover:bg-zinc-800 rounded-md transition-colors">Sports</a>
+          <a href="./world-page.html" class="block px-3 py-2 text-base font-semibold text-gray-300 hover:text-white hover:bg-zinc-800 rounded-md transition-colors">World</a>
+          <a href="./lifestyle-page.html" class="block px-3 py-2 text-base font-semibold text-gray-300 hover:text-white hover:bg-zinc-800 rounded-md transition-colors">Lifestyle</a>
+          <a href="./socialite-page.html" class="block px-3 py-2 text-base font-semibold text-gray-300 hover:text-white hover:bg-zinc-800 rounded-md transition-colors">Socialite</a>
+          <a href="./national-page.html" class="block px-3 py-2 text-base font-semibold text-gray-300 hover:text-white hover:bg-zinc-800 rounded-md transition-colors">National</a>
+          <a href="#" class="block px-3 py-2 text-base font-semibold text-gray-300 hover:text-white hover:bg-zinc-800 rounded-md transition-colors">About Us</a>
+          <a href="#" class="sm:hidden block mt-2 text-center bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-2.5 rounded-sm">Subscribe</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="relative w-full h-56 sm:h-72 md:h-96 lg:h-112 overflow-hidden">
+    <img src="..." alt="Hero image — championship celebration" class="w-full h-full object-cover bg-gray-800" />
+    <!-- sponsor strip placeholder -->
+    <div class="absolute top-0 inset-x-0 h-6 sm:h-8 bg-gray-900/60">
+      <img src="..." alt="Sponsor logos" class="w-full h-full object-cover opacity-80" />
+    </div>
+  </section>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- ============ TOP NEWS ============ -->
+    <section class="py-10 sm:py-12 md:py-16">
+      <header class="flex flex-col items-center text-center">
+        <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight">
+          <span class="text-gray-900 dark:text-white">TOP NEWS </span><span class="text-red-600">THIS WEEK</span>
+        </h2>
+        <button class="mt-3 inline-flex items-center gap-1 rounded-full border border-gray-300 px-4 py-1.5 text-xs sm:text-sm font-medium text-gray-600 hover:bg-gray-50 transition dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800">
+          View all
+          <svg class="w-3.5 h-3.5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 5l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </header>
+
+      <div class="mt-6 sm:mt-8 grid grid-cols-3 gap-3 sm:gap-4 md:gap-6">
+        <article class="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition dark:bg-gray-900 dark:border-gray-800 dark:shadow-none">
+          <img src="..." alt="Article image" class="w-full h-20 sm:h-32 md:h-40 object-cover bg-gray-200 dark:bg-gray-800" />
+          <div class="p-2 sm:p-3 md:p-4">
+            <h3 class="text-[10px] sm:text-xs md:text-sm font-bold uppercase leading-snug text-gray-900 dark:text-white line-clamp-2">Star player signs massive contract extension</h3>
+            <p class="mt-1.5 sm:mt-2 text-[9px] sm:text-[11px] md:text-xs text-gray-500 dark:text-gray-400 leading-relaxed line-clamp-2">The franchise locks in their franchise player for the next five years.</p>
+            <p class="mt-2 sm:mt-3 text-[8px] sm:text-[10px] md:text-xs text-gray-400 dark:text-gray-500">Mar 11, 2025</p>
+          </div>
+        </article>
+        <article class="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition dark:bg-gray-900 dark:border-gray-800 dark:shadow-none">
+          <img src="..." alt="Championship odds graphic" class="w-full h-20 sm:h-32 md:h-40 object-cover bg-gray-800" />
+          <div class="p-2 sm:p-3 md:p-4">
+            <h3 class="text-[10px] sm:text-xs md:text-sm font-bold uppercase leading-snug text-gray-900 dark:text-white line-clamp-2">What the latest means for championship odds</h3>
+            <p class="mt-1.5 sm:mt-2 text-[9px] sm:text-[11px] md:text-xs text-gray-500 dark:text-gray-400 leading-relaxed line-clamp-2">The franchise looks to lock in their playoff seeding for the next few weeks.</p>
+            <p class="mt-2 sm:mt-3 text-[8px] sm:text-[10px] md:text-xs text-gray-400 dark:text-gray-500">Mar 11, 2025</p>
+          </div>
+        </article>
+        <article class="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition dark:bg-gray-900 dark:border-gray-800 dark:shadow-none">
+          <img src="..." alt="Article image" class="w-full h-20 sm:h-32 md:h-40 object-cover bg-gray-200 dark:bg-gray-800" />
+          <div class="p-2 sm:p-3 md:p-4">
+            <h3 class="text-[10px] sm:text-xs md:text-sm font-bold uppercase leading-snug text-gray-900 dark:text-white line-clamp-2">Star player signs massive contract extension</h3>
+            <p class="mt-1.5 sm:mt-2 text-[9px] sm:text-[11px] md:text-xs text-gray-500 dark:text-gray-400 leading-relaxed line-clamp-2">The franchise looks to lock in their franchise player for the next five years.</p>
+            <p class="mt-2 sm:mt-3 text-[8px] sm:text-[10px] md:text-xs text-gray-400 dark:text-gray-500">Mar 11, 2025</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ LATEST NEWS ============ -->
+    <section class="py-10 sm:py-12 md:py-16 border-t border-gray-100 dark:border-gray-800">
+      <header class="flex flex-col items-center text-center">
+        <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight">
+          <span class="text-gray-900 dark:text-white">LATEST NEWS </span><span class="text-red-600">THIS WEEK</span>
+        </h2>
+        <button class="mt-3 inline-flex items-center gap-1 rounded-full border border-gray-300 px-4 py-1.5 text-xs sm:text-sm font-medium text-gray-600 hover:bg-gray-50 transition dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800">
+          View all
+          <svg class="w-3.5 h-3.5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 5l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </header>
+
+      <div class="mt-6 sm:mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-3 md:gap-4">
+        <article class="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition dark:bg-gray-900 dark:border-gray-800 dark:shadow-none">
+          <img src="..." alt="Article image" class="w-full h-16 sm:h-20 md:h-28 object-cover bg-gray-200 dark:bg-gray-800" />
+          <div class="p-2 sm:p-2.5 md:p-3">
+            <h3 class="text-[9px] sm:text-[10px] md:text-xs font-bold uppercase leading-snug text-gray-900 dark:text-white line-clamp-2">Star player sign contract</h3>
+            <p class="mt-1 text-[8px] sm:text-[9px] md:text-[11px] text-gray-500 dark:text-gray-400 leading-relaxed line-clamp-2 hidden sm:block">The franchise locks up their next star.</p>
+            <p class="mt-1.5 sm:mt-2 text-[7px] sm:text-[9px] md:text-[10px] text-gray-400 dark:text-gray-500">Mar 11, 2025</p>
+          </div>
+        </article>
+        <article class="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition dark:bg-gray-900 dark:border-gray-800 dark:shadow-none">
+          <img src="..." alt="Team photo" class="w-full h-16 sm:h-20 md:h-28 object-cover bg-gray-800" />
+          <div class="p-2 sm:p-2.5 md:p-3">
+            <h3 class="text-[9px] sm:text-[10px] md:text-xs font-bold uppercase leading-snug text-gray-900 dark:text-white line-clamp-2">Star player signs important extension</h3>
+            <p class="mt-1 text-[8px] sm:text-[9px] md:text-[11px] text-gray-500 dark:text-gray-400 leading-relaxed line-clamp-2 hidden sm:block">The franchise looks to lock up their next star.</p>
+            <p class="mt-1.5 sm:mt-2 text-[7px] sm:text-[9px] md:text-[10px] text-gray-400 dark:text-gray-500">Mar 11, 2025</p>
+          </div>
+        </article>
+        <article class="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition dark:bg-gray-900 dark:border-gray-800 dark:shadow-none">
+          <img src="..." alt="Trophy graphic" class="w-full h-16 sm:h-20 md:h-28 object-cover bg-gray-200 dark:bg-gray-800" />
+          <div class="p-2 sm:p-2.5 md:p-3">
+            <h3 class="text-[9px] sm:text-[10px] md:text-xs font-bold uppercase leading-snug text-gray-900 dark:text-white line-clamp-2">News for championship odds</h3>
+            <p class="mt-1 text-[8px] sm:text-[9px] md:text-[11px] text-gray-500 dark:text-gray-400 leading-relaxed line-clamp-2 hidden sm:block">The franchise looks to lock in the next five years.</p>
+            <p class="mt-1.5 sm:mt-2 text-[7px] sm:text-[9px] md:text-[10px] text-gray-400 dark:text-gray-500">Dec 11, 2025</p>
+          </div>
+        </article>
+        <article class="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition dark:bg-gray-900 dark:border-gray-800 dark:shadow-none">
+          <img src="..." alt="Trophy graphic" class="w-full h-16 sm:h-20 md:h-28 object-cover bg-gray-200 dark:bg-gray-800" />
+          <div class="p-2 sm:p-2.5 md:p-3">
+            <h3 class="text-[9px] sm:text-[10px] md:text-xs font-bold uppercase leading-snug text-gray-900 dark:text-white line-clamp-2">What the latest means for change</h3>
+            <p class="mt-1 text-[8px] sm:text-[9px] md:text-[11px] text-gray-500 dark:text-gray-400 leading-relaxed line-clamp-2 hidden sm:block">The franchise looks to lock in the next five years.</p>
+            <p class="mt-1.5 sm:mt-2 text-[7px] sm:text-[9px] md:text-[10px] text-gray-400 dark:text-gray-500">Dec 11, 2025</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ BUSINESS NEWS ============ -->
+    <section class="py-10 sm:py-12 md:py-16 border-t border-gray-100 dark:border-gray-800">
+      <header class="flex flex-col items-center text-center">
+        <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight">
+          <span class="text-gray-900 dark:text-white">BUSINESS NEWS </span><span class="text-red-600">THIS WEEK</span>
+        </h2>
+        <button class="mt-3 inline-flex items-center gap-1 rounded-full border border-gray-300 px-4 py-1.5 text-xs sm:text-sm font-medium text-gray-600 hover:bg-gray-50 transition dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800">
+          View all
+          <svg class="w-3.5 h-3.5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 5l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </header>
+
+      <div class="mt-6 sm:mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+        <!-- big feature -->
+        <div class="md:col-span-2 relative rounded-xl overflow-hidden bg-gray-900 h-56 sm:h-72 md:h-full min-h-56">
+          <img src="..." alt="Feature image — tennis" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 p-4 sm:p-6 max-w-md">
+            <p class="text-brand text-[10px] sm:text-xs font-bold uppercase tracking-wide">Tennis</p>
+            <h3 class="mt-1 text-white font-bold text-sm sm:text-base md:text-lg leading-snug">Injuries flagged in Osaka &amp; Sabalenka's relationship with tennis — report</h3>
+          </div>
+        </div>
+
+        <!-- side items -->
+        <div class="flex flex-col justify-center gap-4 md:gap-6">
+          <div class="flex gap-3 items-start">
+            <img src="..." alt="Article thumbnail" class="w-16 h-16 sm:w-20 sm:h-20 rounded-lg object-cover ring-1 ring-gray-200 dark:ring-gray-700 shrink-0 bg-gray-800" />
+            <div>
+              <p class="text-[10px] sm:text-[11px] font-bold uppercase text-gray-900 dark:text-white">Result</p>
+              <p class="mt-1 text-[10px] sm:text-xs text-gray-500 dark:text-gray-400 leading-snug">Ronaldo agrees to big terms to make Saudi move</p>
+            </div>
+          </div>
+          <div class="flex gap-3 items-start">
+            <img src="..." alt="Article thumbnail" class="w-16 h-16 sm:w-20 sm:h-20 rounded-lg object-cover ring-1 ring-gray-200 dark:ring-gray-700 shrink-0 bg-gray-800" />
+            <div>
+              <p class="text-[10px] sm:text-[11px] font-bold uppercase text-gray-900 dark:text-white">Result</p>
+              <p class="mt-1 text-[10px] sm:text-xs text-gray-500 dark:text-gray-400 leading-snug">Ronaldo agrees to big terms to make Saudi move</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LIFESTYLE NEWS ============ -->
+    <section class="py-10 sm:py-12 md:py-16 border-t border-gray-100 dark:border-gray-800">
+      <header class="flex flex-col items-center text-center">
+        <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight">
+          <span class="text-gray-900 dark:text-white">LIFESTYLE NEWS </span><span class="text-red-600">THIS WEEK</span>
+        </h2>
+        <button class="mt-3 inline-flex items-center gap-1 rounded-full border border-gray-300 px-4 py-1.5 text-xs sm:text-sm font-medium text-gray-600 hover:bg-gray-50 transition dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800">
+          View all
+          <svg class="w-3.5 h-3.5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 5l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </header>
+
+      <div class="mt-6 sm:mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+        <!-- side items (mirrored: text right-aligned, thumbnail on the right) -->
+        <div class="order-2 md:order-1 flex flex-col justify-center gap-4 md:gap-6">
+          <div class="flex gap-3 items-start justify-end text-right">
+            <div>
+              <p class="text-[10px] sm:text-[11px] font-bold uppercase text-gray-900 dark:text-white">Result</p>
+              <p class="mt-1 text-[10px] sm:text-xs text-gray-500 dark:text-gray-400 leading-snug">Ronaldo agrees to big terms to make Saudi move</p>
+            </div>
+            <img src="..." alt="Article thumbnail" class="w-16 h-16 sm:w-20 sm:h-20 rounded-lg object-cover ring-1 ring-gray-200 dark:ring-gray-700 shrink-0 bg-gray-800" />
+          </div>
+          <div class="flex gap-3 items-start justify-end text-right">
+            <div>
+              <p class="text-[10px] sm:text-[11px] font-bold uppercase text-gray-900 dark:text-white">Result</p>
+              <p class="mt-1 text-[10px] sm:text-xs text-gray-500 dark:text-gray-400 leading-snug">Ronaldo agrees to big terms to make Saudi move</p>
+            </div>
+            <img src="..." alt="Article thumbnail" class="w-16 h-16 sm:w-20 sm:h-20 rounded-lg object-cover ring-1 ring-gray-200 dark:ring-gray-700 shrink-0 bg-gray-800" />
+          </div>
+        </div>
+
+        <!-- big feature -->
+        <div class="order-1 md:order-2 md:col-span-2 relative rounded-xl overflow-hidden bg-gray-900 h-56 sm:h-72 md:h-full min-h-56">
+          <img src="..." alt="Feature image — tennis" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-linear-to-trom-black/90 via-black/20 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 p-4 sm:p-6 max-w-md">
+            <p class="text-brand text-[10px] sm:text-xs font-bold uppercase tracking-wide">Tennis</p>
+            <h3 class="mt-1 text-white font-bold text-sm sm:text-base md:text-lg leading-snug">Injuries flagged in Osaka &amp; Sabalenka's relationship with tennis — report</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SOCIALITE NEWS (single feature image, no side items) ============ -->
+    <section class="py-10 sm:py-12 md:py-16 border-t border-gray-100 dark:border-gray-800">
+      <header class="flex flex-col items-center text-center">
+        <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight">
+          <span class="text-gray-900 dark:text-white">SOCIALITE NEWS </span><span class="text-red-600">THIS WEEK</span>
+        </h2>
+        <button class="mt-3 inline-flex items-center gap-1 rounded-full border border-gray-300 px-4 py-1.5 text-xs sm:text-sm font-medium text-gray-600 hover:bg-gray-50 transition dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800">
+          View all
+          <svg class="w-3.5 h-3.5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 5l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </header> 
+
+      <div class="mt-6 sm:mt-8 relative rounded-xl overflow-hidden bg-gray-900 h-56 sm:h-72 md:h-96">
+        <img src="..." alt="Feature image — celebrity" class="absolute inset-0 w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 p-4 sm:p-6 max-w-md">
+          <p class="text-brand text-[10px] sm:text-xs font-bold uppercase tracking-wide">Celebrity</p>
+          <h3 class="mt-1 text-white font-bold text-sm sm:text-base md:text-lg leading-snug">Star striker spotted courtside at NBA finals with new partner</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WORLD NEWS (2x2 grid of thumbnail + text) ============ -->
+    <section class="py-10 sm:py-12 md:py-16 border-t border-gray-100 dark:border-gray-800">
+      <header class="flex flex-col items-center text-center">
+        <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight">
+          <span class="text-gray-900 dark:text-white">WORLD NEWS </span><span class="text-red-600">THIS WEEK</span>
+        </h2>
+        <button class="mt-3 inline-flex items-center gap-1 rounded-full border border-gray-300 px-4 py-1.5 text-xs sm:text-sm font-medium text-gray-600 hover:bg-gray-50 transition dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800">
+          View all
+          <svg class="w-3.5 h-3.5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 5l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </header>
+
+      <div class="mt-6 sm:mt-8 grid grid-cols-1 sm:grid-cols-2 gap-x-6 md:gap-x-10 gap-y-4 sm:gap-y-6">
+        <div class="flex gap-3 items-start">
+          <img src="..." alt="World news thumbnail" class="w-16 h-16 sm:w-20 sm:h-20 rounded-lg object-cover ring-1 ring-gray-200 dark:ring-gray-700 shrink-0 bg-gray-800" />
+          <div>
+            <p class="text-[10px] sm:text-[11px] font-bold uppercase text-gray-900 dark:text-white">World</p>
+            <p class="mt-1 text-[10px] sm:text-xs text-gray-500 dark:text-gray-400 leading-snug">Officials confirm new stadium plans ahead of next season</p>
+          </div>
+        </div>
+        <div class="flex gap-3 items-start">
+          <img src="..." alt="World news thumbnail" class="w-16 h-16 sm:w-20 sm:h-20 rounded-lg object-cover ring-1 ring-gray-200 dark:ring-gray-700 shrink-0 bg-gray-800" />
+          <div>
+            <p class="text-[10px] sm:text-[11px] font-bold uppercase text-gray-900 dark:text-white">World</p>
+            <p class="mt-1 text-[10px] sm:text-xs text-gray-500 dark:text-gray-400 leading-snug">League announces expansion to two new markets</p>
+          </div>
+        </div>
+        <div class="flex gap-3 items-start">
+          <img src="..." alt="World news thumbnail" class="w-16 h-16 sm:w-20 sm:h-20 rounded-lg object-cover ring-1 ring-gray-200 dark:ring-gray-700 shrink-0 bg-gray-800" />
+          <div>
+            <p class="text-[10px] sm:text-[11px] font-bold uppercase text-gray-900 dark:text-white">World</p>
+            <p class="mt-1 text-[10px] sm:text-xs text-gray-500 dark:text-gray-400 leading-snug">Federation opens inquiry into ticketing scandal</p>
+          </div>
+        </div>
+        <div class="flex gap-3 items-start">
+          <img src="..." alt="World news thumbnail" class="w-16 h-16 sm:w-20 sm:h-20 rounded-lg object-cover ring-1 ring-gray-200 dark:ring-gray-700 shrink-0 bg-gray-800" />
+          <div>
+            <p class="text-[10px] sm:text-[11px] font-bold uppercase text-gray-900 dark:text-white">World</p>
+            <p class="mt-1 text-[10px] sm:text-xs text-gray-500 dark:text-gray-400 leading-snug">Rising star declares eligibility for next draft</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SPORTS NEWS ============ -->
+    <section class="py-10 sm:py-12 md:py-16 border-t border-gray-100 dark:border-gray-800">
+      <header class="flex flex-col items-center text-center">
+        <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight">
+          <span class="text-gray-900 dark:text-white">SPORTS NEWS </span><span class="text-red-600">THIS WEEK</span>
+        </h2>
+        <button class="mt-3 inline-flex items-center gap-1 rounded-full border border-gray-300 px-4 py-1.5 text-xs sm:text-sm font-medium text-gray-600 hover:bg-gray-50 transition dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800">
+          View all
+          <svg class="w-3.5 h-3.5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 5l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </header>
+
+      <div class="mt-6 sm:mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 items-stretch">
+        <img src="..." alt="Player image" class="rounded-xl w-full h-56 sm:h-72 md:h-full min-h-64 object-cover bg-gray-800" />
+        <div class="divide-y divide-gray-200 dark:divide-gray-800">
+          <div class="flex gap-3 py-3 sm:py-4 first:pt-0">
+            <div class="w-1 rounded-full bg-brand shrink-0"></div>
+            <div>
+              <p class="text-[11px] sm:text-xs font-bold uppercase text-gray-900 dark:text-white">Saturday, March 15</p>
+              <p class="mt-1 text-xs sm:text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Two division rivals meet in a battle for playoff positioning. The stakes have never been higher.</p>
+            </div>
+          </div>
+          <div class="flex gap-3 py-3 sm:py-4">
+            <div class="w-1 rounded-full bg-brand shrink-0"></div>
+            <div>
+              <p class="text-[11px] sm:text-xs font-bold uppercase text-gray-900 dark:text-white">Wednesday, March 19</p>
+              <p class="mt-1 text-xs sm:text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Two division rivals meet in a battle for playoff positioning. The stakes have never been higher.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NEWSLETTER ============ -->
+    <section class="pb-12 sm:pb-16 md:pb-20">
+      <div class="relative rounded-xl bg-slate-100 dark:bg-gray-900 h-40 sm:h-52 md:h-64 overflow-hidden flex items-center">
+        <div class="pl-5 sm:pl-8 md:pl-12 z-10">
+          <p class="text-xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white uppercase tracking-tight leading-none">Newsletter</p>
+          <p class="mt-1 text-xl sm:text-3xl md:text-4xl font-extrabold text-slate-400 dark:text-gray-400 uppercase tracking-tight leading-none">Subscription</p>
+        </div>
+        <img src="..." alt="Newsletter subscription photo" class="absolute right-0 bottom-0 h-full w-28 sm:w-44 md:w-64 object-cover bg-gray-800" />
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    function toggleTheme() {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    }
+
+    // Search panel toggle
+    (function () {
+      const toggle = document.getElementById("search-toggle");
+      const panel = document.getElementById("search-panel");
+      const form = document.getElementById("search-form");
+      const input = document.getElementById("search-input");
+      const close = document.getElementById("search-close");
+
+      function setSearchOpen(isOpen) {
+        panel.classList.toggle("hidden", !isOpen);
+        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        if (isOpen) {
+          window.requestAnimationFrame(function () {
+            input.focus();
+          });
+        }
+      }
+
+      toggle.addEventListener("click", function () {
+        setSearchOpen(panel.classList.contains("hidden"));
+      });
+
+      close.addEventListener("click", function () {
+        setSearchOpen(false);
+        toggle.focus();
+      });
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const query = input.value.trim();
+        if (query) {
+          window.location.href = "./src/pages/news-page.html?search=" + encodeURIComponent(query);
+        }
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          setSearchOpen(false);
+        }
+      });
+
+      document.addEventListener("click", function (event) {
+        if (!panel.classList.contains("hidden") && !panel.contains(event.target) && !toggle.contains(event.target)) {
+          setSearchOpen(false);
+        }
+      });
+    })();
+
+    // Mobile menu toggle
+    (function () {
+      const btn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      const iconOpen = document.getElementById('mobile-menu-icon-open');
+      const iconClose = document.getElementById('mobile-menu-icon-close');
+      btn.addEventListener('click', function () {
+        const isHidden = menu.classList.contains('hidden');
+        menu.classList.toggle('hidden');
+        iconOpen.classList.toggle('hidden');
+        iconClose.classList.toggle('hidden');
+        btn.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+      });
+    })();
+  </script>
+
 </body>
 </html>
