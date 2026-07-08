@@ -51,7 +51,9 @@
                     <!-- News Dropdown Trigger Container via CSS Group-Hover -->
                     <div class="relative group h-full flex items-center">
                         <button class="px-5 py-2 text-lg font-semibold tracking-wide text-white flex items-center space-x-1 focus:outline-none">
-                            <span>News</span>
+                            <a href="../news-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">
+                                News
+                            </a>
                             <svg class="w-4 h-4 ml-0.5 text-gray-400 group-hover:text-white group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
@@ -90,16 +92,19 @@
                 <div class="flex items-center space-x-6">
                     
                     <!-- Search Icon Button -->
-                    <button type="button" class="text-gray-400 hover:text-white p-1 transition-colors focus:outline-none" aria-label="Search">
+                    <button type="button" id="search-toggle-btn" class="text-gray-400 hover:text-white p-1 transition-colors focus:outline-none" aria-label="Search">
                         <svg class="w-5 h-5 stroke-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                         </svg>
                     </button>
 
-                    <!-- Theme Moon Icon Trigger Toggle Indicator -->
-                    <button type="button" class="text-gray-400 hover:text-white p-1 transition-colors focus:outline-none" aria-label="Toggle dark mode">
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                    <!-- Theme Toggle Button (sun/moon swap, persisted via main.js) -->
+                    <button type="button" id="theme-toggle-btn" class="text-gray-400 hover:text-white p-1 transition-colors focus:outline-none" aria-label="Toggle dark mode">
+                        <svg id="theme-toggle-moon-icon" class="w-5 h-5 fill-current" viewBox="0 0 20 20">
                             <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg id="theme-toggle-sun-icon" class="w-5 h-5 fill-current hidden" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
                         </svg>
                     </button>
 
@@ -112,6 +117,20 @@
             </div>
         </div>
     </nav>
+    <!-- Collapsible Search Bar (toggled by main.js) -->
+    <div id="search-bar" class="hidden border-t border-zinc-800 bg-[#1C1C1C]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center gap-3">
+            <svg class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+            <input type="text" id="search-input" placeholder="Search articles on this page..." class="flex-1 bg-transparent text-white placeholder-gray-500 focus:outline-none text-lg" autocomplete="off">
+            <button type="button" id="search-close-btn" class="text-gray-400 hover:text-white flex-shrink-0" aria-label="Close search">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
     </header>
 
     <!-- Main Content Area matching layout of image_d1403d.png -->
@@ -123,7 +142,12 @@
             </h1>
         </div>
 
-        <!-- SECTION 1: Main Feature (Foxconn Grid) -->
+        
+        <div id="search-no-results" class="hidden text-center py-16 text-gray-500 dark:text-gray-400 text-lg">
+            No articles match your search.
+        </div>
+
+<!-- SECTION 1: Main Feature (Foxconn Grid) -->
         <section class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start border-b border-gray-200 dark:border-gray-800 pb-12">
             <article class="md:col-span-4 space-y-4">
                 <h1 class="text-2xl md:text-4xl font-extrabold tracking-tight leading-tight">
@@ -417,45 +441,6 @@
 
         </div>
     </footer>
-
-    <!-- Light/Dark Mode JavaScript Functionality -->
-    <script>
-        const themeToggleDarkIcon = document.getElementById('theme-toggle-moon-icon');
-        const themeToggleLightIcon = document.getElementById('theme-toggle-sun-icon');
-
-        // Setup theme initial state based on preferences/previous state
-        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            themeToggleLightIcon.classList.remove('hidden');
-            document.documentElement.classList.add('dark');
-        } else {
-            themeToggleDarkIcon.classList.remove('hidden');
-            document.documentElement.classList.remove('dark');
-        }
-
-        const themeToggleBtn = document.getElementById('theme-toggle');
-
-        themeToggleBtn.addEventListener('click', function() {
-            themeToggleDarkIcon.classList.toggle('hidden');
-            themeToggleLightIcon.classList.toggle('hidden');
-
-            if (localStorage.getItem('color-theme')) {
-                if (localStorage.getItem('color-theme') === 'light') {
-                    document.documentElement.classList.add('dark');
-                    localStorage.setItem('color-theme', 'dark');
-                } else {
-                    document.documentElement.classList.remove('dark');
-                    localStorage.setItem('color-theme', 'light');
-                }
-            } else {
-                if (document.documentElement.classList.contains('dark')) {
-                    document.documentElement.classList.remove('dark');
-                    localStorage.setItem('color-theme', 'light');
-                } else {
-                    document.documentElement.classList.add('dark');
-                    localStorage.setItem('color-theme', 'dark');
-                }
-            }
-        });
-    </script>
+    <script src="../../components/main.js"></script>
 </body>
 </html>

@@ -2,11 +2,21 @@
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
-  :root, :host {
-    --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+:root, :host {
+    /* 1. Font Family Configurations */
+    --font-serif: "Noto Serif", Georgia, serif;
+    --font-sans: "Noto Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+      
+    /* 2. Your New Custom Color Styles (From Image) */
+    --color-primary-color: #1a1a1a;        /* Very dark charcoal / near black */
+    --color-secondary-color: #e63e14;      /* Bright vibrant orange-red */
+    --color-accent-color: #7a7a7a;         /* Medium neutral gray */
+    --color-gray-description: #dcdcdc;     /* Light gray for readable text */
+
+    /* 3. Palette Color Variables (Retained for utilities) */
     --color-red-600: oklch(57.7% 0.245 27.325);
     --color-red-700: oklch(50.5% 0.213 27.518);
     --color-gray-50: oklch(98.5% 0.002 247.839);
@@ -24,6 +34,8 @@
     --color-zinc-900: oklch(21% 0.006 285.885);
     --color-zinc-950: oklch(14.1% 0.005 285.823);
     --color-white: #fff;
+    
+    /* 4. Layout & Typography Sizing */
     --spacing: 0.25rem;
     --container-sm: 24rem;
     --container-6xl: 72rem;
@@ -33,7 +45,7 @@
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
     --text-base: 1rem;
-    --text-base--line-height: calc(1.5 / 1);
+    --text-text-base--line-height: calc(1.5 / 1);
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
@@ -68,9 +80,12 @@
     --blur-md: 12px;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* 5. Default Fallbacks */
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
-  }
+}
+
 }
 @layer base {
   *, ::after, ::before, ::backdrop, ::file-selector-button {
