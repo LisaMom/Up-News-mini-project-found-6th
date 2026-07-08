@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details | Up News</title>
+    <meta name="description" content="Taiwan's Foxconn reported a 39.8% year-on-year rise in second-quarter revenue, beating market forecasts on strong AI demand.">
+    <!-- link cdn icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Site theme stylesheet (built from src/input.css via Tailwind CLI, contains the custom brand colors/fonts) -->
+    <link rel="stylesheet" href="../output.css">
+</head>
+<body class="bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100 transition-colors duration-300 font-sans antialiased">
+
+    <!-- Header Navigation with Theme Toggle -->
+    <header class="border-b border-gray-200 dark:border-gray-800 sticky top-0 bg-white/80 dark:bg-gray-950/80 backdrop-blur-md z-50">
+     <!-- Main Navigation Bar -->
+    <nav class="bg-brandDark border-b border-zinc-800 relative z-50 select-none bg-[#1C1C1C]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+
+                <!-- Left Side: Brand Logo -->
+                <div class="flex-shrink-0 flex items-center space-x-2">
+                    <img class="h-16 w-auto" src="../image/white-logo-up_news-removebg-preview.png" alt="up news logo">
+                </div>
+
+                <!-- Center Section: Menu Links with Dropdown Menu -->
+                <div class="hidden md:flex items-center space-x-1 h-full">
+
+                    <!-- Home Link -->
+                    <a href="../../index.html" class="px-5 py-2 text-lg font-semibold tracking-wide text-gray-300 hover:text-white transition-colors">
+                        Home
+                    </a>
+
+                    <!-- News Dropdown Trigger Container via CSS Group-Hover -->
+                    <div class="relative group h-full flex items-center">
+                        <button class="px-5 py-2 text-lg font-semibold tracking-wide text-white flex items-center space-x-1 focus:outline-none">
+                            <a href="news-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">
+                                News
+                            </a>
+                            <svg class="w-4 h-4 ml-0.5 text-gray-400 group-hover:text-white group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+
+                        <!-- Hover Dropdown Menu Structure -->
+                        <div class="absolute top-[100%] left-0 w-48 bg-[#252525] border border-zinc-800 shadow-xl rounded-md py-2 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:invisible-none group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50">
+                            <a href="news-page/business-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">
+                                Business
+                            </a>
+                            <a href="news-page/sports-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">
+                                Sports
+                            </a>
+                            <a href="news-page/world-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">
+                                World
+                            </a>
+                            <a href="news-page/lifestyle-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">
+                                Lifestyle
+                            </a>
+                            <a href="news-page/socialite-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">
+                                Socialite
+                            </a>
+                            <a href="news-page/national-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">
+                                National
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- About Us Link -->
+                    <a href="about-page.html" class="px-5 py-2 text-lg font-semibold tracking-wide text-gray-300 hover:text-white transition-colors">
+                        About Us
+                    </a>
+                </div>
+
+                <!-- Right Side Elements: Search, Dark Theme Icon, CTA Button -->
+                <div class="flex items-center space-x-6">
+
+                    <!-- Search Icon Button -->
+                    <button type="button" id="search-toggle-btn" class="text-gray-400 hover:text-white p-1 transition-colors focus:outline-none" aria-label="Search">
+                        <svg class="w-5 h-5 stroke-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </button>
+
+                    <!-- Theme Toggle Button (sun/moon swap, persisted via main.js) -->
+                    <button type="button" id="theme-toggle-btn" class="text-gray-400 hover:text-white p-1 transition-colors focus:outline-none" aria-label="Toggle dark mode">
+                        <svg id="theme-toggle-moon-icon" class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg id="theme-toggle-sun-icon" class="w-5 h-5 fill-current hidden" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+
+                    <!-- Call To Action Button -->
+                    <a href="#" class="bg-red-600 hover:bg-red-700 text-white font-bold text-lg px-6 py-2.5 rounded-lg shadow transition-all duration-150 transform active:scale-95">
+                        Subscribe
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    <!-- Collapsible Search Bar (toggled by main.js) -->
+    <div id="search-bar" class="hidden border-t border-zinc-800 bg-[#1C1C1C]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center gap-3">
+            <svg class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+            <input type="text" id="search-input" placeholder="Search articles on this page..." class="flex-1 bg-transparent text-white placeholder-gray-500 focus:outline-none text-lg" autocomplete="off">
+            <button type="button" id="search-close-btn" class="text-gray-400 hover:text-white flex-shrink-0" aria-label="Close search">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+    </header>
+
+    <!-- Main Content Area: Article Detail Template -->
+    <main class="max-w-3xl mx-auto px-4 py-12 space-y-8">
+        <div class="space-y-4">
+            <div class="text-base text-gray-400 font-medium">Business &middot; July 4, 2026</div>
+            <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight leading-tight">
+                Foxconn second-quarter revenue jumps, company cautions on geopolitics
+            </h1>
+            <p class="text-lg text-gray-500 dark:text-gray-400">By Up News Staff</p>
+        </div>
+
+        <div class="w-full h-72 md:h-96 overflow-hidden rounded-lg">
+            <img src="news-page/image/business-1.avif" alt="Foxconn Technology Group manufacturing building view" class="w-full h-full object-cover">
+        </div>
+
+        <article class="space-y-5 text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
+            <p>
+                Taiwan's Foxconn, the world's largest contract electronics maker, reported a 39.8% year-on-year rise in second-quarter revenue that beat market forecasts on strong demand for AI products, though it cautioned about "volatile" global politics.
+            </p>
+            <p>
+                Executives said continued investment in AI server manufacturing helped offset softer demand in some consumer electronics segments, while ongoing trade tensions between major economies remain a key risk to watch heading into the second half of the year.
+            </p>
+            <p>
+                Analysts noted that the results reinforce Foxconn's position as a bellwether for the broader electronics supply chain, with several other manufacturers expected to report similar trends in the coming weeks.
+            </p>
+        </article>
+
+        <div class="pt-6 border-t border-gray-200 dark:border-gray-800">
+            <a href="news-page/business-page.html" class="text-secondary-color font-semibold hover:underline">&larr; Back to Business News</a>
+        </div>
+    </main>
+
+    <!-- Structural Platform Footer matching image_c2c2dc.png exactly -->
+    <footer class="bg-[#1C1C1C] text-gray-300 pt-16 pb-8 border-t border-zinc-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 xl:gap-12 pb-12 border-b border-zinc-700">
+
+                <!-- Column 1: Brand Info -->
+                <div class="lg:col-span-4 space-y-6">
+                    <div class="flex items-center space-x-2">
+                    <img class="h-32 w-auto object-contain" src="../image/white-logo-up_news-removebg-preview.png" alt="white logo up news">
+                    </div>
+                    <p class="text-lg text-gray-400 leading-relaxed max-w-sm">
+                        Up News is dedicated to bringing you transparent, fast, and deeply meaningful coverage of today's most critical headlines. We bridge the gap between unfolding events and insightful analysis to keep you thoroughly informed.
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="lg:col-span-2 space-y-4">
+                    <h4 class="text-white font-bold uppercase tracking-wider text-lg">Quick Link</h4>
+                    <ul class="space-y-3 text-lg">
+                        <li><a href="../../index.html" class="hover:text-white transition">Home</a></li>
+                        <li><a href="news-page.html" class="hover:text-white transition">News</a></li>
+                        <li><a href="about-page.html" class="hover:text-white transition">About Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact Details -->
+                <div class="lg:col-span-3 space-y-4">
+                    <h4 class="text-white font-bold uppercase tracking-wider text-lg">Address & Contact</h4>
+                    <ul class="space-y-4 text-lg">
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span class="text-gray-400">#40, St 273, Sangkat Boeung Kak II, Khan Toul Kork, Phnom Penh, Cambodia</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-mobile"></i>
+                            <span class="text-gray-400">(+855) 95-990-910</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span class="text-gray-400">info.istad@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Sponsors -->
+                <div class="lg:col-span-3 space-y-4">
+                    <h4 class="text-white font-bold uppercase tracking-wider text-lg">Our Sponsors</h4>
+                    <div class="flex items-center space-x-3 pt-2">
+                        <img src="../image/istad-logo.png" alt="iSTAD Sponsors Logos" class="h-48 w-auto object-contain">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Sub-Footer Bar -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-lg">
+                <div class="text-gray-500">
+                    &copy; 2026 Up News. All rights reserved.
+                </div>
+
+                <!-- Social Channels Links -->
+                <div class="flex items-center space-x-6">
+                    <a href="#" class="flex items-center space-x-2 text-gray-400 hover:text-white transition">
+                       <i class="fa-brands fa-telegram"></i>
+                        <span>Telegram</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-2 text-gray-400 hover:text-white transition">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Email</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-2 text-gray-400 hover:text-white transition">
+                        <i class="fa-brands fa-facebook"></i>
+                        <span>Facebook</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <script src="../components/main.js"></script>
+</body>
+</html>
