@@ -31,7 +31,7 @@
           <!-- Center Section: Menu Links with Dropdown Menu -->
           <div class="hidden md:flex items-center space-x-1 h-full">
             <!-- Home Link -->
-            <a href="#" class="px-5 py-2 text-lg font-semibold tracking-wide text-gray-300 hover:text-white transition-colors">
+            <a href="./index.html" class="px-5 py-2 text-lg font-semibold tracking-wide text-gray-300 hover:text-white transition-colors">
               Home
             </a>
 
@@ -46,17 +46,17 @@
 
               <!-- Hover Dropdown Menu Structure -->
               <div class="absolute top-full left-0 w-48 bg-[#252525] border border-zinc-800 shadow-xl rounded-md py-2 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50">
-                <a href="./business-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">Business</a>
-                <a href="./sports-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">Sports</a>
-                <a href="./world-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">World</a>
-                <a href="./lifestyle-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">Lifestyle</a>
-                <a href="./socialite-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">Socialite</a>
-                <a href="./national-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">National</a>
+                <a href="./src/pages/news-page/business-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">Business</a>
+                <a href="./src/pages/news-page/sports-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">Sports</a>
+                <a href="./src/pages/news-page/world-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">World</a>
+                <a href="./src/pages/news-page/lifestyle-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">Lifestyle</a>
+                <a href="./src/pages/news-page/socialite-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">Socialite</a>
+                <a href="./src/pages/news-page/national-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">National</a>
               </div>
             </div>
 
             <!-- About Us Link -->
-            <a href="#" class="px-5 py-2 text-lg font-semibold tracking-wide text-gray-300 hover:text-white transition-colors">
+            <a href="./src/pages/about-page.html" class="px-5 py-2 text-lg font-semibold tracking-wide text-gray-300 hover:text-white transition-colors">
               About Us
             </a>
           </div>
@@ -81,7 +81,7 @@
             </button>
 
             <!-- Call To Action Button -->
-            <a href="#" class="hidden sm:inline-block bg-red-600 hover:bg-red-700 text-white font-bold text-lg px-6 py-2.5 rounded-sm shadow transition-all duration-150 transform active:scale-95">
+            <a href="./src/pages/subscribe-page.html" class="hidden sm:inline-block bg-red-600 hover:bg-red-700 text-white font-bold text-lg px-6 py-2.5 rounded-sm shadow transition-all duration-150 transform active:scale-95">
               Subscribe
             </a>
 
@@ -99,13 +99,13 @@
       </div>
 
       <!-- Search panel -->
-      <div id="search-panel" class="search-panel hidden">
-        <form id="search-form" class="search-form" role="search">
-          <label for="search-input" class="search-label">Search news</label>
-          <input id="search-input" type="search" placeholder="Search news..." class="search-input" />
-          <button type="submit" class="search-submit">Search</button>
-          <button type="button" id="search-close" class="search-close" aria-label="Close search">
-            <svg class="search-close-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div id="search-panel" class="hidden absolute right-0 top-full z-50 mt-3 w-full max-w-md rounded-md border border-zinc-800 bg-[#1C1C1C] p-3 shadow-xl">
+        <form id="search-form" class="flex items-center gap-3" role="search">
+          <label for="search-input" class="sr-only">Search news</label>
+          <input id="search-input" type="search" placeholder="Search news..." class="w-full rounded-sm border border-zinc-800 bg-gray-900 px-3 py-2 text-sm text-white focus:outline-none" />
+          <button type="submit" class="cursor-pointer rounded-sm bg-red-600 px-4 py-2 text-sm font-bold text-white transition hover:bg-red-700">Search</button>
+          <button type="button" id="search-close" class="cursor-pointer p-2 text-gray-400 transition hover:text-white" aria-label="Close search">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
           </button>
@@ -115,15 +115,15 @@
       <!-- Mobile menu panel -->
       <div id="mobile-menu" class="md:hidden hidden border-t border-zinc-800 bg-[#1C1C1C]">
         <div class="px-4 py-3 space-y-1">
-          <a href="#" class="block px-3 py-2 text-base font-semibold text-gray-300 hover:text-white hover:bg-zinc-800 rounded-md transition-colors">Home</a>
-          <a href="./business-page.html" class="block px-3 py-2 text-base font-semibold text-gray-300 hover:text-white hover:bg-zinc-800 rounded-md transition-colors">Business</a>
-          <a href="./sports-page.html" class="block px-3 py-2 text-base font-semibold text-gray-300 hover:text-white hover:bg-zinc-800 rounded-md transition-colors">Sports</a>
-          <a href="./world-page.html" class="block px-3 py-2 text-base font-semibold text-gray-300 hover:text-white hover:bg-zinc-800 rounded-md transition-colors">World</a>
-          <a href="./lifestyle-page.html" class="block px-3 py-2 text-base font-semibold text-gray-300 hover:text-white hover:bg-zinc-800 rounded-md transition-colors">Lifestyle</a>
-          <a href="./socialite-page.html" class="block px-3 py-2 text-base font-semibold text-gray-300 hover:text-white hover:bg-zinc-800 rounded-md transition-colors">Socialite</a>
-          <a href="./national-page.html" class="block px-3 py-2 text-base font-semibold text-gray-300 hover:text-white hover:bg-zinc-800 rounded-md transition-colors">National</a>
-          <a href="#" class="block px-3 py-2 text-base font-semibold text-gray-300 hover:text-white hover:bg-zinc-800 rounded-md transition-colors">About Us</a>
-          <a href="#" class="sm:hidden block mt-2 text-center bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-2.5 rounded-sm">Subscribe</a>
+          <a href="./index.html" class="block px-3 py-2 text-base font-semibold text-gray-300 hover:text-white hover:bg-zinc-800 rounded-md transition-colors">Home</a>
+          <a href="./src/pages/news-page/business-page.html" class="block px-3 py-2 text-base font-semibold text-gray-300 hover:text-white hover:bg-zinc-800 rounded-md transition-colors">Business</a>
+          <a href="./src/pages/news-page/sports-page.html" class="block px-3 py-2 text-base font-semibold text-gray-300 hover:text-white hover:bg-zinc-800 rounded-md transition-colors">Sports</a>
+          <a href="./src/pages/news-page/world-page.html" class="block px-3 py-2 text-base font-semibold text-gray-300 hover:text-white hover:bg-zinc-800 rounded-md transition-colors">World</a>
+          <a href="./src/pages/news-page/lifestyle-page.html" class="block px-3 py-2 text-base font-semibold text-gray-300 hover:text-white hover:bg-zinc-800 rounded-md transition-colors">Lifestyle</a>
+          <a href="./src/pages/news-page/socialite-page.html" class="block px-3 py-2 text-base font-semibold text-gray-300 hover:text-white hover:bg-zinc-800 rounded-md transition-colors">Socialite</a>
+          <a href="./src/pages/news-page/national-page.html" class="block px-3 py-2 text-base font-semibold text-gray-300 hover:text-white hover:bg-zinc-800 rounded-md transition-colors">National</a>
+          <a href="./src/pages/about-page.html" class="block px-3 py-2 text-base font-semibold text-gray-300 hover:text-white hover:bg-zinc-800 rounded-md transition-colors">About Us</a>
+          <a href="./src/pages/subscribe-page.html" class="sm:hidden block mt-2 text-center bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-2.5 rounded-sm">Subscribe</a>
         </div>
       </div>
     </nav>
@@ -146,37 +146,45 @@
         <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight">
           <span class="text-gray-900 dark:text-white">TOP NEWS </span><span class="text-red-600">THIS WEEK</span>
         </h2>
-        <button class="mt-3 inline-flex items-center gap-1 rounded-full border border-gray-300 px-4 py-1.5 text-xs sm:text-sm font-medium text-gray-600 hover:bg-gray-50 transition dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800">
+        <a href="./src/pages/news-page.html" class="mt-3 inline-flex items-center gap-1 rounded-full border border-gray-300 px-4 py-1.5 text-xs sm:text-sm font-medium text-gray-600 hover:bg-gray-50 transition dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800">
           View all
           <svg class="w-3.5 h-3.5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 5l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
+        </a>
       </header>
 
-      <div class="mt-6 sm:mt-8 grid grid-cols-3 gap-3 sm:gap-4 md:gap-6">
-        <article class="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition dark:bg-gray-900 dark:border-gray-800 dark:shadow-none">
-          <img src="..." alt="Article image" class="w-full h-20 sm:h-32 md:h-40 object-cover bg-gray-200 dark:bg-gray-800" />
-          <div class="p-2 sm:p-3 md:p-4">
-            <h3 class="text-[10px] sm:text-xs md:text-sm font-bold uppercase leading-snug text-gray-900 dark:text-white line-clamp-2">Star player signs massive contract extension</h3>
-            <p class="mt-1.5 sm:mt-2 text-[9px] sm:text-[11px] md:text-xs text-gray-500 dark:text-gray-400 leading-relaxed line-clamp-2">The franchise locks in their franchise player for the next five years.</p>
-            <p class="mt-2 sm:mt-3 text-[8px] sm:text-[10px] md:text-xs text-gray-400 dark:text-gray-500">Mar 11, 2025</p>
+      <div class="mt-6 sm:mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+        <article class="md:col-span-2 relative rounded-xl overflow-hidden bg-gray-900 h-56 sm:h-72 md:h-full min-h-56 border border-gray-200 dark:border-gray-800 shadow-sm dark:shadow-none">
+          <img src="..." alt="Article image" class="absolute inset-0 w-full h-full object-cover bg-gray-800" />
+          <div class="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 p-4 sm:p-6 max-w-md">
+            <p class="text-xs font-bold uppercase tracking-wide text-red-600">Main Story</p>
+            <h3 class="mt-1 text-xl sm:text-2xl md:text-3xl font-extrabold uppercase leading-snug text-white">Star player signs massive contract extension</h3>
+            <p class="mt-2 text-sm text-gray-300 leading-relaxed">The franchise locks in their franchise player for the next five years after weeks of negotiations.</p>
+            <p class="mt-3 text-xs text-gray-400">Mar 11, 2025</p>
           </div>
         </article>
-        <article class="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition dark:bg-gray-900 dark:border-gray-800 dark:shadow-none">
-          <img src="..." alt="Championship odds graphic" class="w-full h-20 sm:h-32 md:h-40 object-cover bg-gray-800" />
-          <div class="p-2 sm:p-3 md:p-4">
-            <h3 class="text-[10px] sm:text-xs md:text-sm font-bold uppercase leading-snug text-gray-900 dark:text-white line-clamp-2">What the latest means for championship odds</h3>
-            <p class="mt-1.5 sm:mt-2 text-[9px] sm:text-[11px] md:text-xs text-gray-500 dark:text-gray-400 leading-relaxed line-clamp-2">The franchise looks to lock in their playoff seeding for the next few weeks.</p>
-            <p class="mt-2 sm:mt-3 text-[8px] sm:text-[10px] md:text-xs text-gray-400 dark:text-gray-500">Mar 11, 2025</p>
-          </div>
-        </article>
-        <article class="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition dark:bg-gray-900 dark:border-gray-800 dark:shadow-none">
-          <img src="..." alt="Article image" class="w-full h-20 sm:h-32 md:h-40 object-cover bg-gray-200 dark:bg-gray-800" />
-          <div class="p-2 sm:p-3 md:p-4">
-            <h3 class="text-[10px] sm:text-xs md:text-sm font-bold uppercase leading-snug text-gray-900 dark:text-white line-clamp-2">Star player signs massive contract extension</h3>
-            <p class="mt-1.5 sm:mt-2 text-[9px] sm:text-[11px] md:text-xs text-gray-500 dark:text-gray-400 leading-relaxed line-clamp-2">The franchise looks to lock in their franchise player for the next five years.</p>
-            <p class="mt-2 sm:mt-3 text-[8px] sm:text-[10px] md:text-xs text-gray-400 dark:text-gray-500">Mar 11, 2025</p>
-          </div>
-        </article>
+
+        <div class="grid grid-cols-1 gap-4 md:gap-6">
+          <article class="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition dark:bg-gray-900 dark:border-gray-800 dark:shadow-none">
+            <img src="..." alt="Championship odds graphic" class="w-full h-32 md:h-40 object-cover bg-gray-800" />
+            <div class="p-4">
+              <p class="text-xs font-bold uppercase tracking-wide text-red-600">Analysis</p>
+              <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">What the latest means for championship odds</h3>
+              <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">The franchise looks to lock in their playoff seeding for the next few weeks.</p>
+              <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">Mar 11, 2025</p>
+            </div>
+          </article>
+
+          <article class="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition dark:bg-gray-900 dark:border-gray-800 dark:shadow-none">
+            <img src="..." alt="Article image" class="w-full h-32 md:h-40 object-cover bg-gray-800" />
+            <div class="p-4">
+              <p class="text-xs font-bold uppercase tracking-wide text-red-600">Roster</p>
+              <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Front office prepares next wave of moves</h3>
+              <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">The franchise looks to lock in its core before the market opens.</p>
+              <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">Mar 11, 2025</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -186,45 +194,67 @@
         <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight">
           <span class="text-gray-900 dark:text-white">LATEST NEWS </span><span class="text-red-600">THIS WEEK</span>
         </h2>
-        <button class="mt-3 inline-flex items-center gap-1 rounded-full border border-gray-300 px-4 py-1.5 text-xs sm:text-sm font-medium text-gray-600 hover:bg-gray-50 transition dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800">
+        <a href="./src/pages/news-page.html" class="mt-3 inline-flex items-center gap-1 rounded-full border border-gray-300 px-4 py-1.5 text-xs sm:text-sm font-medium text-gray-600 hover:bg-gray-50 transition dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800">
           View all
           <svg class="w-3.5 h-3.5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 5l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
+        </a>
       </header>
 
-      <div class="mt-6 sm:mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-3 md:gap-4">
-        <article class="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition dark:bg-gray-900 dark:border-gray-800 dark:shadow-none">
-          <img src="..." alt="Article image" class="w-full h-16 sm:h-20 md:h-28 object-cover bg-gray-200 dark:bg-gray-800" />
-          <div class="p-2 sm:p-2.5 md:p-3">
-            <h3 class="text-[9px] sm:text-[10px] md:text-xs font-bold uppercase leading-snug text-gray-900 dark:text-white line-clamp-2">Star player sign contract</h3>
-            <p class="mt-1 text-[8px] sm:text-[9px] md:text-[11px] text-gray-500 dark:text-gray-400 leading-relaxed line-clamp-2 hidden sm:block">The franchise locks up their next star.</p>
-            <p class="mt-1.5 sm:mt-2 text-[7px] sm:text-[9px] md:text-[10px] text-gray-400 dark:text-gray-500">Mar 11, 2025</p>
-          </div>
-        </article>
-        <article class="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition dark:bg-gray-900 dark:border-gray-800 dark:shadow-none">
-          <img src="..." alt="Team photo" class="w-full h-16 sm:h-20 md:h-28 object-cover bg-gray-800" />
-          <div class="p-2 sm:p-2.5 md:p-3">
-            <h3 class="text-[9px] sm:text-[10px] md:text-xs font-bold uppercase leading-snug text-gray-900 dark:text-white line-clamp-2">Star player signs important extension</h3>
-            <p class="mt-1 text-[8px] sm:text-[9px] md:text-[11px] text-gray-500 dark:text-gray-400 leading-relaxed line-clamp-2 hidden sm:block">The franchise looks to lock up their next star.</p>
-            <p class="mt-1.5 sm:mt-2 text-[7px] sm:text-[9px] md:text-[10px] text-gray-400 dark:text-gray-500">Mar 11, 2025</p>
-          </div>
-        </article>
-        <article class="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition dark:bg-gray-900 dark:border-gray-800 dark:shadow-none">
-          <img src="..." alt="Trophy graphic" class="w-full h-16 sm:h-20 md:h-28 object-cover bg-gray-200 dark:bg-gray-800" />
-          <div class="p-2 sm:p-2.5 md:p-3">
-            <h3 class="text-[9px] sm:text-[10px] md:text-xs font-bold uppercase leading-snug text-gray-900 dark:text-white line-clamp-2">News for championship odds</h3>
-            <p class="mt-1 text-[8px] sm:text-[9px] md:text-[11px] text-gray-500 dark:text-gray-400 leading-relaxed line-clamp-2 hidden sm:block">The franchise looks to lock in the next five years.</p>
-            <p class="mt-1.5 sm:mt-2 text-[7px] sm:text-[9px] md:text-[10px] text-gray-400 dark:text-gray-500">Dec 11, 2025</p>
-          </div>
-        </article>
-        <article class="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition dark:bg-gray-900 dark:border-gray-800 dark:shadow-none">
-          <img src="..." alt="Trophy graphic" class="w-full h-16 sm:h-20 md:h-28 object-cover bg-gray-200 dark:bg-gray-800" />
-          <div class="p-2 sm:p-2.5 md:p-3">
-            <h3 class="text-[9px] sm:text-[10px] md:text-xs font-bold uppercase leading-snug text-gray-900 dark:text-white line-clamp-2">What the latest means for change</h3>
-            <p class="mt-1 text-[8px] sm:text-[9px] md:text-[11px] text-gray-500 dark:text-gray-400 leading-relaxed line-clamp-2 hidden sm:block">The franchise looks to lock in the next five years.</p>
-            <p class="mt-1.5 sm:mt-2 text-[7px] sm:text-[9px] md:text-[10px] text-gray-400 dark:text-gray-500">Dec 11, 2025</p>
-          </div>
-        </article>
+      <div class="mt-6 sm:mt-8 grid grid-cols-1 md:grid-cols-3 rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm dark:bg-gray-900 dark:border-gray-800 dark:shadow-none">
+        <div class="flex items-center justify-between bg-[#1C1C1C] p-4 sm:p-6 text-white">
+          <p class="text-xs font-bold uppercase tracking-wide text-red-600">Updated</p>
+          <span class="text-xl font-extrabold uppercase leading-snug">Today</span>
+        </div>
+
+        <div class="md:col-span-2 divide-y divide-gray-200 dark:divide-gray-800 p-4 sm:p-6">
+          <article class="flex items-start gap-4 py-4 first:pt-0">
+            <time class="min-w-20 text-xs font-bold text-gray-400"><span class="block">10:32 AM</span><span class="mt-1 block text-gray-500 dark:text-gray-400">Mar 11</span></time>
+            <div class="flex items-start gap-3">
+              <span class="mt-1 block w-2 h-2 rounded-full bg-red-600 shrink-0"></span>
+              <div>
+                <p class="text-xs font-bold uppercase tracking-wide text-red-600">Sports</p>
+                <h3 class="mt-1 text-sm font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Star player signs important extension</h3>
+                <p class="mt-1 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">The franchise locks up their next star and keeps the roster plan on schedule.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="flex items-start gap-4 py-4">
+            <time class="min-w-20 text-xs font-bold text-gray-400"><span class="block">09:48 AM</span><span class="mt-1 block text-gray-500 dark:text-gray-400">Mar 11</span></time>
+            <div class="flex items-start gap-3">
+              <span class="mt-1 block w-2 h-2 rounded-full bg-red-600 shrink-0"></span>
+              <div>
+                <p class="text-xs font-bold uppercase tracking-wide text-red-600">Business</p>
+                <h3 class="mt-1 text-sm font-extrabold uppercase leading-snug text-gray-900 dark:text-white">News for championship odds shifts market outlook</h3>
+                <p class="mt-1 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">The latest movement changes how analysts view the next stretch of games.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="flex items-start gap-4 py-4">
+            <time class="min-w-20 text-xs font-bold text-gray-400"><span class="block">08:15 AM</span><span class="mt-1 block text-gray-500 dark:text-gray-400">Mar 11</span></time>
+            <div class="flex items-start gap-3">
+              <span class="mt-1 block w-2 h-2 rounded-full bg-red-600 shrink-0"></span>
+              <div>
+                <p class="text-xs font-bold uppercase tracking-wide text-red-600">World</p>
+                <h3 class="mt-1 text-sm font-extrabold uppercase leading-snug text-gray-900 dark:text-white">League officials confirm new schedule details</h3>
+                <p class="mt-1 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Organizers released a fresh update as teams prepare for a crowded week.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="flex items-start gap-4 py-4">
+            <time class="min-w-20 text-xs font-bold text-gray-400"><span class="block">07:40 AM</span><span class="mt-1 block text-gray-500 dark:text-gray-400">Mar 11</span></time>
+            <div class="flex items-start gap-3">
+              <span class="mt-1 block w-2 h-2 rounded-full bg-red-600 shrink-0"></span>
+              <div>
+                <p class="text-xs font-bold uppercase tracking-wide text-red-600">Lifestyle</p>
+                <h3 class="mt-1 text-sm font-extrabold uppercase leading-snug text-gray-900 dark:text-white">What the latest means for change off the field</h3>
+                <p class="mt-1 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">The story continues to shape fan reaction and the week ahead.</p>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -234,39 +264,44 @@
         <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight">
           <span class="text-gray-900 dark:text-white">BUSINESS NEWS </span><span class="text-red-600">THIS WEEK</span>
         </h2>
-        <button class="mt-3 inline-flex items-center gap-1 rounded-full border border-gray-300 px-4 py-1.5 text-xs sm:text-sm font-medium text-gray-600 hover:bg-gray-50 transition dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800">
+        <a href="./src/pages/news-page/business-page.html" class="mt-3 inline-flex items-center gap-1 rounded-full border border-gray-300 px-4 py-1.5 text-xs sm:text-sm font-medium text-gray-600 hover:bg-gray-50 transition dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800">
           View all
           <svg class="w-3.5 h-3.5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 5l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
+        </a>
       </header>
 
       <div class="mt-6 sm:mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-        <!-- big feature -->
-        <div class="md:col-span-2 relative rounded-xl overflow-hidden bg-gray-900 h-56 sm:h-72 md:h-full min-h-56">
-          <img src="..." alt="Feature image — tennis" class="absolute inset-0 w-full h-full object-cover" />
+        <article class="md:col-span-2 relative rounded-xl overflow-hidden bg-gray-900 h-56 sm:h-72 md:h-full min-h-56 border border-gray-200 dark:border-gray-800 shadow-sm dark:shadow-none">
+          <img src="..." alt="Feature image — business" class="absolute inset-0 w-full h-full object-cover bg-gray-800" />
           <div class="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent"></div>
           <div class="absolute bottom-0 left-0 p-4 sm:p-6 max-w-md">
-            <p class="text-brand text-[10px] sm:text-xs font-bold uppercase tracking-wide">Tennis</p>
-            <h3 class="mt-1 text-white font-bold text-sm sm:text-base md:text-lg leading-snug">Injuries flagged in Osaka &amp; Sabalenka's relationship with tennis — report</h3>
+            <p class="text-xs font-bold uppercase tracking-wide text-red-600">Business</p>
+            <h3 class="mt-1 text-xl sm:text-2xl md:text-3xl font-extrabold uppercase leading-snug text-white">Market leaders brace for a decisive week of earnings</h3>
+            <p class="mt-2 text-sm text-gray-300 leading-relaxed">Analysts are watching whether spending trends can keep momentum through the next quarter.</p>
+            <p class="mt-3 text-xs text-gray-400">Mar 11, 2025</p>
           </div>
-        </div>
+        </article>
 
-        <!-- side items -->
-        <div class="flex flex-col justify-center gap-4 md:gap-6">
-          <div class="flex gap-3 items-start">
-            <img src="..." alt="Article thumbnail" class="w-16 h-16 sm:w-20 sm:h-20 rounded-lg object-cover ring-1 ring-gray-200 dark:ring-gray-700 shrink-0 bg-gray-800" />
-            <div>
-              <p class="text-[10px] sm:text-[11px] font-bold uppercase text-gray-900 dark:text-white">Result</p>
-              <p class="mt-1 text-[10px] sm:text-xs text-gray-500 dark:text-gray-400 leading-snug">Ronaldo agrees to big terms to make Saudi move</p>
+        <div class="grid grid-cols-1 gap-4 md:gap-6">
+          <article class="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition dark:bg-gray-900 dark:border-gray-800 dark:shadow-none">
+            <img src="..." alt="Business news thumbnail" class="w-full h-32 md:h-40 object-cover bg-gray-800" />
+            <div class="p-4">
+              <p class="text-xs font-bold uppercase tracking-wide text-red-600">Markets</p>
+              <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Investors track new signals from central banks</h3>
+              <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Policy hints are shaping expectations before the next round of reports.</p>
+              <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">Mar 11, 2025</p>
             </div>
-          </div>
-          <div class="flex gap-3 items-start">
-            <img src="..." alt="Article thumbnail" class="w-16 h-16 sm:w-20 sm:h-20 rounded-lg object-cover ring-1 ring-gray-200 dark:ring-gray-700 shrink-0 bg-gray-800" />
-            <div>
-              <p class="text-[10px] sm:text-[11px] font-bold uppercase text-gray-900 dark:text-white">Result</p>
-              <p class="mt-1 text-[10px] sm:text-xs text-gray-500 dark:text-gray-400 leading-snug">Ronaldo agrees to big terms to make Saudi move</p>
+          </article>
+
+          <article class="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition dark:bg-gray-900 dark:border-gray-800 dark:shadow-none">
+            <img src="..." alt="Business news thumbnail" class="w-full h-32 md:h-40 object-cover bg-gray-800" />
+            <div class="p-4">
+              <p class="text-xs font-bold uppercase tracking-wide text-red-600">Deals</p>
+              <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Major sponsor signs long-term global partnership</h3>
+              <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">The agreement expands media rights, venue branding, and fan experiences.</p>
+              <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">Mar 11, 2025</p>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
@@ -277,106 +312,124 @@
         <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight">
           <span class="text-gray-900 dark:text-white">LIFESTYLE NEWS </span><span class="text-red-600">THIS WEEK</span>
         </h2>
-        <button class="mt-3 inline-flex items-center gap-1 rounded-full border border-gray-300 px-4 py-1.5 text-xs sm:text-sm font-medium text-gray-600 hover:bg-gray-50 transition dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800">
+        <a href="./src/pages/news-page/lifestyle-page.html" class="mt-3 inline-flex items-center gap-1 rounded-full border border-gray-300 px-4 py-1.5 text-xs sm:text-sm font-medium text-gray-600 hover:bg-gray-50 transition dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800">
           View all
           <svg class="w-3.5 h-3.5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 5l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
+        </a>
       </header>
 
       <div class="mt-6 sm:mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-        <!-- side items (mirrored: text right-aligned, thumbnail on the right) -->
-        <div class="order-2 md:order-1 flex flex-col justify-center gap-4 md:gap-6">
-          <div class="flex gap-3 items-start justify-end text-right">
-            <div>
-              <p class="text-[10px] sm:text-[11px] font-bold uppercase text-gray-900 dark:text-white">Result</p>
-              <p class="mt-1 text-[10px] sm:text-xs text-gray-500 dark:text-gray-400 leading-snug">Ronaldo agrees to big terms to make Saudi move</p>
+        <div class="order-2 md:order-1 grid grid-cols-1 gap-4 md:gap-6">
+          <article class="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition dark:bg-gray-900 dark:border-gray-800 dark:shadow-none">
+            <img src="..." alt="Lifestyle news thumbnail" class="w-full h-32 md:h-40 object-cover bg-gray-800" />
+            <div class="p-4">
+              <p class="text-xs font-bold uppercase tracking-wide text-red-600">Style</p>
+              <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Athletes bring tunnel fashion to center stage</h3>
+              <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Game-day arrivals continue to influence streetwear and brand campaigns.</p>
+              <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">Mar 11, 2025</p>
             </div>
-            <img src="..." alt="Article thumbnail" class="w-16 h-16 sm:w-20 sm:h-20 rounded-lg object-cover ring-1 ring-gray-200 dark:ring-gray-700 shrink-0 bg-gray-800" />
-          </div>
-          <div class="flex gap-3 items-start justify-end text-right">
-            <div>
-              <p class="text-[10px] sm:text-[11px] font-bold uppercase text-gray-900 dark:text-white">Result</p>
-              <p class="mt-1 text-[10px] sm:text-xs text-gray-500 dark:text-gray-400 leading-snug">Ronaldo agrees to big terms to make Saudi move</p>
+          </article>
+
+          <article class="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition dark:bg-gray-900 dark:border-gray-800 dark:shadow-none">
+            <img src="..." alt="Lifestyle news thumbnail" class="w-full h-32 md:h-40 object-cover bg-gray-800" />
+            <div class="p-4">
+              <p class="text-xs font-bold uppercase tracking-wide text-red-600">Culture</p>
+              <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">New documentary follows life beyond the arena</h3>
+              <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">The series focuses on recovery, family, and the pressure of public life.</p>
+              <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">Mar 11, 2025</p>
             </div>
-            <img src="..." alt="Article thumbnail" class="w-16 h-16 sm:w-20 sm:h-20 rounded-lg object-cover ring-1 ring-gray-200 dark:ring-gray-700 shrink-0 bg-gray-800" />
-          </div>
+          </article>
         </div>
 
-        <!-- big feature -->
-        <div class="order-1 md:order-2 md:col-span-2 relative rounded-xl overflow-hidden bg-gray-900 h-56 sm:h-72 md:h-full min-h-56">
-          <img src="..." alt="Feature image — tennis" class="absolute inset-0 w-full h-full object-cover" />
-          <div class="absolute inset-0 bg-linear-to-trom-black/90 via-black/20 to-transparent"></div>
+        <article class="order-1 md:order-2 md:col-span-2 relative rounded-xl overflow-hidden bg-gray-900 h-56 sm:h-72 md:h-full min-h-56 border border-gray-200 dark:border-gray-800 shadow-sm dark:shadow-none">
+          <img src="..." alt="Feature image — lifestyle" class="absolute inset-0 w-full h-full object-cover bg-gray-800" />
+          <div class="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent"></div>
           <div class="absolute bottom-0 left-0 p-4 sm:p-6 max-w-md">
-            <p class="text-brand text-[10px] sm:text-xs font-bold uppercase tracking-wide">Tennis</p>
-            <h3 class="mt-1 text-white font-bold text-sm sm:text-base md:text-lg leading-snug">Injuries flagged in Osaka &amp; Sabalenka's relationship with tennis — report</h3>
+            <p class="text-xs font-bold uppercase tracking-wide text-red-600">Lifestyle</p>
+            <h3 class="mt-1 text-xl sm:text-2xl md:text-3xl font-extrabold uppercase leading-snug text-white">Inside the wellness routine powering a comeback season</h3>
+            <p class="mt-2 text-sm text-gray-300 leading-relaxed">A renewed training rhythm and quieter schedule are changing the way stars prepare.</p>
+            <p class="mt-3 text-xs text-gray-400">Mar 11, 2025</p>
           </div>
-        </div>
+        </article>
       </div>
     </section>
 
-    <!-- ============ SOCIALITE NEWS (single feature image, no side items) ============ -->
+    <!-- ============ SOCIALITE NEWS ============ -->
     <section class="py-10 sm:py-12 md:py-16 border-t border-gray-100 dark:border-gray-800">
       <header class="flex flex-col items-center text-center">
         <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight">
           <span class="text-gray-900 dark:text-white">SOCIALITE NEWS </span><span class="text-red-600">THIS WEEK</span>
         </h2>
-        <button class="mt-3 inline-flex items-center gap-1 rounded-full border border-gray-300 px-4 py-1.5 text-xs sm:text-sm font-medium text-gray-600 hover:bg-gray-50 transition dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800">
+        <a href="./src/pages/news-page/socialite-page.html" class="mt-3 inline-flex items-center gap-1 rounded-full border border-gray-300 px-4 py-1.5 text-xs sm:text-sm font-medium text-gray-600 hover:bg-gray-50 transition dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800">
           View all
           <svg class="w-3.5 h-3.5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 5l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-      </header> 
+        </a>
+      </header>
 
-      <div class="mt-6 sm:mt-8 relative rounded-xl overflow-hidden bg-gray-900 h-56 sm:h-72 md:h-96">
-        <img src="..." alt="Feature image — celebrity" class="absolute inset-0 w-full h-full object-cover" />
+      <article class="mt-6 sm:mt-8 relative rounded-xl overflow-hidden bg-gray-900 h-56 sm:h-72 md:h-96 min-h-56 border border-gray-200 dark:border-gray-800 shadow-sm dark:shadow-none">
+        <img src="..." alt="Feature image — celebrity" class="absolute inset-0 w-full h-full object-cover bg-gray-800" />
         <div class="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent"></div>
         <div class="absolute bottom-0 left-0 p-4 sm:p-6 max-w-md">
-          <p class="text-brand text-[10px] sm:text-xs font-bold uppercase tracking-wide">Celebrity</p>
-          <h3 class="mt-1 text-white font-bold text-sm sm:text-base md:text-lg leading-snug">Star striker spotted courtside at NBA finals with new partner</h3>
+          <p class="text-xs font-bold uppercase tracking-wide text-red-600">Celebrity</p>
+          <h3 class="mt-1 text-xl sm:text-2xl md:text-3xl font-extrabold uppercase leading-snug text-white">Star striker spotted courtside at NBA finals with new partner</h3>
+          <p class="mt-2 text-sm text-gray-300 leading-relaxed">The courtside appearance sets off a wave of reaction across sport and entertainment circles.</p>
+          <p class="mt-3 text-xs text-gray-400">Mar 11, 2025</p>
         </div>
-      </div>
+      </article>
     </section>
 
-    <!-- ============ WORLD NEWS (2x2 grid of thumbnail + text) ============ -->
+    <!-- ============ WORLD NEWS ============ -->
     <section class="py-10 sm:py-12 md:py-16 border-t border-gray-100 dark:border-gray-800">
       <header class="flex flex-col items-center text-center">
         <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight">
           <span class="text-gray-900 dark:text-white">WORLD NEWS </span><span class="text-red-600">THIS WEEK</span>
         </h2>
-        <button class="mt-3 inline-flex items-center gap-1 rounded-full border border-gray-300 px-4 py-1.5 text-xs sm:text-sm font-medium text-gray-600 hover:bg-gray-50 transition dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800">
+        <a href="./src/pages/news-page/world-page.html" class="mt-3 inline-flex items-center gap-1 rounded-full border border-gray-300 px-4 py-1.5 text-xs sm:text-sm font-medium text-gray-600 hover:bg-gray-50 transition dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800">
           View all
           <svg class="w-3.5 h-3.5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 5l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
+        </a>
       </header>
 
-      <div class="mt-6 sm:mt-8 grid grid-cols-1 sm:grid-cols-2 gap-x-6 md:gap-x-10 gap-y-4 sm:gap-y-6">
-        <div class="flex gap-3 items-start">
-          <img src="..." alt="World news thumbnail" class="w-16 h-16 sm:w-20 sm:h-20 rounded-lg object-cover ring-1 ring-gray-200 dark:ring-gray-700 shrink-0 bg-gray-800" />
-          <div>
-            <p class="text-[10px] sm:text-[11px] font-bold uppercase text-gray-900 dark:text-white">World</p>
-            <p class="mt-1 text-[10px] sm:text-xs text-gray-500 dark:text-gray-400 leading-snug">Officials confirm new stadium plans ahead of next season</p>
+      <div class="mt-6 sm:mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+        <article class="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition dark:bg-gray-900 dark:border-gray-800 dark:shadow-none">
+          <img src="..." alt="World news thumbnail" class="w-full h-32 md:h-40 object-cover bg-gray-800" />
+          <div class="p-4">
+            <p class="text-xs font-bold uppercase tracking-wide text-red-600">World</p>
+            <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Officials confirm new stadium plans ahead of next season</h3>
+            <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">City leaders approved the next phase as organizers prepare for a larger global audience.</p>
+            <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">Mar 11, 2025</p>
           </div>
-        </div>
-        <div class="flex gap-3 items-start">
-          <img src="..." alt="World news thumbnail" class="w-16 h-16 sm:w-20 sm:h-20 rounded-lg object-cover ring-1 ring-gray-200 dark:ring-gray-700 shrink-0 bg-gray-800" />
-          <div>
-            <p class="text-[10px] sm:text-[11px] font-bold uppercase text-gray-900 dark:text-white">World</p>
-            <p class="mt-1 text-[10px] sm:text-xs text-gray-500 dark:text-gray-400 leading-snug">League announces expansion to two new markets</p>
+        </article>
+
+        <article class="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition dark:bg-gray-900 dark:border-gray-800 dark:shadow-none">
+          <img src="..." alt="World news thumbnail" class="w-full h-32 md:h-40 object-cover bg-gray-800" />
+          <div class="p-4">
+            <p class="text-xs font-bold uppercase tracking-wide text-red-600">World</p>
+            <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">League announces expansion to two new markets</h3>
+            <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">The move adds fresh pressure to clubs as broadcast and travel plans take shape.</p>
+            <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">Mar 11, 2025</p>
           </div>
-        </div>
-        <div class="flex gap-3 items-start">
-          <img src="..." alt="World news thumbnail" class="w-16 h-16 sm:w-20 sm:h-20 rounded-lg object-cover ring-1 ring-gray-200 dark:ring-gray-700 shrink-0 bg-gray-800" />
-          <div>
-            <p class="text-[10px] sm:text-[11px] font-bold uppercase text-gray-900 dark:text-white">World</p>
-            <p class="mt-1 text-[10px] sm:text-xs text-gray-500 dark:text-gray-400 leading-snug">Federation opens inquiry into ticketing scandal</p>
+        </article>
+
+        <article class="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition dark:bg-gray-900 dark:border-gray-800 dark:shadow-none">
+          <img src="..." alt="World news thumbnail" class="w-full h-32 md:h-40 object-cover bg-gray-800" />
+          <div class="p-4">
+            <p class="text-xs font-bold uppercase tracking-wide text-red-600">World</p>
+            <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Federation opens inquiry into ticketing scandal</h3>
+            <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Officials say the review will focus on pricing, allocation, and resale controls.</p>
+            <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">Mar 11, 2025</p>
           </div>
-        </div>
-        <div class="flex gap-3 items-start">
-          <img src="..." alt="World news thumbnail" class="w-16 h-16 sm:w-20 sm:h-20 rounded-lg object-cover ring-1 ring-gray-200 dark:ring-gray-700 shrink-0 bg-gray-800" />
-          <div>
-            <p class="text-[10px] sm:text-[11px] font-bold uppercase text-gray-900 dark:text-white">World</p>
-            <p class="mt-1 text-[10px] sm:text-xs text-gray-500 dark:text-gray-400 leading-snug">Rising star declares eligibility for next draft</p>
+        </article>
+
+        <article class="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition dark:bg-gray-900 dark:border-gray-800 dark:shadow-none">
+          <img src="..." alt="World news thumbnail" class="w-full h-32 md:h-40 object-cover bg-gray-800" />
+          <div class="p-4">
+            <p class="text-xs font-bold uppercase tracking-wide text-red-600">World</p>
+            <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Rising star declares eligibility for next draft</h3>
+            <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Scouts expect the announcement to reshape early projections across several teams.</p>
+            <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">Mar 11, 2025</p>
           </div>
-        </div>
+        </article>
       </div>
     </section>
 
@@ -386,42 +439,57 @@
         <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight">
           <span class="text-gray-900 dark:text-white">SPORTS NEWS </span><span class="text-red-600">THIS WEEK</span>
         </h2>
-        <button class="mt-3 inline-flex items-center gap-1 rounded-full border border-gray-300 px-4 py-1.5 text-xs sm:text-sm font-medium text-gray-600 hover:bg-gray-50 transition dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800">
+        <a href="./src/pages/news-page/sports-page.html" class="mt-3 inline-flex items-center gap-1 rounded-full border border-gray-300 px-4 py-1.5 text-xs sm:text-sm font-medium text-gray-600 hover:bg-gray-50 transition dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800">
           View all
           <svg class="w-3.5 h-3.5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 5l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
+        </a>
       </header>
 
-      <div class="mt-6 sm:mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 items-stretch">
-        <img src="..." alt="Player image" class="rounded-xl w-full h-56 sm:h-72 md:h-full min-h-64 object-cover bg-gray-800" />
-        <div class="divide-y divide-gray-200 dark:divide-gray-800">
-          <div class="flex gap-3 py-3 sm:py-4 first:pt-0">
-            <div class="w-1 rounded-full bg-brand shrink-0"></div>
-            <div>
-              <p class="text-[11px] sm:text-xs font-bold uppercase text-gray-900 dark:text-white">Saturday, March 15</p>
-              <p class="mt-1 text-xs sm:text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Two division rivals meet in a battle for playoff positioning. The stakes have never been higher.</p>
-            </div>
+      <div class="mt-6 sm:mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+        <article class="md:col-span-2 relative rounded-xl overflow-hidden bg-gray-900 h-56 sm:h-72 md:h-full min-h-56 border border-gray-200 dark:border-gray-800 shadow-sm dark:shadow-none">
+          <img src="..." alt="Player image" class="absolute inset-0 w-full h-full object-cover bg-gray-800" />
+          <div class="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 p-4 sm:p-6 max-w-md">
+            <p class="text-xs font-bold uppercase tracking-wide text-red-600">Matchup</p>
+            <h3 class="mt-1 text-xl sm:text-2xl md:text-3xl font-extrabold uppercase leading-snug text-white">Two division rivals meet in playoff-positioning clash</h3>
+            <p class="mt-2 text-sm text-gray-300 leading-relaxed">The stakes have never been higher as both teams chase momentum before the final stretch.</p>
+            <p class="mt-3 text-xs text-gray-400">Saturday, Mar 15</p>
           </div>
-          <div class="flex gap-3 py-3 sm:py-4">
-            <div class="w-1 rounded-full bg-brand shrink-0"></div>
-            <div>
-              <p class="text-[11px] sm:text-xs font-bold uppercase text-gray-900 dark:text-white">Wednesday, March 19</p>
-              <p class="mt-1 text-xs sm:text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Two division rivals meet in a battle for playoff positioning. The stakes have never been higher.</p>
+        </article>
+
+        <div class="grid grid-cols-1 gap-4 md:gap-6">
+          <article class="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition dark:bg-gray-900 dark:border-gray-800 dark:shadow-none">
+            <img src="..." alt="Sports news thumbnail" class="w-full h-32 md:h-40 object-cover bg-gray-800" />
+            <div class="p-4">
+              <p class="text-xs font-bold uppercase tracking-wide text-red-600">Schedule</p>
+              <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Wednesday showdown adds pressure to standings race</h3>
+              <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">A packed week could decide which teams hold their playoff position.</p>
+              <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">Wednesday, Mar 19</p>
             </div>
-          </div>
+          </article>
+
+          <article class="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition dark:bg-gray-900 dark:border-gray-800 dark:shadow-none">
+            <img src="..." alt="Sports news thumbnail" class="w-full h-32 md:h-40 object-cover bg-gray-800" />
+            <div class="p-4">
+              <p class="text-xs font-bold uppercase tracking-wide text-red-600">Preview</p>
+              <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Coaches prepare rotations for a brutal road stretch</h3>
+              <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Depth and late-game execution are set to define the next run of fixtures.</p>
+              <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">Mar 11, 2025</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- ============ NEWSLETTER ============ -->
     <section class="pb-12 sm:pb-16 md:pb-20">
-      <div class="relative rounded-xl bg-slate-100 dark:bg-gray-900 h-40 sm:h-52 md:h-64 overflow-hidden flex items-center">
+      <a href="./src/pages/subscribe-page.html" class="relative rounded-xl bg-slate-100 dark:bg-gray-900 h-40 sm:h-52 md:h-64 overflow-hidden flex items-center">
         <div class="pl-5 sm:pl-8 md:pl-12 z-10">
           <p class="text-xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white uppercase tracking-tight leading-none">Newsletter</p>
           <p class="mt-1 text-xl sm:text-3xl md:text-4xl font-extrabold text-slate-400 dark:text-gray-400 uppercase tracking-tight leading-none">Subscription</p>
         </div>
         <img src="..." alt="Newsletter subscription photo" class="absolute right-0 bottom-0 h-full w-28 sm:w-44 md:w-64 object-cover bg-gray-800" />
-      </div>
+      </a>
     </section>
 
   </main>
