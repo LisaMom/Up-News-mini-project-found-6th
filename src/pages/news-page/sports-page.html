@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sports News - Up News</title>
     <meta name="description" content="Latest sports headlines, match reports, motorsport updates, and tournament analysis from Up News." />
+    <link rel="canonical" href="./sports-page.html" />
+    <meta property="og:title" content="Sports News - Up News" />
+    <meta property="og:description" content="Latest sports headlines, match reports, motorsport updates, and tournament analysis from Up News." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="../../../images/up_news.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sports News - Up News" />
+    <meta name="twitter:description" content="Latest sports headlines, match reports, motorsport updates, and tournament analysis from Up News." />
+    <meta name="twitter:image" content="../../../images/up_news.png" />
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"WebSite","name":"Up News","description":"Latest sports headlines, match reports, motorsport updates, and tournament analysis from Up News.","url":"./sports-page.html","publisher":{"@type":"Organization","name":"Up News","logo":{"@type":"ImageObject","url":"../../../images/up_news.png"}}}
+    </script>
     <link rel="stylesheet" href="../../output.css" />
     <script>
       (function () {
@@ -21,7 +33,7 @@
       <nav class="border-b border-zinc-800 relative z-50 select-none bg-[#1C1C1C]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex items-center justify-between h-20">
-            <div class="shrink-0 flex items-center space-x-2"><a href="../../../index.html" aria-label="Up News home"><img class="h-16 w-auto" src="/images/up_news.png" alt="Up News logo" /></a></div>
+            <div class="shrink-0 flex items-center space-x-2"><a href="../../../index.html" aria-label="Up News home"><img class="h-16 w-auto" src="../../../images/up_news.png" alt="Up News logo" /></a></div>
 
             <div class="hidden md:flex items-center space-x-1 h-full">
               <a href="../../../index.html" class="px-5 py-2 text-lg font-semibold tracking-wide text-gray-300 hover:text-white transition-colors">Home</a>
@@ -101,16 +113,15 @@
           </div>
         </div>
       </section>
-
-      <section data-reveal class="py-10 sm:py-12 md:py-16 opacity-0 translate-y-2 transition-all duration-500">
+      <section class="py-10 sm:py-12 md:py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <header class="flex flex-col items-center text-center">
             <p class="text-xs font-bold uppercase tracking-wide text-red-600">Latest Coverage</p>
             <h2 class="mt-2 text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">MATCHES, MOMENTS, AND ANALYSIS</h2>
           </header>
 
-          <div class="mt-8 grid grid-cols-1 gap-4 md:gap-6">
-            <a href="./detail-pages/detail-page-sports.html" class="group grid grid-cols-1 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-md dark:bg-gray-900 dark:border-gray-800 dark:shadow-none md:grid-cols-12">
+          <div class="mt-8 space-y-8">
+            <a role="article" data-reveal href="./detail-pages/detail-page-sports.html" class="group opacity-0 translate-y-2 transition-all duration-500 grid grid-cols-1 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-md dark:bg-gray-900 dark:border-gray-800 dark:shadow-none md:grid-cols-12">
               <div class="md:col-span-5 p-5 sm:p-6 lg:p-8 flex flex-col justify-center">
                 <p class="text-xs font-bold uppercase tracking-wide text-red-600">Sports / Football</p>
                 <h3 class="mt-3 text-2xl sm:text-3xl lg:text-4xl font-extrabold uppercase leading-tight text-gray-900 dark:text-white">Lionel Messi's sublime first touch leads to historic World Cup goal</h3>
@@ -121,82 +132,135 @@
                 <img src="./images/sport-1.jpg" alt="Lionel Messi controls the ball during a World Cup match" class="h-72 md:h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
               </div>
             </a>
-            <a href="./detail-pages/detail-page-sports.html" class="group grid grid-cols-1 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-md dark:bg-gray-900 dark:border-gray-800 dark:shadow-none md:grid-cols-12">
-              <div class="md:col-span-5 p-5 sm:p-6 lg:p-8 flex flex-col justify-center">
-                <p class="text-xs font-bold uppercase tracking-wide text-red-600">Football / July 1, 2026</p>
-                <h3 class="mt-3 text-2xl sm:text-3xl lg:text-4xl font-extrabold uppercase leading-tight text-gray-900 dark:text-white">Unbeaten in 34 matches - why Morocco are World Cup contenders</h3>
-                <p class="mt-4 text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">Morocco's run is no longer being treated as a fairytale after another composed, high-pressure performance showed their balance and belief.</p>
-                <p class="mt-5 text-xs font-bold uppercase tracking-wide text-gray-400">July 1, 2026</p>
-              </div>
+            <div data-reveal class="opacity-0 translate-y-2 transition-all duration-500 grid grid-cols-1 gap-4 md:gap-6">
+              <a role="article" href="./detail-pages/detail-page-sports.html" class="group grid grid-cols-1 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-md dark:bg-gray-900 dark:border-gray-800 dark:shadow-none sm:grid-cols-12">
+                <div class="sm:col-span-5 overflow-hidden bg-gray-100 dark:bg-gray-800">
+                  <img src="./images/sport-6.jpeg" alt="Morocco players training" class="h-44 sm:h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                </div>
+                <div class="sm:col-span-7 p-4 sm:p-5 flex flex-col justify-center">
+                  <p class="text-xs font-bold uppercase tracking-wide text-red-600">Football</p>
+                  <h3 class="mt-2 text-lg sm:text-xl font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Unbeaten in 34 matches - why Morocco are World Cup contenders</h3>
+                  <p class="mt-2 text-sm text-gray-600 dark:text-gray-300 leading-relaxed">Morocco's run is no longer being treated as a fairytale after another composed, high-pressure performance showed their balance and belief.</p>
+                  <p class="mt-3 text-xs font-bold uppercase tracking-wide text-gray-400">July 2, 2026</p>
+                </div>
+              </a>
+              <a role="article" href="./detail-pages/detail-page-sports.html" class="group grid grid-cols-1 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-md dark:bg-gray-900 dark:border-gray-800 dark:shadow-none sm:grid-cols-12">
+                <div class="sm:col-span-5 overflow-hidden bg-gray-100 dark:bg-gray-800">
+                  <img src="./images/sport-7.jpeg" alt="Colombia football supporters" class="h-44 sm:h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                </div>
+                <div class="sm:col-span-7 p-4 sm:p-5 flex flex-col justify-center">
+                  <p class="text-xs font-bold uppercase tracking-wide text-red-600">Football</p>
+                  <h3 class="mt-2 text-lg sm:text-xl font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Colombia's World Cup run stays alive as Ghana fall short</h3>
+                  <p class="mt-2 text-sm text-gray-600 dark:text-gray-300 leading-relaxed">An early breakthrough proved enough for Colombia to keep their campaign moving, with Ghana left chasing the match from behind.</p>
+                  <p class="mt-3 text-xs font-bold uppercase tracking-wide text-gray-400">July 1, 2026</p>
+                </div>
+              </a>
+            </div>
+            <div data-reveal class="opacity-0 translate-y-2 transition-all duration-500 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
+              <a role="article" href="./detail-pages/detail-page-sports.html" class="group overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-md dark:bg-gray-900 dark:border-gray-800 dark:shadow-none">
+                <div class="overflow-hidden bg-gray-100 dark:bg-gray-800">
+                  <img src="./images/f1.jpeg" alt="Formula 1 cars racing on track" class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                </div>
+                <div class="p-4 sm:p-5">
+                  <p class="text-xs font-bold uppercase tracking-wide text-red-600">Motorsport</p>
+                  <h3 class="mt-2 text-xl font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Leclerc wins dramatic British Grand Prix from Russell and Hamilton</h3>
+                  <p class="mt-2 text-sm text-gray-600 dark:text-gray-300 leading-relaxed">A late-race charge turned Silverstone into one of the season's sharpest reminders of Formula 1's thin margins.</p>
+                  <p class="mt-3 text-xs font-bold uppercase tracking-wide text-gray-400">July 4, 2026</p>
+                </div>
+              </a>
+              <a role="article" href="./detail-pages/detail-page-sports.html" class="group overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-md dark:bg-gray-900 dark:border-gray-800 dark:shadow-none">
+                <div class="overflow-hidden bg-gray-100 dark:bg-gray-800">
+                  <img src="./images/f1-2.jpeg" alt="Formula 1 race car detail" class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                </div>
+                <div class="p-4 sm:p-5">
+                  <p class="text-xs font-bold uppercase tracking-wide text-red-600">Racing</p>
+                  <h3 class="mt-2 text-xl font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Paddock strategy calls decide another chaotic sprint weekend</h3>
+                  <p class="mt-2 text-sm text-gray-600 dark:text-gray-300 leading-relaxed">Teams are adjusting tire windows and pit timing as changing weather reshapes the race calendar and rewards sharper calls from the wall.</p>
+                  <p class="mt-3 text-xs font-bold uppercase tracking-wide text-gray-400">July 1, 2026</p>
+                </div>
+              </a>
+            </div>
+            <a role="article" data-reveal href="./detail-pages/detail-page-sports.html" class="group opacity-0 translate-y-2 transition-all duration-500 grid grid-cols-1 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-md dark:bg-gray-900 dark:border-gray-800 dark:shadow-none md:grid-cols-12">
               <div class="md:col-span-7 overflow-hidden bg-gray-100 dark:bg-gray-800">
-                <img src="./images/sport-6.jpeg" alt="Morocco players training" class="h-72 md:h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <img src="./images/sport-8.jpeg" alt="Young football midfielders pressing during a match" class="h-72 md:h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
               </div>
-            </a>
-            <a href="./detail-pages/detail-page-sports.html" class="group grid grid-cols-1 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-md dark:bg-gray-900 dark:border-gray-800 dark:shadow-none md:grid-cols-12">
               <div class="md:col-span-5 p-5 sm:p-6 lg:p-8 flex flex-col justify-center">
-                <p class="text-xs font-bold uppercase tracking-wide text-red-600">Football / June 28, 2026</p>
-                <h3 class="mt-3 text-2xl sm:text-3xl lg:text-4xl font-extrabold uppercase leading-tight text-gray-900 dark:text-white">Colombia's World Cup run stays alive as Ghana fall short</h3>
-                <p class="mt-4 text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">An early breakthrough proved enough for Colombia to keep their campaign moving, with Ghana left chasing the match from behind.</p>
-                <p class="mt-5 text-xs font-bold uppercase tracking-wide text-gray-400">June 28, 2026</p>
-              </div>
-              <div class="md:col-span-7 overflow-hidden bg-gray-100 dark:bg-gray-800">
-                <img src="./images/sport-7.jpeg" alt="Colombia football supporters" class="h-72 md:h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <p class="text-xs font-bold uppercase tracking-wide text-red-600">Football</p>
+                <h3 class="mt-3 text-2xl sm:text-3xl lg:text-4xl font-extrabold uppercase leading-tight text-gray-900 dark:text-white">Young midfielders reshape the World Cup with fearless pressing</h3>
+                <p class="mt-4 text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">A new generation is setting the tournament tempo, closing passing lanes early and turning loose balls into fast chances around the box.</p>
+                  <p class="mt-3 text-xs font-bold uppercase tracking-wide text-gray-400">July 6, 2026</p>
               </div>
             </a>
-            <a href="./detail-pages/detail-page-sports.html" class="group grid grid-cols-1 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-md dark:bg-gray-900 dark:border-gray-800 dark:shadow-none md:grid-cols-12">
+            <div data-reveal class="opacity-0 translate-y-2 transition-all duration-500 grid grid-cols-1 gap-4 md:gap-6">
+              <a role="article" href="./detail-pages/detail-page-sports.html" class="group grid grid-cols-1 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-md dark:bg-gray-900 dark:border-gray-800 dark:shadow-none sm:grid-cols-12">
+                <div class="sm:col-span-5 overflow-hidden bg-gray-100 dark:bg-gray-800">
+                  <img src="./images/f1-3.jpeg" alt="Formula 1 team testing car upgrades" class="h-44 sm:h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                </div>
+                <div class="sm:col-span-7 p-4 sm:p-5 flex flex-col justify-center">
+                  <p class="text-xs font-bold uppercase tracking-wide text-red-600">Motorsport</p>
+                  <h3 class="mt-2 text-lg sm:text-xl font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Formula 1 teams test lighter upgrades before the next street race</h3>
+                  <p class="mt-2 text-sm text-gray-600 dark:text-gray-300 leading-relaxed">Engineers are chasing better balance over bumps and tighter corners as teams prepare packages designed for the calendar's narrowest circuits.</p>
+                  <p class="mt-3 text-xs font-bold uppercase tracking-wide text-gray-400">July 6, 2026</p>
+                </div>
+              </a>
+              <a role="article" href="./detail-pages/detail-page-sports.html" class="group grid grid-cols-1 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-md dark:bg-gray-900 dark:border-gray-800 dark:shadow-none sm:grid-cols-12">
+                <div class="sm:col-span-5 overflow-hidden bg-gray-100 dark:bg-gray-800">
+                  <img src="./images/life-3.jpg" alt="Tennis player celebrating a comeback victory" class="h-44 sm:h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                </div>
+                <div class="sm:col-span-7 p-4 sm:p-5 flex flex-col justify-center">
+                  <p class="text-xs font-bold uppercase tracking-wide text-red-600">Tennis</p>
+                  <h3 class="mt-2 text-lg sm:text-xl font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Teen qualifier stuns seeded rival in a five-set comeback</h3>
+                  <p class="mt-2 text-sm text-gray-600 dark:text-gray-300 leading-relaxed">The newcomer saved break points late and rode a fearless return game to deliver one of the tournament's loudest upsets.</p>
+                  <p class="mt-3 text-xs font-bold uppercase tracking-wide text-gray-400">July 1, 2026</p>
+                </div>
+              </a>
+            </div>
+            <div data-reveal class="opacity-0 translate-y-2 transition-all duration-500 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
+              <a role="article" href="./detail-pages/detail-page-sports.html" class="group overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-md dark:bg-gray-900 dark:border-gray-800 dark:shadow-none">
+                <div class="overflow-hidden bg-gray-100 dark:bg-gray-800">
+                  <img src="./images/Teams header GB Saturday.avif" alt="Basketball team training camp practice" class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                </div>
+                <div class="p-4 sm:p-5">
+                  <p class="text-xs font-bold uppercase tracking-wide text-red-600">Basketball</p>
+                  <h3 class="mt-2 text-xl font-extrabold uppercase leading-snug text-gray-900 dark:text-white">National team opens training camp with faster defensive system</h3>
+                  <p class="mt-2 text-sm text-gray-600 dark:text-gray-300 leading-relaxed">Coaches are emphasizing transition stops, quick switches, and deeper bench roles as players prepare for a demanding international schedule.</p>
+                  <p class="mt-3 text-xs font-bold uppercase tracking-wide text-gray-400">July 1, 2026</p>
+                </div>
+              </a>
+              <a role="article" href="./detail-pages/detail-page-sports.html" class="group overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-md dark:bg-gray-900 dark:border-gray-800 dark:shadow-none">
+                <div class="overflow-hidden bg-gray-100 dark:bg-gray-800">
+                  <img src="./images/sport-2.webp" alt="Kylian Mbappe in a football match" class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                </div>
+                <div class="p-4 sm:p-5">
+                  <p class="text-xs font-bold uppercase tracking-wide text-red-600">World Cup</p>
+                  <h3 class="mt-2 text-xl font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Mbappe strikes again to send France through</h3>
+                  <p class="mt-2 text-sm text-gray-600 dark:text-gray-300 leading-relaxed">France relied on another composed finish from Mbappe to survive a tense knockout test and keep their title push alive.</p>
+                  <p class="mt-3 text-xs font-bold uppercase tracking-wide text-gray-400">June 30, 2026</p>
+                </div>
+              </a>
+            </div>
+            <a role="article" data-reveal href="./detail-pages/detail-page-sports.html" class="group opacity-0 translate-y-2 transition-all duration-500 grid grid-cols-1 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-md dark:bg-gray-900 dark:border-gray-800 dark:shadow-none md:grid-cols-12">
               <div class="md:col-span-5 p-5 sm:p-6 lg:p-8 flex flex-col justify-center">
-                <p class="text-xs font-bold uppercase tracking-wide text-red-600">Motorsport / June 25, 2026</p>
-                <h3 class="mt-3 text-2xl sm:text-3xl lg:text-4xl font-extrabold uppercase leading-tight text-gray-900 dark:text-white">Leclerc wins dramatic British Grand Prix from Russell and Hamilton</h3>
-                <p class="mt-4 text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">A late-race charge turned Silverstone into one of the season's sharpest reminders of Formula 1's thin margins.</p>
-                <p class="mt-5 text-xs font-bold uppercase tracking-wide text-gray-400">June 25, 2026</p>
-              </div>
-              <div class="md:col-span-7 overflow-hidden bg-gray-100 dark:bg-gray-800">
-                <img src="./images/f1.jpeg" alt="Formula 1 cars racing on track" class="h-72 md:h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
-              </div>
-            </a>
-            <a href="./detail-pages/detail-page-sports.html" class="group grid grid-cols-1 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-md dark:bg-gray-900 dark:border-gray-800 dark:shadow-none md:grid-cols-12">
-              <div class="md:col-span-5 p-5 sm:p-6 lg:p-8 flex flex-col justify-center">
-                <p class="text-xs font-bold uppercase tracking-wide text-red-600">Racing / July 2, 2026</p>
-                <h3 class="mt-3 text-2xl sm:text-3xl lg:text-4xl font-extrabold uppercase leading-tight text-gray-900 dark:text-white">Paddock strategy calls decide another chaotic sprint weekend</h3>
-                <p class="mt-4 text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">Teams are adjusting tire windows and pit timing as changing weather reshapes the race calendar and rewards sharper calls from the wall.</p>
-                <p class="mt-5 text-xs font-bold uppercase tracking-wide text-gray-400">July 2, 2026</p>
-              </div>
-              <div class="md:col-span-7 overflow-hidden bg-gray-100 dark:bg-gray-800">
-                <img src="./images/f1-2.jpeg" alt="Formula 1 race car detail" class="h-72 md:h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section data-reveal class="py-10 sm:py-12 md:py-16 border-t border-gray-100 dark:border-gray-800 opacity-0 translate-y-2 transition-all duration-500">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-            <a href="./detail-pages/detail-page-sports.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
-              <div class="overflow-hidden"><img src="./images/sport-2.webp" alt="Kylian Mbappe in a football match" class="h-44 w-full object-cover transition-transform duration-500 group-hover:scale-105" /></div>
-              <div class="p-4">
-                <p class="text-xs font-bold uppercase tracking-wide text-red-600">World Cup</p>
-                <h3 class="mt-1 text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Mbappe strikes again to send France through</h3>
-                <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">France leaned on another clinical finish to grind through a tense round-of-16 test.</p>
-              </div>
-            </a>
-            <a href="./detail-pages/detail-page-sports.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
-              <div class="overflow-hidden"><img src="./images/sport-3.webp" alt="Cape Verde players after a World Cup match" class="h-44 w-full object-cover transition-transform duration-500 group-hover:scale-105" /></div>
-              <div class="p-4">
                 <p class="text-xs font-bold uppercase tracking-wide text-red-600">Underdogs</p>
-                <h3 class="mt-1 text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Farewell Cape Verde - the underdogs the World Cup will never forget</h3>
-                <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Cape Verde exit the tournament with one of the most memorable stories of the summer.</p>
+                <h3 class="mt-3 text-2xl sm:text-3xl lg:text-4xl font-extrabold uppercase leading-tight text-gray-900 dark:text-white">Farewell Cape Verde - the underdogs the World Cup will never forget</h3>
+                <p class="mt-4 text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">Cape Verde leave the tournament with one of its most memorable runs, earning respect for their energy, belief, and fearless performances.</p>
+                  <p class="mt-3 text-xs font-bold uppercase tracking-wide text-gray-400">July 5, 2026</p>
+              </div>
+              <div class="md:col-span-7 overflow-hidden bg-gray-100 dark:bg-gray-800">
+                <img src="./images/sport-3.webp" alt="Cape Verde players after a World Cup match" class="h-72 md:h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
               </div>
             </a>
-            <a href="./detail-pages/detail-page-sports.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
-              <div class="overflow-hidden"><img src="./images/sport-5.webp" alt="Morocco football team celebrating" class="h-44 w-full object-cover transition-transform duration-500 group-hover:scale-105" /></div>
-              <div class="p-4">
+            <a role="article" data-reveal href="./detail-pages/detail-page-sports.html" class="group opacity-0 translate-y-2 transition-all duration-500 grid grid-cols-1 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-md dark:bg-gray-900 dark:border-gray-800 dark:shadow-none md:grid-cols-12">
+              <div class="md:col-span-7 overflow-hidden bg-gray-100 dark:bg-gray-800">
+                <img src="./images/sport-5.webp" alt="Morocco football team celebrating" class="h-72 md:h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              </div>
+              <div class="md:col-span-5 p-5 sm:p-6 lg:p-8 flex flex-col justify-center">
                 <p class="text-xs font-bold uppercase tracking-wide text-red-600">Quarter-Finals</p>
-                <h3 class="mt-1 text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Morocco reach quarter-finals as co-hosts Canada bow out</h3>
-                <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">A disciplined performance sent Morocco deeper into the knockout bracket.</p>
+                <h3 class="mt-3 text-2xl sm:text-3xl lg:text-4xl font-extrabold uppercase leading-tight text-gray-900 dark:text-white">Morocco reach quarter-finals as co-hosts Canada bow out</h3>
+                <p class="mt-4 text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">Morocco moved deeper into the knockout bracket with a disciplined display that ended Canada’s campaign on home soil.</p>
+                  <p class="mt-3 text-xs font-bold uppercase tracking-wide text-gray-400">July 3, 2026</p>
               </div>
-            </a>
-          </div>
+            </a>          </div>
         </div>
       </section>
     </main>
@@ -205,7 +269,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 xl:gap-12 pb-12 border-b border-zinc-700">
           <div class="lg:col-span-4 space-y-6">
-            <div class="flex items-center space-x-2"><img class="h-40 w-auto object-contain" src="/images/up_news.png" alt="white logo up news" /></div>
+            <div class="flex items-center space-x-2"><img class="h-40 w-auto object-contain" src="../../../images/up_news.png" alt="white logo up news" /></div>
             <p class="text-lg text-gray-400 leading-relaxed max-w-sm">Up News is dedicated to bringing you transparent, fast, and deeply meaningful coverage of today's most critical headlines. We bridge the gap between unfolding events and insightful analysis to keep you thoroughly informed.</p>
           </div>
           <div class="lg:col-span-2 space-y-4">
@@ -235,21 +299,15 @@
           </div>
           <div class="lg:col-span-3 space-y-4">
             <h4 class="text-white font-bold uppercase tracking-wider text-lg">Our Sponsors</h4>
-            <div class="flex items-center space-x-3 pt-2"><img src="/images/ISTAD_logo.png" alt="iSTAD Sponsor Logo" class="h-48 w-auto object-contain" /></div>
+            <div class="flex items-center space-x-3 pt-2"><img src="../../../images/ISTAD_logo.png" alt="iSTAD Sponsor Logo" class="h-48 w-auto object-contain" /></div>
           </div>
         </div>
         <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-lg">
           <div class="text-gray-500">&copy; 2026 Up News. All rights reserved.</div>
           <div class="flex items-center space-x-6">
-            <a href="#" class="flex items-center space-x-2 text-gray-400 hover:text-white transition"
-              ><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-1-.65-.35-1 .22-1.62.15-.15 2.73-2.5 2.78-2.7.01-.03.01-.15-.06-.21-.07-.06-.17-.04-.25-.02-.11.02-1.83 1.16-5.16 3.42-.49.34-.93.5-1.33.49-.44-.01-1.29-.25-1.92-.45-.77-.25-1.39-.39-1.34-.83.03-.23.35-.46.97-.71 3.82-1.66 6.37-2.75 7.63-3.27 3.63-1.49 4.38-1.75 4.87-1.76.11 0 .35.03.51.16.13.11.17.26.19.37z" /></svg><span>Telegram</span>
-            </a>
-            <a href="#" class="flex items-center space-x-2 text-gray-400 hover:text-white transition"
-              ><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg><span>Email</span>
-            </a>
-            <a href="#" class="flex items-center space-x-2 text-gray-400 hover:text-white transition"
-              ><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8.02 9.71v-6.87H7.54V12h2.48V9.8c0-2.45 1.45-3.81 3.69-3.81 1.08 0 2.2.19 2.2.19v2.42h-1.24c-1.21 0-1.59.75-1.59 1.52V12h2.73l-.44 2.84h-2.29v6.87C18.56 20.87 22 16.84 22 12z" /></svg><span>Facebook</span>
-            </a>
+            <a href="https://t.me/istadkh" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 text-gray-400 hover:text-white transition"><span>Telegram</span></a>
+            <a href="mailto:info.istad@gmail.com" class="flex items-center space-x-2 text-gray-400 hover:text-white transition"><span>Email</span></a>
+            <a href="https://web.facebook.com/istad.co/" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 text-gray-400 hover:text-white transition"><span>Facebook</span></a>
           </div>
         </div>
       </div>

@@ -60,13 +60,67 @@ window.toggleTheme = function toggleTheme() {
     });
   }
 
+
+  function initSearchResults() {
+    const params = new URLSearchParams(window.location.search);
+    const query = (params.get("search") || "").trim();
+    if (!query) return;
+
+    const searchInput = document.getElementById("search-input");
+    if (searchInput) {
+      searchInput.value = query;
+    }
+
+    const cards = Array.from(document.querySelectorAll('main a[href*="detail-pages"]'));
+    const header = document.querySelector("main header");
+    if (!cards.length || !header) return;
+
+    function escapeHtml(value) {
+      return value.replace(/[&<>"']/g, function (char) {
+        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char];
+      });
+    }
+
+    const terms = query.toLowerCase().split(/\s+/).filter(Boolean);
+    let matchCount = 0;
+
+    cards.forEach(function (card) {
+      const text = card.textContent.toLowerCase();
+      const isMatch = terms.every(function (term) {
+        return text.includes(term);
+      });
+      card.dataset.searchMatch = isMatch ? "true" : "false";
+      card.classList.toggle("hidden", !isMatch);
+      if (isMatch) matchCount += 1;
+    });
+
+    Array.from(document.querySelectorAll("main [data-reveal]")).forEach(function (section) {
+      if (section.matches('a[href*="detail-pages"]')) return;
+      const sectionCards = Array.from(section.querySelectorAll('a[href*="detail-pages"]'));
+      if (!sectionCards.length) return;
+      const hasMatch = sectionCards.some(function (card) {
+        return card.dataset.searchMatch === "true";
+      });
+      section.classList.toggle("hidden", !hasMatch);
+    });
+
+    const summary = document.createElement("div");
+    summary.className = "mt-5 rounded-md border border-gray-200 bg-gray-50 px-4 py-3 text-sm text-gray-600 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-300";
+    summary.innerHTML = matchCount
+      ? '<span class="font-bold text-gray-900 dark:text-white">' + matchCount + '</span> result' + (matchCount === 1 ? "" : "s") + ' for <span class="font-bold text-red-600">' + escapeHtml(query) + '</span>. <a class="ml-2 font-bold text-red-600 hover:text-red-700" href="' + window.location.pathname + '">Clear search</a>'
+      : 'No stories found for <span class="font-bold text-red-600">' + escapeHtml(query) + '</span>. <a class="ml-2 font-bold text-red-600 hover:text-red-700" href="' + window.location.pathname + '">Show all stories</a>';
+    header.appendChild(summary);
+  }
+
   function initReveal() {
     const revealItems = document.querySelectorAll("[data-reveal]");
     if (!revealItems.length) return;
 
-    function reveal(item) {
-      item.classList.remove("opacity-0", "translate-y-2");
-      item.classList.add("opacity-100", "translate-y-0");
+    function reveal(item, delay) {
+      window.setTimeout(function () {
+        item.classList.remove("opacity-0", "translate-y-2");
+        item.classList.add("opacity-100", "translate-y-0");
+      }, delay || 0);
     }
 
     if (!("IntersectionObserver" in window)) {
@@ -76,12 +130,14 @@ window.toggleTheme = function toggleTheme() {
 
     const observer = new IntersectionObserver(
       function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            reveal(entry.target);
+        entries
+          .filter(function (entry) {
+            return entry.isIntersecting;
+          })
+          .forEach(function (entry, index) {
+            reveal(entry.target, index * 90);
             observer.unobserve(entry.target);
-          }
-        });
+          });
       },
       { threshold: 0.15 },
     );
@@ -219,6 +275,7 @@ window.toggleTheme = function toggleTheme() {
 
   document.addEventListener("DOMContentLoaded", function () {
     initSearch();
+    initSearchResults();
     initReveal();
     initMobileMenu();
     initSubscribeOverlay();

@@ -4,6 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Up News - Homepage</title>
+    <meta name="description" content="Up News brings the latest headlines across business, sports, world, lifestyle, socialite, and national coverage." />
+    <link rel="canonical" href="./index.html" />
+    <meta property="og:title" content="Up News - Homepage" />
+    <meta property="og:description" content="Up News brings the latest headlines across business, sports, world, lifestyle, socialite, and national coverage." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./images/up_news.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Up News - Homepage" />
+    <meta name="twitter:description" content="Up News brings the latest headlines across business, sports, world, lifestyle, socialite, and national coverage." />
+    <meta name="twitter:image" content="./images/up_news.png" />
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"WebSite","name":"Up News","description":"Up News brings the latest headlines across business, sports, world, lifestyle, socialite, and national coverage.","url":"./index.html","publisher":{"@type":"Organization","name":"Up News","logo":{"@type":"ImageObject","url":"./images/up_news.png"}}}
+    </script>
     <link rel="stylesheet" href="./src/output.css" />
     <script>
       (function () {
@@ -23,7 +36,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex items-center justify-between h-20">
             <!-- Left Side: Brand Logo -->
-            <div class="shrink-0 flex items-center space-x-2"><a href="./index.html" aria-label="Up News home"><img class="h-16 w-auto" src="/images/up_news.png" alt="Up News logo" /></a></div>
+            <div class="shrink-0 flex items-center space-x-2"><a href="./index.html" aria-label="Up News home"><img class="h-16 w-auto" src="./images/up_news.png" alt="Up News logo" /></a></div>
 
             <!-- Center Section: Menu Links with Dropdown Menu -->
             <div class="hidden md:flex items-center space-x-1 h-full">
@@ -133,7 +146,7 @@
           <h1 class="mt-5 text-3xl sm:text-4xl md:text-5xl font-extrabold uppercase tracking-tight leading-tight text-white">Global leaders unveil unified strategy for climate action</h1>
           <p class="mt-4 max-w-2xl mx-auto text-sm sm:text-base text-gray-200 leading-relaxed">A new framework puts renewable energy expansion, climate finance, and supply-chain resilience at the center of the next phase of international cooperation.</p>
           <div class="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <a href="./src/pages/news-page/detail-pages/detail-page-world.html" class="inline-flex items-center justify-center rounded-sm bg-red-600 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-red-700"> Read Featured Story </a>
+            <a role="article" href="./src/pages/news-page/detail-pages/detail-page-world.html" class="inline-flex items-center justify-center rounded-sm bg-red-600 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-red-700"> Read Featured Story </a>
             <a href="./src/pages/news-page/world-page.html" class="inline-flex items-center justify-center rounded-sm border border-white/40 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:border-white hover:bg-white/10"> More World News </a>
           </div>
         </div>
@@ -154,7 +167,7 @@
         </header>
 
         <div class="mt-6 sm:mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-          <a href="./src/pages/news-page/detail-pages/detail-page-business.html" class="group md:col-span-2 relative rounded-xl overflow-hidden bg-gray-900 h-56 sm:h-72 md:h-full min-h-56 border border-gray-200 dark:border-gray-800 shadow-sm dark:shadow-none transform transition-all duration-500 hover:-translate-y-1 hover:shadow-md">
+          <a role="article" href="./src/pages/news-page/detail-pages/detail-page-business.html" class="group md:col-span-2 relative rounded-xl overflow-hidden bg-gray-900 h-56 sm:h-72 md:h-full min-h-56 border border-gray-200 dark:border-gray-800 shadow-sm dark:shadow-none transform transition-all duration-500 hover:-translate-y-1 hover:shadow-md">
             <img src="./src/pages/news-page/images/business-1.avif" alt="Foxconn manufacturing facility" class="absolute inset-0 w-full h-full object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
             <div class="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent"></div>
             <div class="absolute bottom-0 left-0 p-4 sm:p-6 max-w-md">
@@ -166,7 +179,7 @@
           </a>
 
           <div class="grid grid-cols-1 gap-4 md:gap-6">
-            <a href="./src/pages/news-page/detail-pages/detail-page-sports.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+            <a role="article" href="./src/pages/news-page/detail-pages/detail-page-sports.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
               <img src="./src/pages/news-page/images/sport-1.jpg" alt="Lionel Messi controls the ball during a World Cup match" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
               <div class="p-4">
                 <p class="text-xs font-bold uppercase tracking-wide text-red-600">Sports / Football</p>
@@ -176,7 +189,7 @@
               </div>
             </a>
 
-            <a href="./src/pages/news-page/detail-pages/detail-page-lifestyle.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+            <a role="article" href="./src/pages/news-page/detail-pages/detail-page-lifestyle.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
               <img src="./src/pages/news-page/images/life.jpeg" alt="World Cup stadium music and crowd atmosphere" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
               <div class="p-4">
                 <p class="text-xs font-bold uppercase tracking-wide text-red-600">Lifestyle / Music</p>
@@ -201,17 +214,14 @@
           </a>
         </header>
 
-        <div class="mt-6 sm:mt-8 grid grid-cols-1 md:grid-cols-3 rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm dark:bg-gray-900 dark:border-gray-800 dark:shadow-none">
-          <div class="flex items-center justify-between bg-[#1C1C1C] p-4 sm:p-6 text-white">
-            <p class="text-xs font-bold uppercase tracking-wide text-red-600">Updated</p>
-            <span class="text-xl font-extrabold uppercase leading-snug">Today</span>
-          </div>
-
-          <div class="md:col-span-2 divide-y divide-gray-200 dark:divide-gray-800 p-4 sm:p-6">
-            <a href="./src/pages/news-page/detail-pages/detail-page-business.html" class="flex items-start gap-4 py-4 first:pt-0 transition hover:bg-gray-50 dark:hover:bg-gray-950/40">
-              <time class="min-w-20 text-xs font-bold text-gray-400"><span class="block">11:20 AM</span><span class="mt-1 block text-gray-500 dark:text-gray-400">Jul 5</span></time>
-              <div class="flex items-start gap-3">
-                <span class="mt-1 block w-2 h-2 rounded-full bg-red-600 shrink-0 animate-pulse"></span>
+        <div class="mt-6 sm:mt-8 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm dark:bg-gray-900 dark:border-gray-800 dark:shadow-none">
+          <div class="divide-y divide-gray-200 dark:divide-gray-800 p-4 sm:p-6">
+            <a role="article" href="./src/pages/news-page/detail-pages/detail-page-business.html" class="grid grid-cols-1 gap-4 py-4 first:pt-0 transition hover:bg-gray-50 dark:hover:bg-gray-950/40 sm:grid-cols-12 sm:items-center">
+              <div class="sm:col-span-3 overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800">
+                <img src="./src/pages/news-page/images/business-1.avif" alt="Business operations" class="h-36 w-full object-cover transition-transform duration-500 hover:scale-105" />
+              </div>
+              <div class="sm:col-span-9 flex items-start gap-4">
+                <time class="min-w-20 text-xs font-bold text-gray-400"><span class="block">11:20 AM</span><span class="mt-1 block text-gray-500 dark:text-gray-400">Jul 5</span></time>
                 <div>
                   <p class="text-xs font-bold uppercase tracking-wide text-red-600">Business</p>
                   <h3 class="mt-1 text-sm font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Foxconn second-quarter revenue jumps as AI demand strengthens</h3>
@@ -220,10 +230,12 @@
               </div>
             </a>
 
-            <a href="./src/pages/news-page/detail-pages/detail-page-world.html" class="flex items-start gap-4 py-4 transition hover:bg-gray-50 dark:hover:bg-gray-950/40">
-              <time class="min-w-20 text-xs font-bold text-gray-400"><span class="block">09:45 AM</span><span class="mt-1 block text-gray-500 dark:text-gray-400">Jul 5</span></time>
-              <div class="flex items-start gap-3">
-                <span class="mt-1 block w-2 h-2 rounded-full bg-red-600 shrink-0 animate-pulse"></span>
+            <a role="article" href="./src/pages/news-page/detail-pages/detail-page-world.html" class="grid grid-cols-1 gap-4 py-4 transition hover:bg-gray-50 dark:hover:bg-gray-950/40 sm:grid-cols-12 sm:items-center">
+              <div class="sm:col-span-3 overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800">
+                <img src="./src/pages/news-page/images/w-1.jpg" alt="Military vessels at sea" class="h-36 w-full object-cover transition-transform duration-500 hover:scale-105" />
+              </div>
+              <div class="sm:col-span-9 flex items-start gap-4">
+                <time class="min-w-20 text-xs font-bold text-gray-400"><span class="block">09:45 AM</span><span class="mt-1 block text-gray-500 dark:text-gray-400">Jul 5</span></time>
                 <div>
                   <p class="text-xs font-bold uppercase tracking-wide text-red-600">World</p>
                   <h3 class="mt-1 text-sm font-extrabold uppercase leading-snug text-gray-900 dark:text-white">China and Russia navies to hold drills off China coast</h3>
@@ -232,10 +244,12 @@
               </div>
             </a>
 
-            <a href="./src/pages/news-page/detail-pages/detail-page-sports.html" class="flex items-start gap-4 py-4 transition hover:bg-gray-50 dark:hover:bg-gray-950/40">
-              <time class="min-w-20 text-xs font-bold text-gray-400"><span class="block">08:10 AM</span><span class="mt-1 block text-gray-500 dark:text-gray-400">Jul 5</span></time>
-              <div class="flex items-start gap-3">
-                <span class="mt-1 block w-2 h-2 rounded-full bg-red-600 shrink-0 animate-pulse"></span>
+            <a role="article" href="./src/pages/news-page/detail-pages/detail-page-sports.html" class="grid grid-cols-1 gap-4 py-4 transition hover:bg-gray-50 dark:hover:bg-gray-950/40 sm:grid-cols-12 sm:items-center">
+              <div class="sm:col-span-3 overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800">
+                <img src="./src/pages/news-page/images/sport-2.webp" alt="Kylian Mbappe in a football match" class="h-36 w-full object-cover transition-transform duration-500 hover:scale-105" />
+              </div>
+              <div class="sm:col-span-9 flex items-start gap-4">
+                <time class="min-w-20 text-xs font-bold text-gray-400"><span class="block">08:10 AM</span><span class="mt-1 block text-gray-500 dark:text-gray-400">Jul 5</span></time>
                 <div>
                   <p class="text-xs font-bold uppercase tracking-wide text-red-600">Sports</p>
                   <h3 class="mt-1 text-sm font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Mbappe strikes again to send France through</h3>
@@ -244,10 +258,12 @@
               </div>
             </a>
 
-            <a href="./src/pages/news-page/detail-pages/detail-page-lifestyle.html" class="flex items-start gap-4 py-4 transition hover:bg-gray-50 dark:hover:bg-gray-950/40">
-              <time class="min-w-20 text-xs font-bold text-gray-400"><span class="block">6:30 PM</span><span class="mt-1 block text-gray-500 dark:text-gray-400">Jul 4</span></time>
-              <div class="flex items-start gap-3">
-                <span class="mt-1 block w-2 h-2 rounded-full bg-red-600 shrink-0 animate-pulse"></span>
+            <a role="article" href="./src/pages/news-page/detail-pages/detail-page-lifestyle.html" class="grid grid-cols-1 gap-4 py-4 transition hover:bg-gray-50 dark:hover:bg-gray-950/40 sm:grid-cols-12 sm:items-center">
+              <div class="sm:col-span-3 overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800">
+                <img src="./src/pages/news-page/images/life-2.webp" alt="Madonna performing on stage" class="h-36 w-full object-cover transition-transform duration-500 hover:scale-105" />
+              </div>
+              <div class="sm:col-span-9 flex items-start gap-4">
+                <time class="min-w-20 text-xs font-bold text-gray-400"><span class="block">6:30 PM</span><span class="mt-1 block text-gray-500 dark:text-gray-400">Jul 4</span></time>
                 <div>
                   <p class="text-xs font-bold uppercase tracking-wide text-red-600">Lifestyle</p>
                   <h3 class="mt-1 text-sm font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Madonna releases 15th studio album Confessions II</h3>
@@ -272,7 +288,7 @@
         </header>
 
         <div class="mt-6 sm:mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-          <a href="./src/pages/news-page/detail-pages/detail-page-business.html" class="group md:col-span-2 relative rounded-xl overflow-hidden bg-gray-900 h-56 sm:h-72 md:h-full min-h-56 border border-gray-200 dark:border-gray-800 shadow-sm dark:shadow-none transform transition-all duration-500 hover:-translate-y-1 hover:shadow-md">
+          <a role="article" href="./src/pages/news-page/detail-pages/detail-page-business.html" class="group md:col-span-2 relative rounded-xl overflow-hidden bg-gray-900 h-56 sm:h-72 md:h-full min-h-56 border border-gray-200 dark:border-gray-800 shadow-sm dark:shadow-none transform transition-all duration-500 hover:-translate-y-1 hover:shadow-md">
             <img src="./src/pages/news-page/images/business-1.avif" alt="Business team reviewing global market strategy" class="absolute inset-0 w-full h-full object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
             <div class="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent"></div>
             <div class="absolute bottom-0 left-0 p-4 sm:p-6 max-w-md">
@@ -284,7 +300,7 @@
           </a>
 
           <div class="grid grid-cols-1 gap-4 md:gap-6">
-            <a href="./src/pages/news-page/detail-pages/detail-page-business.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+            <a role="article" href="./src/pages/news-page/detail-pages/detail-page-business.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
               <img src="./src/pages/news-page/images/b-2.webp" alt="Oil industry operations" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
               <div class="p-4">
                 <p class="text-xs font-bold uppercase tracking-wide text-red-600">Energy</p>
@@ -294,7 +310,7 @@
               </div>
             </a>
 
-            <a href="./src/pages/news-page/detail-pages/detail-page-business.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+            <a role="article" href="./src/pages/news-page/detail-pages/detail-page-business.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
               <img src="./src/pages/news-page/images/b-3.jpg" alt="Semiconductor manufacturing" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
               <div class="p-4">
                 <p class="text-xs font-bold uppercase tracking-wide text-red-600">Markets</p>
@@ -321,7 +337,7 @@
 
         <div class="mt-6 sm:mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
           <div class="order-2 md:order-1 grid grid-cols-1 gap-4 md:gap-6">
-            <a href="./src/pages/news-page/detail-pages/detail-page-lifestyle.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+            <a role="article" href="./src/pages/news-page/detail-pages/detail-page-lifestyle.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
               <img src="./src/pages/news-page/images/life-2.webp" alt="Madonna performing on stage" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
               <div class="p-4">
                 <p class="text-xs font-bold uppercase tracking-wide text-red-600">Music</p>
@@ -331,7 +347,7 @@
               </div>
             </a>
 
-            <a href="./src/pages/news-page/detail-pages/detail-page-lifestyle.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+            <a role="article" href="./src/pages/news-page/detail-pages/detail-page-lifestyle.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
               <img src="./src/pages/news-page/images/life-3.jpg" alt="Tennis player walking at Wimbledon" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
               <div class="p-4">
                 <p class="text-xs font-bold uppercase tracking-wide text-red-600">Fashion</p>
@@ -342,7 +358,7 @@
             </a>
           </div>
 
-          <a href="./src/pages/news-page/detail-pages/detail-page-lifestyle.html" class="group order-1 md:order-2 md:col-span-2 relative rounded-xl overflow-hidden bg-gray-900 h-56 sm:h-72 md:h-full min-h-56 border border-gray-200 dark:border-gray-800 shadow-sm dark:shadow-none transform transition-all duration-500 hover:-translate-y-1 hover:shadow-md">
+          <a role="article" href="./src/pages/news-page/detail-pages/detail-page-lifestyle.html" class="group order-1 md:order-2 md:col-span-2 relative rounded-xl overflow-hidden bg-gray-900 h-56 sm:h-72 md:h-full min-h-56 border border-gray-200 dark:border-gray-800 shadow-sm dark:shadow-none transform transition-all duration-500 hover:-translate-y-1 hover:shadow-md">
             <img src="./src/pages/news-page/images/life.jpeg" alt="Concert crowd and stadium lifestyle scene" class="absolute inset-0 w-full h-full object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
             <div class="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent"></div>
             <div class="absolute bottom-0 left-0 p-4 sm:p-6 max-w-md">
@@ -355,11 +371,11 @@
         </div>
       </section>
 
-      <!-- Editor picks -->
+      <!-- Socialite news -->
       <section data-reveal class="py-10 sm:py-12 md:py-16 border-t border-gray-100 dark:border-gray-800 opacity-0 translate-y-2 transition-all duration-500">
         <header class="flex flex-col items-center text-center">
-          <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight"><span class="text-gray-900 dark:text-white">EDITOR </span><span class="text-red-600">PICKS</span></h2>
-          <a href="./src/pages/news-page.html" class="group mt-3 inline-flex items-center gap-1 rounded-full border border-gray-300 px-4 py-1.5 text-xs sm:text-sm font-medium text-gray-600 hover:border-red-600 hover:text-red-600 hover:bg-gray-50 transition-all duration-500 dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800">
+          <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight"><span class="text-gray-900 dark:text-white">SOCIALITE NEWS </span><span class="text-red-600">THIS WEEK</span></h2>
+          <a href="./src/pages/news-page/socialite-page.html" class="group mt-3 inline-flex items-center gap-1 rounded-full border border-gray-300 px-4 py-1.5 text-xs sm:text-sm font-medium text-gray-600 hover:border-red-600 hover:text-red-600 hover:bg-gray-50 transition-all duration-500 dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800">
             View all
             <svg class="w-3.5 h-3.5 transition-transform duration-500 group-hover:translate-x-1" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M7 5l5 5-5 5" stroke-linecap="round" stroke-linejoin="round" />
@@ -368,35 +384,38 @@
         </header>
 
         <div class="mt-6 sm:mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-          <a href="./src/pages/news-page/detail-pages/detail-page-world.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
-            <img src="./src/pages/news-page/images/w-6.avif" alt="European leaders in a diplomatic meeting" class="w-full h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
-            <div class="p-4">
-              <p class="text-xs font-bold uppercase tracking-wide text-red-600">World / Europe</p>
-              <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Leaders push for renewed talks as Ukraine diplomacy intensifies</h3>
-              <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Fresh calls for negotiation came with warnings that any deal needs security guarantees.</p>
-              <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">12 hours ago</p>
+          <a role="article" href="./src/pages/news-page/detail-pages/detail-page-socialite.html" class="group md:col-span-2 relative rounded-xl overflow-hidden bg-gray-900 h-56 sm:h-72 md:h-full min-h-56 border border-gray-200 dark:border-gray-800 shadow-sm dark:shadow-none transform transition-all duration-500 hover:-translate-y-1 hover:shadow-md">
+            <img src="./src/pages/news-page/images/taylor-swift-travis-kelce-lede-07042026-615x410.webp" alt="Taylor Swift and Travis Kelce ceremony" class="absolute inset-0 w-full h-full object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 p-4 sm:p-6 max-w-md">
+              <p class="text-xs font-bold uppercase tracking-wide text-red-600">Socialite / Celebrity</p>
+              <h3 class="mt-1 text-xl sm:text-2xl md:text-3xl font-extrabold uppercase leading-snug text-white">Taylor Swift and Travis Kelce are married in star-studded ceremony</h3>
+              <p class="mt-2 text-sm text-gray-300 leading-relaxed">The reported celebration brought together music and sports figures for one of the year's biggest celebrity moments.</p>
+              <p class="mt-3 text-xs text-gray-400">Updated July 4, 2026</p>
             </div>
           </a>
 
-          <a href="./src/pages/news-page/detail-pages/detail-page-sports.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
-            <img src="./src/pages/news-page/images/f1.jpeg" alt="Formula 1 cars racing on track" class="w-full h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
-            <div class="p-4">
-              <p class="text-xs font-bold uppercase tracking-wide text-red-600">Sports / Motorsport</p>
-              <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Leclerc wins dramatic British Grand Prix from Russell and Hamilton</h3>
-              <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">A late-race charge turned Silverstone into a reminder of Formula 1's thin margins.</p>
-              <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">June 25, 2026</p>
-            </div>
-          </a>
+          <div class="grid grid-cols-1 gap-4 md:gap-6">
+            <a role="article" href="./src/pages/news-page/detail-pages/detail-page-socialite.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+              <img src="./src/pages/news-page/images/ariana-grande-lede-06122026-615x410.jpg" alt="Ariana Grande portrait" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
+              <div class="p-4">
+                <p class="text-xs font-bold uppercase tracking-wide text-red-600">Music</p>
+                <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Ariana Grande teases a new era after studio appearance</h3>
+                <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Fans are reading every outfit, caption, and producer tag as clues for the next release.</p>
+                <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">July 5, 2026</p>
+              </div>
+            </a>
 
-          <a href="./src/pages/news-page/detail-pages/detail-page-lifestyle.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
-            <img src="./src/pages/news-page/images/life-8.webp" alt="World Cup merchandise display" class="w-full h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
-            <div class="p-4">
-              <p class="text-xs font-bold uppercase tracking-wide text-red-600">Lifestyle / Fans</p>
-              <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Congo shirts to key chains, fans flock for World Cup mementos</h3>
-              <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Tournament stores are becoming gathering points as supporters turn memories into keepsakes.</p>
-              <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">July 3, 2026</p>
-            </div>
-          </a>
+            <a role="article" href="./src/pages/news-page/detail-pages/detail-page-socialite.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+              <img src="./src/pages/news-page/images/beyonce-lede-07052026-1-615x410.jpg" alt="Beyonce promotional portrait" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
+              <div class="p-4">
+                <p class="text-xs font-bold uppercase tracking-wide text-red-600">Music</p>
+                <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Beyonce drops surprise single Morning Dew</h3>
+                <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Fans reacted quickly as the release added fresh momentum to the Act III conversation.</p>
+                <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">July 5, 2026</p>
+              </div>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -413,7 +432,7 @@
         </header>
 
         <div class="mt-6 sm:mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
-          <a href="./src/pages/news-page/detail-pages/detail-page-world.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+          <a role="article" href="./src/pages/news-page/detail-pages/detail-page-world.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
             <img src="./src/pages/news-page/images/world.jpg" alt="World leaders gathered at an international summit" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
             <div class="p-4">
               <p class="text-xs font-bold uppercase tracking-wide text-red-600">World / Climate Policy</p>
@@ -423,7 +442,7 @@
             </div>
           </a>
 
-          <a href="./src/pages/news-page/detail-pages/detail-page-world.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+          <a role="article" href="./src/pages/news-page/detail-pages/detail-page-world.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
             <img src="./src/pages/news-page/images/w-1.jpg" alt="Military vessels at sea" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
             <div class="p-4">
               <p class="text-xs font-bold uppercase tracking-wide text-red-600">Security</p>
@@ -433,7 +452,7 @@
             </div>
           </a>
 
-          <a href="./src/pages/news-page/detail-pages/detail-page-world.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+          <a role="article" href="./src/pages/news-page/detail-pages/detail-page-world.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
             <img src="./src/pages/news-page/images/w-3.webp" alt="Commercial ships near a Gulf port" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
             <div class="p-4">
               <p class="text-xs font-bold uppercase tracking-wide text-red-600">Middle East</p>
@@ -443,7 +462,7 @@
             </div>
           </a>
 
-          <a href="./src/pages/news-page/detail-pages/detail-page-world.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+          <a role="article" href="./src/pages/news-page/detail-pages/detail-page-world.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
             <img src="./src/pages/news-page/images/w-6.avif" alt="European leaders in a diplomatic meeting" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
             <div class="p-4">
               <p class="text-xs font-bold uppercase tracking-wide text-red-600">Europe</p>
@@ -468,7 +487,7 @@
         </header>
 
         <div class="mt-6 sm:mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-          <a href="./src/pages/news-page/detail-pages/detail-page-sports.html" class="group md:col-span-2 relative rounded-xl overflow-hidden bg-gray-900 h-56 sm:h-72 md:h-full min-h-56 border border-gray-200 dark:border-gray-800 shadow-sm dark:shadow-none transform transition-all duration-500 hover:-translate-y-1 hover:shadow-md">
+          <a role="article" href="./src/pages/news-page/detail-pages/detail-page-sports.html" class="group md:col-span-2 relative rounded-xl overflow-hidden bg-gray-900 h-56 sm:h-72 md:h-full min-h-56 border border-gray-200 dark:border-gray-800 shadow-sm dark:shadow-none transform transition-all duration-500 hover:-translate-y-1 hover:shadow-md">
             <img src="./src/pages/news-page/images/sport-1.jpg" alt="Footballer celebrating a World Cup goal" class="absolute inset-0 w-full h-full object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
             <div class="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent"></div>
             <div class="absolute bottom-0 left-0 p-4 sm:p-6 max-w-md">
@@ -480,7 +499,7 @@
           </a>
 
           <div class="grid grid-cols-1 gap-4 md:gap-6">
-            <a href="./src/pages/news-page/detail-pages/detail-page-sports.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+            <a role="article" href="./src/pages/news-page/detail-pages/detail-page-sports.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
               <img src="./src/pages/news-page/images/sport-2.webp" alt="Kylian Mbappe in a football match" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
               <div class="p-4">
                 <p class="text-xs font-bold uppercase tracking-wide text-red-600">World Cup</p>
@@ -490,13 +509,61 @@
               </div>
             </a>
 
-            <a href="./src/pages/news-page/detail-pages/detail-page-sports.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+            <a role="article" href="./src/pages/news-page/detail-pages/detail-page-sports.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
               <img src="./src/pages/news-page/images/sport-5.webp" alt="Morocco football team celebrating" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
               <div class="p-4">
                 <p class="text-xs font-bold uppercase tracking-wide text-red-600">Quarter-Finals</p>
                 <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Morocco reach quarter-finals as co-hosts Canada bow out</h3>
                 <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">A disciplined performance sent Morocco deeper into the knockout bracket.</p>
                 <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">July 2, 2026</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- National news -->
+      <section data-reveal class="py-10 sm:py-12 md:py-16 border-t border-gray-100 dark:border-gray-800 opacity-0 translate-y-2 transition-all duration-500">
+        <header class="flex flex-col items-center text-center">
+          <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight"><span class="text-gray-900 dark:text-white">NATIONAL NEWS </span><span class="text-red-600">THIS WEEK</span></h2>
+          <a href="./src/pages/news-page/national-page.html" class="group mt-3 inline-flex items-center gap-1 rounded-full border border-gray-300 px-4 py-1.5 text-xs sm:text-sm font-medium text-gray-600 hover:border-red-600 hover:text-red-600 hover:bg-gray-50 transition-all duration-500 dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800">
+            View all
+            <svg class="w-3.5 h-3.5 transition-transform duration-500 group-hover:translate-x-1" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M7 5l5 5-5 5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </header>
+
+        <div class="mt-6 sm:mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+          <a role="article" href="./src/pages/news-page/detail-pages/detail-page-national.html" class="group md:col-span-2 relative rounded-xl overflow-hidden bg-gray-900 h-56 sm:h-72 md:h-full min-h-56 border border-gray-200 dark:border-gray-800 shadow-sm dark:shadow-none transform transition-all duration-500 hover:-translate-y-1 hover:shadow-md">
+            <img src="./src/pages/news-page/images/photo_2026-07-03_19-34-11.jpg" alt="Thai border razor wire barricades" class="absolute inset-0 w-full h-full object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 p-4 sm:p-6 max-w-md">
+              <p class="text-xs font-bold uppercase tracking-wide text-red-600">National / Border Affairs</p>
+              <h3 class="mt-1 text-xl sm:text-2xl md:text-3xl font-extrabold uppercase leading-snug text-white">New Thai razor wire barricades spark fresh diplomatic protests</h3>
+              <p class="mt-2 text-sm text-gray-300 leading-relaxed">Cambodia condemned the installation and urged a peaceful resolution through existing agreements.</p>
+              <p class="mt-3 text-xs text-gray-400">Updated July 2, 2026</p>
+            </div>
+          </a>
+
+          <div class="grid grid-cols-1 gap-4 md:gap-6">
+            <a role="article" href="./src/pages/news-page/detail-pages/detail-page-national.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+              <img src="./src/pages/news-page/images/hun manet fish day.webp" alt="Fish release ceremony at National Fish Day" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
+              <div class="p-4">
+                <p class="text-xs font-bold uppercase tracking-wide text-red-600">Fisheries</p>
+                <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">PM orders stronger enforcement of fisheries crimes</h3>
+                <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Provincial teams are being urged to tighten enforcement and protect communities.</p>
+                <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">July 5, 2026</p>
+              </div>
+            </a>
+
+            <a role="article" href="./src/pages/news-page/detail-pages/detail-page-national.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+              <img src="./src/pages/news-page/images/library.jpg" alt="Community library supporting rural students" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
+              <div class="p-4">
+                <p class="text-xs font-bold uppercase tracking-wide text-red-600">Education</p>
+                <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">New community libraries aim to support students in rural provinces</h3>
+                <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Reading rooms and study programs are opening closer to students outside major cities.</p>
+                <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">July 6, 2026</p>
               </div>
             </a>
           </div>
@@ -528,7 +595,7 @@
                             <span class="text-lg leading-none font-extrabold tracking-normal">NEWS</span>
 
                         </div> -->
-              <img class="h-40 w-auto object-contain" src="/images/up_news.png" alt="white logo up news" />
+              <img class="h-40 w-auto object-contain" src="./images/up_news.png" alt="white logo up news" />
             </div>
             <p class="text-lg text-gray-400 leading-relaxed max-w-sm">Up News is dedicated to bringing you transparent, fast, and deeply meaningful coverage of today's most critical headlines. We bridge the gap between unfolding events and insightful analysis to keep you thoroughly informed.</p>
           </div>
@@ -579,7 +646,7 @@
           <div class="lg:col-span-3 space-y-4">
             <h4 class="text-white font-bold uppercase tracking-wider text-lg">Our Sponsors</h4>
             <div class="flex items-center space-x-3 pt-2">
-              <img src="/images/ISTAD_logo.png" alt="iSTAD Sponsor Logo" class="h-48 w-auto object-contain" />
+              <img src="./images/ISTAD_logo.png" alt="iSTAD Sponsor Logo" class="h-48 w-auto object-contain" />
             </div>
           </div>
         </div>
@@ -590,24 +657,9 @@
 
           <!-- Social Channels Links -->
           <div class="flex items-center space-x-6">
-            <a href="#" class="flex items-center space-x-2 text-gray-400 hover:text-white transition">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-1-.65-.35-1 .22-1.62.15-.15 2.73-2.5 2.78-2.7.01-.03.01-.15-.06-.21-.07-.06-.17-.04-.25-.02-.11.02-1.83 1.16-5.16 3.42-.49.34-.93.5-1.33.49-.44-.01-1.29-.25-1.92-.45-.77-.25-1.39-.39-1.34-.83.03-.23.35-.46.97-.71 3.82-1.66 6.37-2.75 7.63-3.27 3.63-1.49 4.38-1.75 4.87-1.76.11 0 .35.03.51.16.13.11.17.26.19.37z" />
-              </svg>
-              <span>Telegram</span>
-            </a>
-            <a href="#" class="flex items-center space-x-2 text-gray-400 hover:text-white transition">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-              </svg>
-              <span>Email</span>
-            </a>
-            <a href="#" class="flex items-center space-x-2 text-gray-400 hover:text-white transition">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8.02 9.71v-6.87H7.54V12h2.48V9.8c0-2.45 1.45-3.81 3.69-3.81 1.08 0 2.2.19 2.2.19v2.42h-1.24c-1.21 0-1.59.75-1.59 1.52V12h2.73l-.44 2.84h-2.29v6.87C18.56 20.87 22 16.84 22 12z" />
-              </svg>
-              <span>Facebook</span>
-            </a>
+            <a href="https://t.me/istadkh" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 text-gray-400 hover:text-white transition"><span>Telegram</span></a>
+            <a href="mailto:info.istad@gmail.com" class="flex items-center space-x-2 text-gray-400 hover:text-white transition"><span>Email</span></a>
+            <a href="https://web.facebook.com/istad.co/" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 text-gray-400 hover:text-white transition"><span>Facebook</span></a>
           </div>
         </div>
       </div>
