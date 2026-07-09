@@ -283,12 +283,38 @@
     </header>
 
     <!-- Hero -->
-    <section
-      class="relative w-full h-56 sm:h-72 md:h-96 lg:h-112 overflow-hidden">
-      <img
-        src="..."
-        alt="Hero image — championship celebration"
-        class="w-full h-full object-cover bg-gray-800" />
+    <section class="relative overflow-hidden bg-gray-900">
+      <div class="relative min-h-[420px] flex items-center justify-center overflow-hidden">
+        <img
+          src="..."
+          alt="Hero image - featured news story"
+          class="absolute inset-0 h-full w-full object-cover bg-gray-800 opacity-55" />
+        <div class="absolute inset-0 bg-linear-to-t from-black/90 via-black/45 to-black/20"></div>
+        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <p class="inline-flex items-center gap-2 rounded-full bg-red-600 px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-white">
+            <span class="block h-2 w-2 rounded-full bg-white animate-pulse"></span>
+            Breaking / Featured Story
+          </p>
+          <h1 class="mt-5 text-3xl sm:text-4xl md:text-5xl font-extrabold uppercase tracking-tight leading-tight text-white">
+            Your Front Row Seat To The Stories Shaping The Week
+          </h1>
+          <p class="mt-4 max-w-2xl mx-auto text-sm sm:text-base text-gray-200 leading-relaxed">
+            Follow the latest updates across world affairs, sports, business, lifestyle, and culture with sharp reporting from Up News.
+          </p>
+          <div class="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <a
+              href="./src/pages/news-page.html"
+              class="inline-flex items-center justify-center rounded-sm bg-red-600 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-red-700">
+              View Latest News
+            </a>
+            <a
+              href="./src/pages/about-page.html"
+              class="inline-flex items-center justify-center rounded-sm border border-white/40 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:border-white hover:bg-white/10">
+              About Up News
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1219,7 +1245,7 @@
             </h4>
             <div class="flex items-center space-x-3 pt-2">
               <img
-                src="..."
+                src="/images/ISTAD_logo.png"
                 alt="iSTAD Sponsor Logo"
                 class="h-48 w-auto object-contain" />
             </div>
