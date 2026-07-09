@@ -1,448 +1,254 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>World | Latest Financial & Geopolitical Updates</title>
-    <meta name="description" content="Stay updated with the latest business news, including Foxconn revenue updates, oil market updates, stock indices, and global trade reports.">
-    <!-- link cdn icon -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Site theme stylesheet (built from src/input.css via Tailwind CLI, contains the custom brand colors/fonts) -->
-    <link rel="stylesheet" href="../../output.css">
-</head>
-<body class="bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100 transition-colors duration-300 font-sans antialiased">
-
-    <!-- Header Navigation with Theme Toggle -->
-    <header class="border-b border-gray-200 dark:border-gray-800 sticky top-0 bg-white/80 dark:bg-gray-950/80 backdrop-blur-md z-50">
-     <!-- Main Navigation Bar -->
-    <nav class="bg-brandDark border-b border-zinc-800 relative z-50 select-none bg-[#1C1C1C]">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World News - Up News</title>
+    <meta name="description" content="Latest world headlines, diplomacy, security, climate policy, and international affairs from Up News." />
+    <link rel="stylesheet" href="../../output.css" />
+    <script>
+      (function () {
+        const saved = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (saved === "dark" || (!saved && prefersDark)) {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
+  </head>
+  <body class="bg-white text-gray-900 antialiased dark:bg-gray-950 transition-colors">
+    <header class="sticky top-0 bg-white/80 dark:bg-gray-950/80 backdrop-blur-md z-50">
+      <nav class="border-b border-zinc-800 relative z-50 select-none bg-[#1C1C1C]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                
-                <!-- Left Side: Brand Logo -->
-                <div class="flex-shrink-0 flex items-center space-x-2">
-                    <img class="h-16 w-auto" src="../../image/white-logo-up_news-removebg-preview.png" alt="up news logo">
-                </div>
-
-                <!-- Center Section: Menu Links with Dropdown Menu -->
-                <div class="hidden md:flex items-center space-x-1 h-full">
-                    
-                    <!-- Home Link -->
-                    <a href="../../../index.html" class="px-5 py-2 text-lg font-semibold tracking-wide text-gray-300 hover:text-white transition-colors">
-                        Home
-                    </a>
-
-                    <!-- News Dropdown Trigger Container via CSS Group-Hover -->
-                    <div class="relative group h-full flex items-center">
-                        <button class="px-5 py-2 text-lg font-semibold tracking-wide text-white flex items-center space-x-1 focus:outline-none">
-                            <a href="../news-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">
-                                News
-                            </a>
-                            <svg class="w-4 h-4 ml-0.5 text-gray-400 group-hover:text-white group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
-
-                        <!-- Hover Dropdown Menu Structure -->
-                        <div class="absolute top-[100%] left-0 w-48 bg-[#252525] border border-zinc-800 shadow-xl rounded-md py-2 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:invisible-none group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50">
-                            <a href="./business-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">
-                                Business
-                            </a>
-                            <a href="./sports-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">
-                                Sports
-                            </a>
-                            <a href="./world-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">
-                                World
-                            </a>
-                            <a href="./lifestyle-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">
-                                Lifestyle
-                            </a>
-                            <a href="./socialite-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">
-                                Socialite
-                            </a>
-                            <a href="./national-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">
-                                National
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- About Us Link -->
-                    <a href="#" class="px-5 py-2 text-lg font-semibold tracking-wide text-gray-300 hover:text-white transition-colors">
-                        About Us
-                    </a>
-                </div>
-
-                <!-- Right Side Elements: Search, Dark Theme Icon, CTA Button -->
-                <div class="flex items-center space-x-6">
-                    
-                    <!-- Search Icon Button -->
-                    <button type="button" id="search-toggle-btn" class="text-gray-400 hover:text-white p-1 transition-colors focus:outline-none" aria-label="Search">
-                        <svg class="w-5 h-5 stroke-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                        </svg>
-                    </button>
-
-                    <!-- Theme Toggle Button (sun/moon swap, persisted via main.js) -->
-                    <button type="button" id="theme-toggle-btn" class="text-gray-400 hover:text-white p-1 transition-colors focus:outline-none" aria-label="Toggle dark mode">
-                        <svg id="theme-toggle-moon-icon" class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-                        </svg>
-                        <svg id="theme-toggle-sun-icon" class="w-5 h-5 fill-current hidden" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
-
-                    <!-- Call To Action Button -->
-                    <a href="#" class="bg-red-600 hover:bg-red-700 text-white font-bold text-lg px-6 py-2.5 rounded-lg shadow transition-all duration-150 transform active:scale-95">
-                        Subscribe
-                    </a>
-                </div>
-
+          <div class="flex items-center justify-between h-20">
+            <div class="shrink-0 flex items-center space-x-2">
+              <img class="h-16 w-auto" src="/images/up_news.png" alt="Up News logo" />
             </div>
+
+            <div class="hidden md:flex items-center space-x-1 h-full">
+              <a href="../../../index.html" class="px-5 py-2 text-lg font-semibold tracking-wide text-gray-300 hover:text-white transition-colors">Home</a>
+              <div class="relative group h-full flex items-center">
+                <button class="cursor-pointer px-5 py-2 text-lg font-semibold tracking-wide text-white flex items-center space-x-1 focus:outline-none">
+                  <span>News</span>
+                  <svg class="w-4 h-4 ml-0.5 text-gray-400 group-hover:text-white group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="absolute top-full left-0 w-48 bg-[#252525] border border-zinc-800 shadow-xl rounded-md py-2 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50">
+                  <a href="./business-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">Business</a>
+                  <a href="./sports-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">Sports</a>
+                  <a href="./world-page.html" class="block px-4 py-2.5 text-lg text-white bg-zinc-800 transition-colors">World</a>
+                  <a href="./lifestyle-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">Lifestyle</a>
+                  <a href="./socialite-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">Socialite</a>
+                  <a href="./national-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">National</a>
+                </div>
+              </div>
+              <a href="../about-page.html" class="px-5 py-2 text-lg font-semibold tracking-wide text-gray-300 hover:text-white transition-colors">About Us</a>
+            </div>
+
+            <div class="flex items-center space-x-4 sm:space-x-6">
+              <button type="button" id="search-toggle" class="cursor-pointer text-gray-400 hover:text-white p-1 transition-colors focus:outline-none" aria-label="Search" aria-expanded="false" aria-controls="search-panel">
+                <svg class="w-5 h-5 stroke-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+              </button>
+              <button type="button" onclick="toggleTheme()" class="cursor-pointer text-gray-400 hover:text-white p-1 transition-colors focus:outline-none" aria-label="Toggle dark mode">
+                <svg class="w-5 h-5 fill-current dark:hidden" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                <svg class="w-5 h-5 fill-current hidden dark:block" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path></svg>
+              </button>
+              <a href="../subscribe-page.html" class="hidden sm:inline-block bg-red-600 hover:bg-red-700 text-white font-bold text-lg px-6 py-2.5 rounded-sm shadow transition-all duration-150 transform active:scale-95">Subscribe</a>
+              <button type="button" id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white p-1 focus:outline-none" aria-label="Toggle menu" aria-expanded="false">
+                <svg id="mobile-menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                <svg id="mobile-menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+              </button>
+            </div>
+          </div>
         </div>
-    </nav>
-    <!-- Collapsible Search Bar (toggled by main.js) -->
-    <div id="search-bar" class="hidden border-t border-zinc-800 bg-[#1C1C1C]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center gap-3">
-            <svg class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-            </svg>
-            <input type="text" id="search-input" placeholder="Search articles on this page..." class="flex-1 bg-transparent text-white placeholder-gray-500 focus:outline-none text-lg" autocomplete="off">
-            <button type="button" id="search-close-btn" class="text-gray-400 hover:text-white flex-shrink-0" aria-label="Close search">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
+
+        <div id="search-panel" class="hidden absolute right-0 top-full z-50 mt-3 w-full max-w-md rounded-md border border-zinc-800 bg-[#1C1C1C] p-3 shadow-xl">
+          <form id="search-form" class="flex items-center gap-3" role="search" data-search-url="../news-page.html">
+            <label for="search-input" class="sr-only">Search news</label>
+            <input id="search-input" type="search" placeholder="Search news..." class="w-full rounded-sm border border-zinc-800 bg-gray-900 px-3 py-2 text-sm text-white focus:outline-none" />
+            <button type="submit" class="cursor-pointer rounded-sm bg-red-600 px-4 py-2 text-sm font-bold text-white transition hover:bg-red-700">Search</button>
+            <button type="button" id="search-close" class="cursor-pointer p-2 text-gray-400 transition hover:text-white" aria-label="Close search">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
+          </form>
         </div>
-    </div>
+
+        <div id="mobile-menu" class="md:hidden hidden border-t border-zinc-800 bg-[#1C1C1C]">
+          <div class="px-4 py-3 space-y-1">
+            <a href="../../../index.html" class="block px-3 py-2 text-base font-semibold text-gray-300 hover:text-white hover:bg-zinc-800 rounded-md transition-colors">Home</a>
+            <a href="./business-page.html" class="block px-3 py-2 text-base font-semibold text-gray-300 hover:text-white hover:bg-zinc-800 rounded-md transition-colors">Business</a>
+            <a href="./sports-page.html" class="block px-3 py-2 text-base font-semibold text-gray-300 hover:text-white hover:bg-zinc-800 rounded-md transition-colors">Sports</a>
+            <a href="./world-page.html" class="block px-3 py-2 text-base font-semibold text-white bg-zinc-800 rounded-md transition-colors">World</a>
+            <a href="./lifestyle-page.html" class="block px-3 py-2 text-base font-semibold text-gray-300 hover:text-white hover:bg-zinc-800 rounded-md transition-colors">Lifestyle</a>
+            <a href="./socialite-page.html" class="block px-3 py-2 text-base font-semibold text-gray-300 hover:text-white hover:bg-zinc-800 rounded-md transition-colors">Socialite</a>
+            <a href="./national-page.html" class="block px-3 py-2 text-base font-semibold text-gray-300 hover:text-white hover:bg-zinc-800 rounded-md transition-colors">National</a>
+            <a href="../about-page.html" class="block px-3 py-2 text-base font-semibold text-gray-300 hover:text-white hover:bg-zinc-800 rounded-md transition-colors">About Us</a>
+            <a href="../subscribe-page.html" class="sm:hidden block mt-2 text-center bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-2.5 rounded-sm">Subscribe</a>
+          </div>
+        </div>
+      </nav>
     </header>
 
-    <!-- Main Content Area matching layout of image_d1403d.png -->
-    <main class="max-w-6xl mx-auto px-4 py-8 space-y-12">
-        <!-- Portal Dynamic Title -->
-        <div class="text-center mb-8">
-            <h1 class="text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-white">
-                World <span class="text-secondary-color">News</span>
-            </h1>
+    <main>
+      <section data-reveal class="opacity-0 translate-y-2 transition-all duration-500">
+        <div class="relative min-h-105 overflow-hidden bg-gray-900 flex items-center justify-center">
+          <img src="./images/world.jpg" alt="World leaders gathered at an international summit" class="absolute inset-0 h-full w-full object-cover opacity-55" />
+          <div class="absolute inset-0 bg-linear-to-t from-black/90 via-black/45 to-black/20"></div>
+          <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+            <p class="inline-flex items-center gap-2 rounded-full bg-red-600 px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-white">
+              <span class="block h-2 w-2 rounded-full bg-white animate-pulse"></span>
+              World / Global Affairs
+            </p>
+            <h1 class="mt-5 text-3xl sm:text-4xl md:text-5xl font-extrabold uppercase tracking-tight leading-tight text-white">World News This Week</h1>
+            <p class="mt-4 max-w-2xl mx-auto text-sm sm:text-base text-gray-200 leading-relaxed">Follow diplomacy, conflict, climate decisions, regional politics, and the global shifts shaping tomorrow's headlines.</p>
+          </div>
         </div>
+      </section>
 
-        
-        <div id="search-no-results" class="hidden text-center py-16 text-gray-500 dark:text-gray-400 text-lg">
-            No articles match your search.
-        </div>
-
-<!-- SECTION 1: Main Feature (Foxconn Grid) -->
-        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start border-b border-gray-200 dark:border-gray-800 pb-12">
-            <article class="md:col-span-4 space-y-4">
-                <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight leading-tight">
-                    Three of Khamenei's sons appear at his funeral, not his successor
-                </h1>
-                <p class="text-lg md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-                    There has been no public sighting or image released of Mojtaba Khamenei, the son who succeeded his father as Iran's supreme leader after he was killed in U.S. and Israeli airstrikes.
-
-                </p>
-            </article>
-            <div class="md:col-span-8 w-full overflow-hidden rounded-2xl">
-                <!-- Referenced image placeholder matching layout style -->
-                <img src="./image/world.jpg" alt="Foxconn Technology Group manufacturing building view"  class="w-full h-full object-cover hover:scale-105 transition duration-500 rounded-2xl" />
-            </div>
-        </section>
-
-        <!-- SECTION 2: 3-Column Mid-Tier News Grid -->
-        <section class="grid grid-cols-1 md:grid-cols-3 gap-8 border-b border-gray-200 dark:border-gray-800 pb-12">
-            
-            <!-- Column 1 -->
-            <div class="space-y-6">
-                <article class="space-y-3 pb-6 border-b border-gray-200 dark:border-gray-800">
-                    <div class="w-full h-44 bg-gray-100 dark:bg-gray-800 flex items-center justify-center overflow-hidden rounded-lg">
-                        <span class="text-base text-gray-400 font-mono ">
-                            <img src="./image/w-1.jpg" alt="">
-                        </span>
-                    </div>
-                    <h2 class="text-2xl font-bold tracking-tight leading-snug">
-                        China, Russia navies to hold drills off China coast
-                    </h2>
-                    <p class="text-base text-gray-400">Updated July 3, 2026</p>
-                </article>
-                <article class="space-y-2">
-                    <h3 class="text-2xl font-bold tracking-tight leading-snug hover:text-red-600 cursor-pointer">
-                        As Venezuela death toll rises, survivor recounts days beneath the rubble
-                    </h3>
-                    <p class="text-base text-gray-400">22 hours ago</p>
-                </article>
-            </div>
-
-            <!-- Column 2 -->
-            <div class="space-y-6">
-                <article class="space-y-3 pb-6 border-b border-gray-200 dark:border-gray-800">
-                    <div class="w-full h-44 bg-gray-100 dark:bg-gray-800 flex items-center justify-center overflow-hidden rounded-lg">
-                        <span class="text-base text-gray-400 font-mono">[SK Hynix Logo from image_d1403d.png]
-                            <img src="./image/w-2.avif" alt="">
-                        </span>
-                    </div>
-                    <h2 class="text-2xl font-bold tracking-tight leading-snug">
-                        Christian NGO welcomes release of pastor held in southern China
-                    </h2>
-                    <p class="text-base text-gray-400">Updated July 4, 2026</p>
-                </article>
-                <article class="space-y-2">
-                    <span class="text-base font-bold uppercase tracking-wider text-red-600 block">Exclusive</span>
-                    <h3 class="text-2xl font-bold tracking-tight leading-snug hover:text-red-600 cursor-pointer">
-                       UK's Farage referred to standards watchdog after new report of undeclared benefits
-                    </h3>
-                    <p class="text-base text-gray-400">Updated July 3, 2026</p>
-                </article>
-            </div>
-
-            <!-- Column 3 -->
-            <div class="space-y-6">
-                <article class="space-y-3 pb-6 border-b border-gray-200 dark:border-gray-800">
-                    <div class="w-full h-44 bg-gray-100 dark:bg-gray-800 flex items-center justify-center overflow-hidden rounded-lg">
-                        <span class="text-base text-gray-400 font-mono">[Global Markets Room from image_d1403d.png]
-                            <img src="./image/w-3.webp" alt="">
-                        </span>
-                    </div>
-                    <h2 class="text-2xl font-bold tracking-tight leading-snug">
-                        Qatar says all maritime activities will resume immediately
-                    </h2>
-                    <p class="text-base text-gray-400">Updated July 3, 2026</p>
-                </article>
-                <article class="space-y-2">
-                    <h3 class="text-2xl font-bold tracking-tight leading-snug hover:text-red-600 cursor-pointer">
-                        French President Macron to visit Syria, Syrian presidency says
-                    </h3>
-                    <p class="text-base text-gray-400">Updated July 3, 2026</p>
-                </article>
-            </div>
-
-        </section>
-
-        <!-- SECTION 3: Bottom Horizontal Feature (JPMorgan) -->
-        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pb-8">
-            <article class="md:col-span-7 space-y-3 order-2 md:order-1">
-                <div class="text-base text-gray-400 font-medium">Middle East · 20 hours ago</div>
-                <h2 class="text-xl md:text-3xl font-bold tracking-tight">
-                    Israel hasn't said who its soldiers abused. Two Gaza mothers think it's their son
-                </h2>
-                <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-                    The photo depicts a blindfolded Gaza man stripped to ​his underwear and restrained face down on a cot while in Israeli custody.
-                </p>
-            </article>
-            <div class="md:col-span-5 order-1 md:order-2 overflow-hidden rounded-lg">
-                <div class="w-full h-48 bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
-                    <span class="text-base text-gray-400 font-mono">[JPMorgan Facade from image_d1403d.png]
-                        <img src="./image/w-4.jpg" alt="">
-                    </span>
-                </div>
-            </div>
-        </section>
-        <hr> 
-                <!-- SECTION 3: Bottom Horizontal Feature (JPMorgan) -->
-        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pb-8">
-            <article class="md:col-span-7 space-y-3 order-2 md:order-1">
-                <div class="text-base text-gray-400 font-medium">14 hours ago</div>
-                <h2 class="text-2xl md:text-3xl font-bold tracking-tight">
-                    North Korea's Kim observed naval destroyer cruise missile launch, weapons tests, state media says
-                </h2>
-                <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-                    North Korean leader Kim Jong Un observed the test firing of a strategic cruise ​missile and evaluations of anti-ship, anti-submarine and air defence ‌systems aboard the naval destroyer Kang Kon, state media KCNA reported on Sunday.
-                </p>
-            </article>
-            <div class="md:col-span-5 order-1 md:order-2 overflow-hidden rounded-lg">
-                <div class="w-full h-48 bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
-                    <span class="text-base text-gray-400 font-mono">[JPMorgan Facade from image_d1403d.png]
-                        <img src="./image/w-5.jpg" alt="">
-                    </span>
-                </div>
-            </div>
-        </section>
-        <hr> 
-                <!-- SECTION 3: Bottom Horizontal Feature (JPMorgan) -->
-        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pb-8">
-            <article class="md:col-span-7 space-y-3 order-2 md:order-1">
-                <div class="text-base text-gray-400 font-medium">Europe . 12 hours ago</div>
-                <h2 class="text-xl md:text-3xl font-bold tracking-tight">
-                    Trump offers to help Putin find deal with Ukraine, also speaks with Zelenskiy
-                </h2>
-                <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-                    U.S. ​President Donald Trump, speaking to Russian leader Vladimir Putin by telephone for nearly 90 minutes, offered ‌to help find a solution to the Ukraine war, Kremlin aide Yuri Ushakov said in comments made public early on Sunday.
-                </p>
-            </article>
-            <div class="md:col-span-5 order-1 md:order-2 overflow-hidden rounded-lg">
-                <div class="w-full h-48 bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
-                    <span class="text-base text-gray-400 font-mono">[JPMorgan Facade from image_d1403d.png]
-                        <img src="./image/w-6.avif" alt="">
-                    </span>
-                </div>
-            </div>
-        </section>
-        <hr> 
-                <!-- SECTION 3: Bottom Horizontal Feature (JPMorgan) -->
-        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pb-8">
-            <article class="md:col-span-7 space-y-3 order-2 md:order-1">
-                <div class="text-base text-gray-400 font-medium">Europe . 16 hours ago</div>
-                <h2 class="text-xl md:text-3xl font-bold tracking-tight">
-                    Pope Leo urges US to welcome immigrants in July 4 appeal from Lampedusa
-                </h2>
-                <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-                    Pope Leo marked the 250th anniversary of U.S. independence on ​Saturday with an appeal to Americans to welcome and protect immigrants, in a letter sent to his home country as he visited Italy's migrant frontline island ‌of Lampedusa.
-                </p>
-            </article>
-            <div class="md:col-span-5 order-1 md:order-2 overflow-hidden rounded-lg">
-                <div class="w-full h-48 bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
-                    <span class="text-base text-gray-400 font-mono">[JPMorgan Facade from image_d1403d.png]
-                        <img src="./image/w-7.avif" alt="">
-                    </span>
-                </div>
-            </div>
-        </section>
-        <hr> 
-                <!-- SECTION 3: Bottom Horizontal Feature (JPMorgan) -->
-        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pb-8">
-            <article class="md:col-span-7 space-y-3 order-2 md:order-1">
-                <div class="text-base text-gray-400 font-medium">United Kingdom . 21 hours ago</div>
-                <h2 class="text-xl md:text-3xl font-bold tracking-tight">
-                    US VP Vance says Britain has been failed by leaders, hopes next PM delivers change
-                </h2>
-                <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-                    U.S. Vice President JD Vance said Britain had been "failed by its leadership for a long time," adding that he hoped the country's next prime minister could deliver the structural ​change voters were seeking after years of political turmoil.
-                </p>
-            </article>
-            <div class="md:col-span-5 order-1 md:order-2 overflow-hidden rounded-lg">
-                <div class="w-full h-48 bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
-                    <span class="text-base text-gray-400 font-mono">[JPMorgan Facade from image_d1403d.png]
-                        <img src="./image/w-8.avif" alt="">
-                    </span>
-                </div>
-            </div>
-        </section>
-        <hr> 
-                <!-- SECTION 3: Bottom Horizontal Feature (JPMorgan) -->
-        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pb-8">
-            <article class="md:col-span-7 space-y-3 order-2 md:order-1">
-                <div class="text-base text-gray-400 font-medium">United States . 21 hours ago</div>
-                <h2 class="text-xl md:text-3xl font-bold tracking-tight">
-                    Trump rails at communism as US celebrates Independence Day
-                </h2>
-                <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-                    The president also said "newcomers to our country" threaten the U.S. and should be expelled.
-                </p>
-            </article>
-            <div class="md:col-span-5 order-1 md:order-2 overflow-hidden rounded-lg">
-                <div class="w-full h-48 bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
-                    <span class="text-base text-gray-400 font-mono">[JPMorgan Facade from image_d1403d.png]
-                        <img src="./image/w-8.jpg" alt="">
-                    </span>
-                </div>
-            </div>
-        </section>  
-                        <!-- SECTION 3: Bottom Horizontal Feature (JPMorgan) -->
-        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pb-8">
-            <article class="md:col-span-7 space-y-3 order-2 md:order-1">
-                <div class="text-base text-gray-400 font-medium">Africa . 13 hours ago</div>
-                <h2 class="text-xl md:text-3xl font-bold tracking-tight">
-                    Insurgents stage coordinated attacks on army positions across Mali
-                </h2>
-                <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-                    Insurgents staged attacks on army ​positions across Mali on Saturday, including in a northern town where government and Russian fighters are based and in a town ‌south of the capital Bamako, the latest threat to the landlocked Sahel nation's embattled leaders.
-                </p>
-            </article>
-            <div class="md:col-span-5 order-1 md:order-2 overflow-hidden rounded-lg">
-                <div class="w-full h-48 bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
-                    <span class="text-base text-gray-400 font-mono">[JPMorgan Facade from image_d1403d.png]
-                        <img src="./image/w-9.jpeg" alt="">
-                    </span>
-                </div>
-            </div>
-        </section>  
-
-    </main>
-    <!-- Structural Platform Footer matching image_c2c2dc.png exactly -->
-    <footer class="bg-[#1C1C1C] text-gray-300 pt-16 pb-8 border-t border-zinc-800">
+      <section data-reveal class="py-10 sm:py-12 md:py-16 opacity-0 translate-y-2 transition-all duration-500">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 xl:gap-12 pb-12 border-b border-zinc-700">
-                
-                <!-- Column 1: Brand Info -->
-                <div class="lg:col-span-4 space-y-6">
-                    <div class="flex items-center space-x-2">
-                        <!-- <div class="text-white font-black tracking-tighter text-3xl flex flex-col items-center border-2 border-white px-3 py-1 rounded-full w-20 h-20 justify-center">
-                            <span class="text-base leading-none">UP</span>
-                            <span class="text-lg leading-none font-extrabold tracking-normal">NEWS</span>
+          <header class="flex flex-col items-center text-center">
+            <p class="text-xs font-bold uppercase tracking-wide text-red-600">Latest Coverage</p>
+            <h2 class="mt-2 text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">DIPLOMACY, SECURITY, AND GLOBAL CHANGE</h2>
+          </header>
 
-                        </div> -->
-                    <img class="h-32 w-auto object-contain" src="../../image/white-logo-up_news-removebg-preview.png" alt="white logo up news">
-                    </div>
-                    <p class="text-lg text-gray-400 leading-relaxed max-w-sm">
-                        Up News is dedicated to bringing you transparent, fast, and deeply meaningful coverage of today's most critical headlines.
-                    </p>
-                </div>
-
-                <!-- Column 2: Quick Links -->
-                <div class="lg:col-span-2 space-y-4">
-                    <h4 class="text-white font-bold uppercase tracking-wider text-lg">Quick Link</h4>
-                    <ul class="space-y-3 text-lg">
-                        <li><a href="../../../index.html" class="hover:text-white transition">Home</a></li>
-                        <li><a href="../news-page.html" class="hover:text-white transition">News</a></li>
-                        <li><a href="../about-page.html" class="hover:text-white transition">About Us</a></li>
-                    </ul>
-                </div>
-
-                <!-- Column 3: Contact Details -->
-                <div class="lg:col-span-3 space-y-4">
-                    <h4 class="text-white font-bold uppercase tracking-wider text-lg">Address & Contact</h4>
-                    <ul class="space-y-4 text-lg">
-                        <li class="flex items-start space-x-3">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span class="text-gray-400">#40, St 273, Sangkat Boeung Kak II, Khan Toul Kork, Phnom Penh, Cambodia</span>
-                        </li>
-                        <li class="flex items-center space-x-3">
-                            <i class="fa-solid fa-mobile"></i>
-                            <span class="text-gray-400">(+855) 95-990-910</span>
-                        </li>
-                        <li class="flex items-center space-x-3">
-                            <i class="fa-solid fa-envelope"></i>
-                            <span class="text-gray-400">info.istad@gmail.com</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Column 4: Sponsors -->
-                <div class="lg:col-span-3 space-y-4">
-                    <h4 class="text-white font-bold uppercase tracking-wider text-lg">Our Sponsors</h4>
-                    <div class="flex items-center space-x-3 pt-2">
-                        <!-- References the file image_c2c2dc.png verbatim -->
-                        <img src="../../image/istad-logo.png" alt="iSTAD Sponsors Logos" class="h-48 w-auto object-contain">
-                    </div>
-                </div>
-
+          <a href="./detail-pages/detail-page-world.html" class="group mt-8 grid grid-cols-1 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-md dark:bg-gray-900 dark:border-gray-800 dark:shadow-none md:grid-cols-12">
+            <div class="md:col-span-5 p-5 sm:p-6 lg:p-8 flex flex-col justify-center">
+              <p class="text-xs font-bold uppercase tracking-wide text-red-600">World / Climate Policy</p>
+              <h3 class="mt-3 text-2xl sm:text-3xl lg:text-4xl font-extrabold uppercase leading-tight text-gray-900 dark:text-white">Global leaders unveil unified strategy for climate action</h3>
+              <p class="mt-4 text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">A new framework puts renewable energy expansion, climate finance, and supply-chain resilience at the center of the next phase of international cooperation.</p>
+              <p class="mt-5 text-xs font-bold uppercase tracking-wide text-gray-400">Updated July 4, 2026</p>
             </div>
-
-            <!-- Bottom Sub-Footer Bar -->
-            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-lg">
-                <div class="text-gray-500">
-                    &copy; 2026 Up News. All rights reserved.
-                </div>
-                
-                <!-- Social Channels Links -->
-                <div class="flex items-center space-x-6">
-                    <a href="#" class="flex items-center space-x-2 text-gray-400 hover:text-white transition">
-                       <i class="fa-brands fa-telegram"></i>
-                        <span>Telegram</span>
-                    </a>
-                    <a href="#" class="flex items-center space-x-2 text-gray-400 hover:text-white transition">
-                        <i class="fa-solid fa-envelope"></i>
-                        <span>Email</span>
-                    </a>
-                    <a href="#" class="flex items-center space-x-2 text-gray-400 hover:text-white transition">
-                        <i class="fa-brands fa-facebook"></i>
-                        <span>Facebook</span>
-                    </a>
-                </div>
+            <div class="md:col-span-7 overflow-hidden bg-gray-100 dark:bg-gray-800">
+              <img src="./images/world.jpg" alt="International climate summit meeting room" class="h-72 md:h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
             </div>
-
+          </a>
         </div>
+      </section>
+
+      <section data-reveal class="py-10 sm:py-12 md:py-16 border-t border-gray-100 dark:border-gray-800 opacity-0 translate-y-2 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+            <a href="./detail-pages/detail-page-world.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+              <div class="overflow-hidden"><img src="./images/w-1.jpg" alt="Military vessels at sea" class="h-44 w-full object-cover transition-transform duration-500 group-hover:scale-105" /></div>
+              <div class="p-4">
+                <p class="text-xs font-bold uppercase tracking-wide text-red-600">Security</p>
+                <h3 class="mt-1 text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">China and Russia navies to hold drills off China coast</h3>
+                <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">The joint exercises are being watched closely as regional governments assess security signals in the Pacific.</p>
+              </div>
+            </a>
+            <a href="./detail-pages/detail-page-world.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+              <div class="overflow-hidden"><img src="./images/w-2.avif" alt="Pastor walking outside after release" class="h-44 w-full object-cover transition-transform duration-500 group-hover:scale-105" /></div>
+              <div class="p-4">
+                <p class="text-xs font-bold uppercase tracking-wide text-red-600">Human Rights</p>
+                <h3 class="mt-1 text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Christian NGO welcomes release of pastor held in southern China</h3>
+                <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Advocacy groups say the case drew renewed attention to religious freedom and legal transparency.</p>
+              </div>
+            </a>
+            <a href="./detail-pages/detail-page-world.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+              <div class="overflow-hidden"><img src="./images/w-3.webp" alt="Commercial ships near a Gulf port" class="h-44 w-full object-cover transition-transform duration-500 group-hover:scale-105" /></div>
+              <div class="p-4">
+                <p class="text-xs font-bold uppercase tracking-wide text-red-600">Middle East</p>
+                <h3 class="mt-1 text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Qatar says maritime activities will resume immediately</h3>
+                <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Officials said port and shipping operations would restart after a temporary pause linked to regional security checks.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section data-reveal class="py-10 sm:py-12 md:py-16 border-t border-gray-100 dark:border-gray-800 opacity-0 translate-y-2 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 gap-4 md:gap-6">
+            <a href="./detail-pages/detail-page-world.html" class="group grid grid-cols-1 md:grid-cols-12 gap-0 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+              <div class="md:col-span-7 p-5 sm:p-6 flex flex-col justify-center">
+                <p class="text-xs font-bold uppercase tracking-wide text-red-600">Middle East / 20 hours ago</p>
+                <h3 class="mt-2 text-xl md:text-3xl font-extrabold uppercase tracking-tight text-gray-900 dark:text-white">Families seek answers after reports of abuse in custody</h3>
+                <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 leading-relaxed">Rights monitors and relatives are pressing for clearer identification, accountability, and access to detainee information.</p>
+              </div>
+              <div class="md:col-span-5 overflow-hidden"><img src="./images/w-4.jpg" alt="People walking through a conflict-affected street" class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105" /></div>
+            </a>
+            <a href="./detail-pages/detail-page-world.html" class="group grid grid-cols-1 md:grid-cols-12 gap-0 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+              <div class="md:col-span-7 p-5 sm:p-6 flex flex-col justify-center">
+                <p class="text-xs font-bold uppercase tracking-wide text-red-600">Asia-Pacific / 14 hours ago</p>
+                <h3 class="mt-2 text-xl md:text-3xl font-extrabold uppercase tracking-tight text-gray-900 dark:text-white">North Korea tests naval cruise missile systems, state media says</h3>
+                <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 leading-relaxed">The reported launch adds another layer to regional security concerns as neighboring governments review maritime readiness.</p>
+              </div>
+              <div class="md:col-span-5 overflow-hidden"><img src="./images/w-5.jpg" alt="North Korean naval vessel at sea" class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105" /></div>
+            </a>
+            <a href="./detail-pages/detail-page-world.html" class="group grid grid-cols-1 md:grid-cols-12 gap-0 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+              <div class="md:col-span-7 p-5 sm:p-6 flex flex-col justify-center">
+                <p class="text-xs font-bold uppercase tracking-wide text-red-600">Europe / 12 hours ago</p>
+                <h3 class="mt-2 text-xl md:text-3xl font-extrabold uppercase tracking-tight text-gray-900 dark:text-white">Leaders push for renewed talks as Ukraine diplomacy intensifies</h3>
+                <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 leading-relaxed">Fresh calls for negotiation came alongside warnings that any agreement would need firm security guarantees.</p>
+              </div>
+              <div class="md:col-span-5 overflow-hidden"><img src="./images/w-6.avif" alt="European leaders in a diplomatic meeting" class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105" /></div>
+            </a>
+            <a href="./detail-pages/detail-page-world.html" class="group grid grid-cols-1 md:grid-cols-12 gap-0 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+              <div class="md:col-span-7 p-5 sm:p-6 flex flex-col justify-center">
+                <p class="text-xs font-bold uppercase tracking-wide text-red-600">Latin America / July 3, 2026</p>
+                <h3 class="mt-2 text-xl md:text-3xl font-extrabold uppercase tracking-tight text-gray-900 dark:text-white">Survivors describe days beneath rubble as flood death toll rises</h3>
+                <p class="mt-3 text-sm text-gray-600 dark:text-gray-300 leading-relaxed">Emergency crews continued rescue and recovery work while aid agencies warned that displaced families need long-term support.</p>
+              </div>
+              <div class="md:col-span-5 overflow-hidden"><img src="./images/w-7.avif" alt="Rescue workers after flooding damage" class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105" /></div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-[#1C1C1C] text-gray-300 pt-16 pb-8 border-t border-zinc-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 xl:gap-12 pb-12 border-b border-zinc-700">
+          <div class="lg:col-span-4 space-y-6">
+            <div class="flex items-center space-x-2"><img class="h-40 w-auto object-contain" src="/images/up_news.png" alt="white logo up news" /></div>
+            <p class="text-lg text-gray-400 leading-relaxed max-w-sm">Up News is dedicated to bringing you transparent, fast, and deeply meaningful coverage of today's most critical headlines. We bridge the gap between unfolding events and insightful analysis to keep you thoroughly informed.</p>
+          </div>
+          <div class="lg:col-span-2 space-y-4">
+            <h4 class="text-white font-bold uppercase tracking-wider text-lg">Quick Links</h4>
+            <ul class="space-y-3 text-lg">
+              <li><a href="../../../index.html" class="hover:text-white transition">Home</a></li>
+              <li><a href="../news-page.html" class="hover:text-white transition">News</a></li>
+              <li><a href="../about-page.html" class="hover:text-white transition">About Us</a></li>
+            </ul>
+          </div>
+          <div class="lg:col-span-3 space-y-4">
+            <h4 class="text-white font-bold uppercase tracking-wider text-lg">Address & Contact</h4>
+            <ul class="space-y-4 text-lg">
+              <li class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-gray-400 mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                  <span class="text-gray-400">#40, St 273, Sangkat Boeung Kak II, Khan Toul Kork, Phnom Penh, Cambodia</span>
+              </li>
+              <li class="flex items-center space-x-3">
+                <svg class="w-5 h-5 text-gray-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg><span class="text-gray-400">(+855) 95-990-910</span>
+              </li>
+              <li class="flex items-center space-x-3">
+                <svg class="w-5 h-5 text-gray-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg><span class="text-gray-400">info.istad@gmail.com</span>
+              </li>
+            </ul>
+          </div>
+          <div class="lg:col-span-3 space-y-4">
+            <h4 class="text-white font-bold uppercase tracking-wider text-lg">Our Sponsors</h4>
+            <div class="flex items-center space-x-3 pt-2"><img src="/images/ISTAD_logo.png" alt="iSTAD Sponsor Logo" class="h-48 w-auto object-contain" /></div>
+          </div>
+        </div>
+        <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-lg">
+          <div class="text-gray-500">&copy; 2026 Up News. All rights reserved.</div>
+          <div class="flex items-center space-x-6">
+            <a href="#" class="flex items-center space-x-2 text-gray-400 hover:text-white transition"
+              ><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-1-.65-.35-1 .22-1.62.15-.15 2.73-2.5 2.78-2.7.01-.03.01-.15-.06-.21-.07-.06-.17-.04-.25-.02-.11.02-1.83 1.16-5.16 3.42-.49.34-.93.5-1.33.49-.44-.01-1.29-.25-1.92-.45-.77-.25-1.39-.39-1.34-.83.03-.23.35-.46.97-.71 3.82-1.66 6.37-2.75 7.63-3.27 3.63-1.49 4.38-1.75 4.87-1.76.11 0 .35.03.51.16.13.11.17.26.19.37z" /></svg><span>Telegram</span>
+            </a>
+            <a href="#" class="flex items-center space-x-2 text-gray-400 hover:text-white transition"
+              ><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg><span>Email</span>
+            </a>
+            <a href="#" class="flex items-center space-x-2 text-gray-400 hover:text-white transition"
+              ><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8.02 9.71v-6.87H7.54V12h2.48V9.8c0-2.45 1.45-3.81 3.69-3.81 1.08 0 2.2.19 2.2.19v2.42h-1.24c-1.21 0-1.59.75-1.59 1.52V12h2.73l-.44 2.84h-2.29v6.87C18.56 20.87 22 16.84 22 12z" /></svg><span>Facebook</span></a>
+          </div>
+        </div>
+      </div>
     </footer>
+
     <script src="../../components/main.js"></script>
-</body>
+  </body>
 </html>
