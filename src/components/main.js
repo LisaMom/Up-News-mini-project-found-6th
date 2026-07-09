@@ -108,9 +108,119 @@ window.toggleTheme = function toggleTheme() {
     });
   }
 
+
+  function initSubscribeOverlay() {
+    const subscribeLinks = Array.from(document.querySelectorAll('[data-subscribe-open]'));
+    if (!subscribeLinks.length) return;
+
+    const modal = document.createElement("div");
+    modal.id = "subscribe-modal";
+    modal.className = "fixed inset-0 z-[100] hidden items-center justify-center bg-black/70 px-4 py-6 backdrop-blur-sm";
+    modal.innerHTML = `
+      <div class="absolute inset-0" data-subscribe-close aria-hidden="true"></div>
+      <section role="dialog" aria-modal="true" aria-labelledby="subscribe-modal-title" class="relative w-full max-w-2xl overflow-hidden rounded-xl border border-gray-200 bg-white shadow-2xl dark:border-gray-800 dark:bg-gray-900">
+        <button type="button" data-subscribe-close class="absolute right-4 top-4 z-10 rounded-full bg-white/90 p-2 text-gray-500 transition hover:text-red-600 dark:bg-gray-950/90 dark:text-gray-300" aria-label="Close subscribe dialog">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+        <div class="grid grid-cols-1 md:grid-cols-5">
+          <div class="relative min-h-56 bg-[#1C1C1C] md:col-span-2">
+            <div class="absolute inset-0 bg-linear-to-br from-red-600/85 via-[#1C1C1C] to-black"></div>
+            <div class="relative flex h-full flex-col justify-between p-6 text-white">
+              <p class="inline-flex w-fit items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-bold uppercase tracking-wide"><span class="h-2 w-2 rounded-full bg-red-500 animate-pulse"></span>Up News</p>
+              <div>
+                <h2 id="subscribe-modal-title" class="text-3xl font-extrabold uppercase leading-tight">Subscribe To<br />Up News</h2>
+                <p class="mt-12 text-sm leading-relaxed text-gray-200">Get weekly updates on the stories shaping business, culture, sport, and world affairs.</p>
+              </div>
+            </div>
+          </div>
+          <div class="md:col-span-3 p-6 sm:p-8">
+            <p class="text-xs font-bold uppercase tracking-wide text-red-600">Newsletter</p>
+            <h3 class="mt-2 text-2xl font-extrabold uppercase tracking-tight text-gray-900 dark:text-white">No Spam, Just The Brief</h3>
+            <p class="mt-3 text-sm leading-relaxed text-gray-600 dark:text-gray-300">A clean weekly email with the top headlines and editor picks from Up News.</p>
+            <form id="subscribe-modal-form" class="mt-6 space-y-4">
+              <label for="subscribe-email" class="sr-only">Email address</label>
+              <div class="flex flex-col gap-3 rounded-xl border border-gray-200 bg-gray-50 p-2 dark:border-gray-800 dark:bg-gray-950 sm:flex-row sm:items-center">
+                <div class="flex min-w-0 flex-1 items-center gap-2 px-2">
+                  <svg class="h-5 w-5 shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                  <input id="subscribe-email" type="email" required placeholder="you@example.com" class="min-w-0 flex-1 bg-transparent py-3 text-sm text-gray-900 outline-none placeholder:text-gray-400 dark:text-white" />
+                </div>
+                <button type="submit" class="cursor-pointer rounded-sm bg-red-600 px-6 py-3 text-xs font-bold uppercase tracking-wide text-white transition hover:bg-red-700 active:scale-95">Subscribe</button>
+              </div>
+              <p id="subscribe-modal-message" class="text-sm text-gray-500 dark:text-gray-400" aria-live="polite">Free weekly briefing. Unsubscribe anytime.</p>
+            </form>
+          </div>
+        </div>
+      </section>
+    `;
+    document.body.appendChild(modal);
+
+    const dialog = modal.querySelector('[role="dialog"]');
+    const email = modal.querySelector("#subscribe-email");
+    const form = modal.querySelector("#subscribe-modal-form");
+    const message = modal.querySelector("#subscribe-modal-message");
+    let lastFocused = null;
+
+    function setOpen(isOpen) {
+      modal.classList.toggle("hidden", !isOpen);
+      modal.classList.toggle("flex", isOpen);
+      document.body.classList.toggle("overflow-hidden", isOpen);
+      if (isOpen) {
+        lastFocused = document.activeElement;
+        window.requestAnimationFrame(function () {
+          email.focus();
+        });
+      } else if (lastFocused && typeof lastFocused.focus === "function") {
+        lastFocused.focus();
+      }
+    }
+
+    subscribeLinks.forEach(function (link) {
+      link.addEventListener("click", function (event) {
+        event.preventDefault();
+        setOpen(true);
+      });
+    });
+
+    modal.addEventListener("click", function (event) {
+      if (event.target.closest("[data-subscribe-close]")) {
+        setOpen(false);
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && !modal.classList.contains("hidden")) {
+        setOpen(false);
+      }
+      if (event.key !== "Tab" || modal.classList.contains("hidden")) return;
+
+      const focusable = Array.from(dialog.querySelectorAll('button, input, a, select, textarea, [tabindex]:not([tabindex="-1"])')).filter(function (item) {
+        return !item.disabled && item.offsetParent !== null;
+      });
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    });
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      message.textContent = "You're subscribed. Welcome to the Up News briefing.";
+      message.classList.remove("text-gray-500", "dark:text-gray-400");
+      message.classList.add("text-red-600");
+      form.reset();
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initSearch();
     initReveal();
     initMobileMenu();
+    initSubscribeOverlay();
   });
 })();

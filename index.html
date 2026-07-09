@@ -76,7 +76,7 @@
               </button>
 
               <!-- Call To Action Button -->
-              <a href="./src/pages/subscribe-page.html" class="hidden sm:inline-block bg-red-600 hover:bg-red-700 text-white font-bold text-lg px-6 py-2.5 rounded-sm shadow transition-all duration-150 transform active:scale-95"> Subscribe </a>
+              <a href="#subscribe" data-subscribe-open class="hidden sm:inline-block bg-red-600 hover:bg-red-700 text-white font-bold text-lg px-6 py-2.5 rounded-sm shadow transition-all duration-150 transform active:scale-95"> Subscribe </a>
 
               <!-- Mobile Menu Toggle (nav links are hidden below md:, this is the only way to reach them there) -->
               <button type="button" id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white p-1 focus:outline-none" aria-label="Toggle menu" aria-expanded="false">
@@ -116,7 +116,7 @@
             <a href="./src/pages/news-page/socialite-page.html" class="block px-3 py-2 text-base font-semibold text-gray-300 hover:text-white hover:bg-zinc-800 rounded-md transition-colors">Socialite</a>
             <a href="./src/pages/news-page/national-page.html" class="block px-3 py-2 text-base font-semibold text-gray-300 hover:text-white hover:bg-zinc-800 rounded-md transition-colors">National</a>
             <a href="./src/pages/about-page.html" class="block px-3 py-2 text-base font-semibold text-gray-300 hover:text-white hover:bg-zinc-800 rounded-md transition-colors">About Us</a>
-            <a href="./src/pages/subscribe-page.html" class="sm:hidden block mt-2 text-center bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-2.5 rounded-sm">Subscribe</a>
+            <a href="#subscribe" data-subscribe-open class="sm:hidden block mt-2 text-center bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-2.5 rounded-sm">Subscribe</a>
           </div>
         </div>
       </nav>
@@ -125,18 +125,18 @@
     <!-- Hero -->
     <section class="relative overflow-hidden bg-gray-900">
       <div class="relative min-h-105 flex items-center justify-center overflow-hidden">
-        <img src="..." alt="Hero image - featured news story" class="absolute inset-0 h-full w-full object-cover bg-gray-800 opacity-55" />
+        <img src="./src/pages/news-page/images/world.jpg" alt="International climate summit meeting room" class="absolute inset-0 h-full w-full object-cover bg-gray-800 opacity-55" />
         <div class="absolute inset-0 bg-linear-to-t from-black/90 via-black/45 to-black/20"></div>
         <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <p class="inline-flex items-center gap-2 rounded-full bg-red-600 px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-white">
             <span class="block h-2 w-2 rounded-full bg-white animate-pulse"></span>
-            Breaking / Featured Story
+            World / Climate Policy
           </p>
-          <h1 class="mt-5 text-3xl sm:text-4xl md:text-5xl font-extrabold uppercase tracking-tight leading-tight text-white">Your Front Row Seat To The Stories Shaping The Week</h1>
-          <p class="mt-4 max-w-2xl mx-auto text-sm sm:text-base text-gray-200 leading-relaxed">Follow the latest updates across world affairs, sports, business, lifestyle, and culture with sharp reporting from Up News.</p>
+          <h1 class="mt-5 text-3xl sm:text-4xl md:text-5xl font-extrabold uppercase tracking-tight leading-tight text-white">Global leaders unveil unified strategy for climate action</h1>
+          <p class="mt-4 max-w-2xl mx-auto text-sm sm:text-base text-gray-200 leading-relaxed">A new framework puts renewable energy expansion, climate finance, and supply-chain resilience at the center of the next phase of international cooperation.</p>
           <div class="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <a href="./src/pages/news-page.html" class="inline-flex items-center justify-center rounded-sm bg-red-600 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-red-700"> View Latest News </a>
-            <a href="./src/pages/about-page.html" class="inline-flex items-center justify-center rounded-sm border border-white/40 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:border-white hover:bg-white/10"> About Up News </a>
+            <a href="./src/pages/news-page/detail-pages/detail-page-world.html" class="inline-flex items-center justify-center rounded-sm bg-red-600 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-red-700"> Read Featured Story </a>
+            <a href="./src/pages/news-page/world-page.html" class="inline-flex items-center justify-center rounded-sm border border-white/40 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:border-white hover:bg-white/10"> More World News </a>
           </div>
         </div>
       </div>
@@ -156,37 +156,37 @@
         </header>
 
         <div class="mt-6 sm:mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-          <article class="group md:col-span-2 relative rounded-xl overflow-hidden bg-gray-900 h-56 sm:h-72 md:h-full min-h-56 border border-gray-200 dark:border-gray-800 shadow-sm dark:shadow-none transform transition-all duration-500 hover:-translate-y-1 hover:shadow-md">
-            <img src="..." alt="Article image" class="absolute inset-0 w-full h-full object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
+          <a href="./src/pages/news-page/detail-pages/detail-page-business.html" class="group md:col-span-2 relative rounded-xl overflow-hidden bg-gray-900 h-56 sm:h-72 md:h-full min-h-56 border border-gray-200 dark:border-gray-800 shadow-sm dark:shadow-none transform transition-all duration-500 hover:-translate-y-1 hover:shadow-md">
+            <img src="./src/pages/news-page/images/business-1.avif" alt="Foxconn manufacturing facility" class="absolute inset-0 w-full h-full object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
             <div class="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent"></div>
             <div class="absolute bottom-0 left-0 p-4 sm:p-6 max-w-md">
-              <p class="text-xs font-bold uppercase tracking-wide text-red-600">Main Story</p>
-              <h3 class="mt-1 text-xl sm:text-2xl md:text-3xl font-extrabold uppercase leading-snug text-white">Star player signs massive contract extension</h3>
-              <p class="mt-2 text-sm text-gray-300 leading-relaxed">The franchise locks in their franchise player for the next five years after weeks of negotiations.</p>
-              <p class="mt-3 text-xs text-gray-400">Mar 11, 2025</p>
+              <p class="text-xs font-bold uppercase tracking-wide text-red-600">Business / Revenue</p>
+              <h3 class="mt-1 text-xl sm:text-2xl md:text-3xl font-extrabold uppercase leading-snug text-white">Foxconn second-quarter revenue jumps as AI demand strengthens</h3>
+              <p class="mt-2 text-sm text-gray-300 leading-relaxed">The world's largest contract electronics maker beat market forecasts while warning that global politics remain volatile for supply chains.</p>
+              <p class="mt-3 text-xs text-gray-400">Updated July 4, 2026</p>
             </div>
-          </article>
+          </a>
 
           <div class="grid grid-cols-1 gap-4 md:gap-6">
-            <article class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
-              <img src="..." alt="Championship odds graphic" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
+            <a href="./src/pages/news-page/detail-pages/detail-page-sports.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+              <img src="./src/pages/news-page/images/sport-1.jpg" alt="Lionel Messi controls the ball during a World Cup match" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
               <div class="p-4">
-                <p class="text-xs font-bold uppercase tracking-wide text-red-600">Analysis</p>
-                <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">What the latest means for championship odds</h3>
-                <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">The franchise looks to lock in their playoff seeding for the next few weeks.</p>
-                <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">Mar 11, 2025</p>
+                <p class="text-xs font-bold uppercase tracking-wide text-red-600">Sports / Football</p>
+                <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Lionel Messi's sublime first touch leads to historic World Cup goal</h3>
+                <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Argentina survived a tense knockout night after one touch changed the match.</p>
+                <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">July 4, 2026</p>
               </div>
-            </article>
+            </a>
 
-            <article class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
-              <img src="..." alt="Article image" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
+            <a href="./src/pages/news-page/detail-pages/detail-page-lifestyle.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+              <img src="./src/pages/news-page/images/life.jpeg" alt="World Cup stadium music and crowd atmosphere" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
               <div class="p-4">
-                <p class="text-xs font-bold uppercase tracking-wide text-red-600">Roster</p>
-                <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Front office prepares next wave of moves</h3>
-                <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">The franchise looks to lock in its core before the market opens.</p>
-                <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">Mar 11, 2025</p>
+                <p class="text-xs font-bold uppercase tracking-wide text-red-600">Lifestyle / Music</p>
+                <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">What's in a song? The story behind World Cup stadium music</h3>
+                <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Stadium playlists are becoming part of the tournament identity.</p>
+                <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">July 3, 2026</p>
               </div>
-            </article>
+            </a>
           </div>
         </div>
       </section>
@@ -210,53 +210,53 @@
           </div>
 
           <div class="md:col-span-2 divide-y divide-gray-200 dark:divide-gray-800 p-4 sm:p-6">
-            <article class="flex items-start gap-4 py-4 first:pt-0">
-              <time class="min-w-20 text-xs font-bold text-gray-400"><span class="block">10:32 AM</span><span class="mt-1 block text-gray-500 dark:text-gray-400">Mar 11</span></time>
-              <div class="flex items-start gap-3">
-                <span class="mt-1 block w-2 h-2 rounded-full bg-red-600 shrink-0 animate-pulse"></span>
-                <div>
-                  <p class="text-xs font-bold uppercase tracking-wide text-red-600">Sports</p>
-                  <h3 class="mt-1 text-sm font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Star player signs important extension</h3>
-                  <p class="mt-1 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">The franchise locks up their next star and keeps the roster plan on schedule.</p>
-                </div>
-              </div>
-            </article>
-
-            <article class="flex items-start gap-4 py-4">
-              <time class="min-w-20 text-xs font-bold text-gray-400"><span class="block">09:48 AM</span><span class="mt-1 block text-gray-500 dark:text-gray-400">Mar 11</span></time>
+            <a href="./src/pages/news-page/detail-pages/detail-page-business.html" class="flex items-start gap-4 py-4 first:pt-0 transition hover:bg-gray-50 dark:hover:bg-gray-950/40">
+              <time class="min-w-20 text-xs font-bold text-gray-400"><span class="block">11:20 AM</span><span class="mt-1 block text-gray-500 dark:text-gray-400">Jul 5</span></time>
               <div class="flex items-start gap-3">
                 <span class="mt-1 block w-2 h-2 rounded-full bg-red-600 shrink-0 animate-pulse"></span>
                 <div>
                   <p class="text-xs font-bold uppercase tracking-wide text-red-600">Business</p>
-                  <h3 class="mt-1 text-sm font-extrabold uppercase leading-snug text-gray-900 dark:text-white">News for championship odds shifts market outlook</h3>
-                  <p class="mt-1 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">The latest movement changes how analysts view the next stretch of games.</p>
+                  <h3 class="mt-1 text-sm font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Foxconn second-quarter revenue jumps as AI demand strengthens</h3>
+                  <p class="mt-1 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">AI hardware demand lifted revenue above forecasts while supply-chain risks stayed in focus.</p>
                 </div>
               </div>
-            </article>
+            </a>
 
-            <article class="flex items-start gap-4 py-4">
-              <time class="min-w-20 text-xs font-bold text-gray-400"><span class="block">08:15 AM</span><span class="mt-1 block text-gray-500 dark:text-gray-400">Mar 11</span></time>
+            <a href="./src/pages/news-page/detail-pages/detail-page-world.html" class="flex items-start gap-4 py-4 transition hover:bg-gray-50 dark:hover:bg-gray-950/40">
+              <time class="min-w-20 text-xs font-bold text-gray-400"><span class="block">09:45 AM</span><span class="mt-1 block text-gray-500 dark:text-gray-400">Jul 5</span></time>
               <div class="flex items-start gap-3">
                 <span class="mt-1 block w-2 h-2 rounded-full bg-red-600 shrink-0 animate-pulse"></span>
                 <div>
                   <p class="text-xs font-bold uppercase tracking-wide text-red-600">World</p>
-                  <h3 class="mt-1 text-sm font-extrabold uppercase leading-snug text-gray-900 dark:text-white">League officials confirm new schedule details</h3>
-                  <p class="mt-1 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Organizers released a fresh update as teams prepare for a crowded week.</p>
+                  <h3 class="mt-1 text-sm font-extrabold uppercase leading-snug text-gray-900 dark:text-white">China and Russia navies to hold drills off China coast</h3>
+                  <p class="mt-1 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">The exercises are being watched closely as governments assess security signals in the Pacific.</p>
                 </div>
               </div>
-            </article>
+            </a>
 
-            <article class="flex items-start gap-4 py-4">
-              <time class="min-w-20 text-xs font-bold text-gray-400"><span class="block">07:40 AM</span><span class="mt-1 block text-gray-500 dark:text-gray-400">Mar 11</span></time>
+            <a href="./src/pages/news-page/detail-pages/detail-page-sports.html" class="flex items-start gap-4 py-4 transition hover:bg-gray-50 dark:hover:bg-gray-950/40">
+              <time class="min-w-20 text-xs font-bold text-gray-400"><span class="block">08:10 AM</span><span class="mt-1 block text-gray-500 dark:text-gray-400">Jul 5</span></time>
+              <div class="flex items-start gap-3">
+                <span class="mt-1 block w-2 h-2 rounded-full bg-red-600 shrink-0 animate-pulse"></span>
+                <div>
+                  <p class="text-xs font-bold uppercase tracking-wide text-red-600">Sports</p>
+                  <h3 class="mt-1 text-sm font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Mbappe strikes again to send France through</h3>
+                  <p class="mt-1 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">France leaned on another clinical finish to grind through a tense knockout test.</p>
+                </div>
+              </div>
+            </a>
+
+            <a href="./src/pages/news-page/detail-pages/detail-page-lifestyle.html" class="flex items-start gap-4 py-4 transition hover:bg-gray-50 dark:hover:bg-gray-950/40">
+              <time class="min-w-20 text-xs font-bold text-gray-400"><span class="block">6:30 PM</span><span class="mt-1 block text-gray-500 dark:text-gray-400">Jul 4</span></time>
               <div class="flex items-start gap-3">
                 <span class="mt-1 block w-2 h-2 rounded-full bg-red-600 shrink-0 animate-pulse"></span>
                 <div>
                   <p class="text-xs font-bold uppercase tracking-wide text-red-600">Lifestyle</p>
-                  <h3 class="mt-1 text-sm font-extrabold uppercase leading-snug text-gray-900 dark:text-white">What the latest means for change off the field</h3>
-                  <p class="mt-1 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">The story continues to shape fan reaction and the week ahead.</p>
+                  <h3 class="mt-1 text-sm font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Madonna releases 15th studio album Confessions II</h3>
+                  <p class="mt-1 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">The pop icon returns with a dance-forward record built around memory and reinvention.</p>
                 </div>
               </div>
-            </article>
+            </a>
           </div>
         </div>
       </section>
@@ -274,37 +274,37 @@
         </header>
 
         <div class="mt-6 sm:mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-          <article class="group md:col-span-2 relative rounded-xl overflow-hidden bg-gray-900 h-56 sm:h-72 md:h-full min-h-56 border border-gray-200 dark:border-gray-800 shadow-sm dark:shadow-none transform transition-all duration-500 hover:-translate-y-1 hover:shadow-md">
-            <img src="..." alt="Feature image — business" class="absolute inset-0 w-full h-full object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
+          <a href="./src/pages/news-page/detail-pages/detail-page-business.html" class="group md:col-span-2 relative rounded-xl overflow-hidden bg-gray-900 h-56 sm:h-72 md:h-full min-h-56 border border-gray-200 dark:border-gray-800 shadow-sm dark:shadow-none transform transition-all duration-500 hover:-translate-y-1 hover:shadow-md">
+            <img src="./src/pages/news-page/images/business-1.avif" alt="Business team reviewing global market strategy" class="absolute inset-0 w-full h-full object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
             <div class="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent"></div>
             <div class="absolute bottom-0 left-0 p-4 sm:p-6 max-w-md">
-              <p class="text-xs font-bold uppercase tracking-wide text-red-600">Business</p>
-              <h3 class="mt-1 text-xl sm:text-2xl md:text-3xl font-extrabold uppercase leading-snug text-white">Market leaders brace for a decisive week of earnings</h3>
-              <p class="mt-2 text-sm text-gray-300 leading-relaxed">Analysts are watching whether spending trends can keep momentum through the next quarter.</p>
-              <p class="mt-3 text-xs text-gray-400">Mar 11, 2025</p>
+              <p class="text-xs font-bold uppercase tracking-wide text-red-600">Business / Revenue</p>
+              <h3 class="mt-1 text-xl sm:text-2xl md:text-3xl font-extrabold uppercase leading-snug text-white">Foxconn second-quarter revenue jumps as AI demand strengthens</h3>
+              <p class="mt-2 text-sm text-gray-300 leading-relaxed">The world's largest contract electronics maker beat market forecasts.</p>
+              <p class="mt-3 text-xs text-gray-400">Updated July 4, 2026</p>
             </div>
-          </article>
+          </a>
 
           <div class="grid grid-cols-1 gap-4 md:gap-6">
-            <article class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
-              <img src="..." alt="Business news thumbnail" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
+            <a href="./src/pages/news-page/detail-pages/detail-page-business.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+              <img src="./src/pages/news-page/images/b-2.webp" alt="Oil industry operations" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
+              <div class="p-4">
+                <p class="text-xs font-bold uppercase tracking-wide text-red-600">Energy</p>
+                <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">US oil companies see profit jump as pump-price debate grows</h3>
+                <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Energy producers prepare for a sharper policy debate as margins strengthen.</p>
+                <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">July 4, 2026</p>
+              </div>
+            </a>
+
+            <a href="./src/pages/news-page/detail-pages/detail-page-business.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+              <img src="./src/pages/news-page/images/b-3.jpg" alt="Semiconductor manufacturing" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
               <div class="p-4">
                 <p class="text-xs font-bold uppercase tracking-wide text-red-600">Markets</p>
-                <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Investors track new signals from central banks</h3>
-                <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Policy hints are shaping expectations before the next round of reports.</p>
-                <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">Mar 11, 2025</p>
+                <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">SK Hynix weighs fee payout in ADR offering</h3>
+                <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">The chipmaker is reviewing investor terms as AI-linked demand stays elevated.</p>
+                <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">July 3, 2026</p>
               </div>
-            </article>
-
-            <article class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
-              <img src="..." alt="Business news thumbnail" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
-              <div class="p-4">
-                <p class="text-xs font-bold uppercase tracking-wide text-red-600">Deals</p>
-                <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Major sponsor signs long-term global partnership</h3>
-                <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">The agreement expands media rights, venue branding, and fan experiences.</p>
-                <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">Mar 11, 2025</p>
-              </div>
-            </article>
+            </a>
           </div>
         </div>
       </section>
@@ -323,45 +323,45 @@
 
         <div class="mt-6 sm:mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
           <div class="order-2 md:order-1 grid grid-cols-1 gap-4 md:gap-6">
-            <article class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
-              <img src="..." alt="Lifestyle news thumbnail" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
+            <a href="./src/pages/news-page/detail-pages/detail-page-lifestyle.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+              <img src="./src/pages/news-page/images/life-2.webp" alt="Madonna performing on stage" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
               <div class="p-4">
-                <p class="text-xs font-bold uppercase tracking-wide text-red-600">Style</p>
-                <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Athletes bring tunnel fashion to center stage</h3>
-                <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Game-day arrivals continue to influence streetwear and brand campaigns.</p>
-                <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">Mar 11, 2025</p>
+                <p class="text-xs font-bold uppercase tracking-wide text-red-600">Music</p>
+                <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Madonna releases 15th studio album Confessions II</h3>
+                <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">The pop icon returns with a dance-forward record built around reinvention.</p>
+                <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">18 hours ago</p>
               </div>
-            </article>
+            </a>
 
-            <article class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
-              <img src="..." alt="Lifestyle news thumbnail" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
+            <a href="./src/pages/news-page/detail-pages/detail-page-lifestyle.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+              <img src="./src/pages/news-page/images/life-3.jpg" alt="Tennis player walking at Wimbledon" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
               <div class="p-4">
-                <p class="text-xs font-bold uppercase tracking-wide text-red-600">Culture</p>
-                <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">New documentary follows life beyond the arena</h3>
-                <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">The series focuses on recovery, family, and the pressure of public life.</p>
-                <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">Mar 11, 2025</p>
+                <p class="text-xs font-bold uppercase tracking-wide text-red-600">Fashion</p>
+                <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Male players follow Osaka's lead on Wimbledon's fashion runway</h3>
+                <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Tennis style is moving beyond tradition as players make sharper statements.</p>
+                <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">July 4, 2026</p>
               </div>
-            </article>
+            </a>
           </div>
 
-          <article class="group order-1 md:order-2 md:col-span-2 relative rounded-xl overflow-hidden bg-gray-900 h-56 sm:h-72 md:h-full min-h-56 border border-gray-200 dark:border-gray-800 shadow-sm dark:shadow-none transform transition-all duration-500 hover:-translate-y-1 hover:shadow-md">
-            <img src="..." alt="Feature image — lifestyle" class="absolute inset-0 w-full h-full object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
+          <a href="./src/pages/news-page/detail-pages/detail-page-lifestyle.html" class="group order-1 md:order-2 md:col-span-2 relative rounded-xl overflow-hidden bg-gray-900 h-56 sm:h-72 md:h-full min-h-56 border border-gray-200 dark:border-gray-800 shadow-sm dark:shadow-none transform transition-all duration-500 hover:-translate-y-1 hover:shadow-md">
+            <img src="./src/pages/news-page/images/life.jpeg" alt="Concert crowd and stadium lifestyle scene" class="absolute inset-0 w-full h-full object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
             <div class="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent"></div>
             <div class="absolute bottom-0 left-0 p-4 sm:p-6 max-w-md">
-              <p class="text-xs font-bold uppercase tracking-wide text-red-600">Lifestyle</p>
-              <h3 class="mt-1 text-xl sm:text-2xl md:text-3xl font-extrabold uppercase leading-snug text-white">Inside the wellness routine powering a comeback season</h3>
-              <p class="mt-2 text-sm text-gray-300 leading-relaxed">A renewed training rhythm and quieter schedule are changing the way stars prepare.</p>
-              <p class="mt-3 text-xs text-gray-400">Mar 11, 2025</p>
+              <p class="text-xs font-bold uppercase tracking-wide text-red-600">Lifestyle / Music</p>
+              <h3 class="mt-1 text-xl sm:text-2xl md:text-3xl font-extrabold uppercase leading-snug text-white">What's in a song? The story behind World Cup stadium music</h3>
+              <p class="mt-2 text-sm text-gray-300 leading-relaxed">From anthems to post-match singalongs, playlists are becoming part of the tournament identity.</p>
+              <p class="mt-3 text-xs text-gray-400">Updated July 4, 2026</p>
             </div>
-          </article>
+          </a>
         </div>
       </section>
 
-      <!-- Socialite news -->
+      <!-- Editor picks -->
       <section data-reveal class="py-10 sm:py-12 md:py-16 border-t border-gray-100 dark:border-gray-800 opacity-0 translate-y-2 transition-all duration-500">
         <header class="flex flex-col items-center text-center">
-          <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight"><span class="text-gray-900 dark:text-white">SOCIALITE NEWS </span><span class="text-red-600">THIS WEEK</span></h2>
-          <a href="./src/pages/news-page/socialite-page.html" class="group mt-3 inline-flex items-center gap-1 rounded-full border border-gray-300 px-4 py-1.5 text-xs sm:text-sm font-medium text-gray-600 hover:border-red-600 hover:text-red-600 hover:bg-gray-50 transition-all duration-500 dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800">
+          <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight"><span class="text-gray-900 dark:text-white">EDITOR </span><span class="text-red-600">PICKS</span></h2>
+          <a href="./src/pages/news-page.html" class="group mt-3 inline-flex items-center gap-1 rounded-full border border-gray-300 px-4 py-1.5 text-xs sm:text-sm font-medium text-gray-600 hover:border-red-600 hover:text-red-600 hover:bg-gray-50 transition-all duration-500 dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-800">
             View all
             <svg class="w-3.5 h-3.5 transition-transform duration-500 group-hover:translate-x-1" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M7 5l5 5-5 5" stroke-linecap="round" stroke-linejoin="round" />
@@ -369,16 +369,37 @@
           </a>
         </header>
 
-        <article class="group mt-6 sm:mt-8 relative rounded-xl overflow-hidden bg-gray-900 h-56 sm:h-72 md:h-96 min-h-56 border border-gray-200 dark:border-gray-800 shadow-sm dark:shadow-none transform transition-all duration-500 hover:-translate-y-1 hover:shadow-md">
-          <img src="..." alt="Feature image — celebrity" class="absolute inset-0 w-full h-full object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
-          <div class="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent"></div>
-          <div class="absolute bottom-0 left-0 p-4 sm:p-6 max-w-md">
-            <p class="text-xs font-bold uppercase tracking-wide text-red-600">Celebrity</p>
-            <h3 class="mt-1 text-xl sm:text-2xl md:text-3xl font-extrabold uppercase leading-snug text-white">Star striker spotted courtside at NBA finals with new partner</h3>
-            <p class="mt-2 text-sm text-gray-300 leading-relaxed">The courtside appearance sets off a wave of reaction across sport and entertainment circles.</p>
-            <p class="mt-3 text-xs text-gray-400">Mar 11, 2025</p>
-          </div>
-        </article>
+        <div class="mt-6 sm:mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+          <a href="./src/pages/news-page/detail-pages/detail-page-world.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+            <img src="./src/pages/news-page/images/w-6.avif" alt="European leaders in a diplomatic meeting" class="w-full h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
+            <div class="p-4">
+              <p class="text-xs font-bold uppercase tracking-wide text-red-600">World / Europe</p>
+              <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Leaders push for renewed talks as Ukraine diplomacy intensifies</h3>
+              <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Fresh calls for negotiation came with warnings that any deal needs security guarantees.</p>
+              <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">12 hours ago</p>
+            </div>
+          </a>
+
+          <a href="./src/pages/news-page/detail-pages/detail-page-sports.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+            <img src="./src/pages/news-page/images/f1.jpeg" alt="Formula 1 cars racing on track" class="w-full h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
+            <div class="p-4">
+              <p class="text-xs font-bold uppercase tracking-wide text-red-600">Sports / Motorsport</p>
+              <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Leclerc wins dramatic British Grand Prix from Russell and Hamilton</h3>
+              <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">A late-race charge turned Silverstone into a reminder of Formula 1's thin margins.</p>
+              <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">June 25, 2026</p>
+            </div>
+          </a>
+
+          <a href="./src/pages/news-page/detail-pages/detail-page-lifestyle.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+            <img src="./src/pages/news-page/images/life-8.webp" alt="World Cup merchandise display" class="w-full h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
+            <div class="p-4">
+              <p class="text-xs font-bold uppercase tracking-wide text-red-600">Lifestyle / Fans</p>
+              <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Congo shirts to key chains, fans flock for World Cup mementos</h3>
+              <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Tournament stores are becoming gathering points as supporters turn memories into keepsakes.</p>
+              <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">July 3, 2026</p>
+            </div>
+          </a>
+        </div>
       </section>
 
       <!-- World news -->
@@ -394,45 +415,45 @@
         </header>
 
         <div class="mt-6 sm:mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
-          <article class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
-            <img src="..." alt="World news thumbnail" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
+          <a href="./src/pages/news-page/detail-pages/detail-page-world.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+            <img src="./src/pages/news-page/images/world.jpg" alt="World leaders gathered at an international summit" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
             <div class="p-4">
-              <p class="text-xs font-bold uppercase tracking-wide text-red-600">World</p>
-              <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Officials confirm new stadium plans ahead of next season</h3>
-              <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">City leaders approved the next phase as organizers prepare for a larger global audience.</p>
-              <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">Mar 11, 2025</p>
+              <p class="text-xs font-bold uppercase tracking-wide text-red-600">World / Climate Policy</p>
+              <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Global leaders unveil unified strategy for climate action</h3>
+              <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">A new framework puts renewable energy expansion and climate finance at the center.</p>
+              <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">Updated July 4, 2026</p>
             </div>
-          </article>
+          </a>
 
-          <article class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
-            <img src="..." alt="World news thumbnail" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
+          <a href="./src/pages/news-page/detail-pages/detail-page-world.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+            <img src="./src/pages/news-page/images/w-1.jpg" alt="Military vessels at sea" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
             <div class="p-4">
-              <p class="text-xs font-bold uppercase tracking-wide text-red-600">World</p>
-              <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">League announces expansion to two new markets</h3>
-              <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">The move adds fresh pressure to clubs as broadcast and travel plans take shape.</p>
-              <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">Mar 11, 2025</p>
+              <p class="text-xs font-bold uppercase tracking-wide text-red-600">Security</p>
+              <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">China and Russia navies to hold drills off China coast</h3>
+              <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Regional governments are watching the joint exercises for security signals.</p>
+              <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">July 4, 2026</p>
             </div>
-          </article>
+          </a>
 
-          <article class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
-            <img src="..." alt="World news thumbnail" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
+          <a href="./src/pages/news-page/detail-pages/detail-page-world.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+            <img src="./src/pages/news-page/images/w-3.webp" alt="Commercial ships near a Gulf port" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
             <div class="p-4">
-              <p class="text-xs font-bold uppercase tracking-wide text-red-600">World</p>
-              <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Federation opens inquiry into ticketing scandal</h3>
-              <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Officials say the review will focus on pricing, allocation, and resale controls.</p>
-              <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">Mar 11, 2025</p>
+              <p class="text-xs font-bold uppercase tracking-wide text-red-600">Middle East</p>
+              <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Qatar says maritime activities will resume immediately</h3>
+              <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Officials said port and shipping operations would restart after security checks.</p>
+              <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">20 hours ago</p>
             </div>
-          </article>
+          </a>
 
-          <article class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
-            <img src="..." alt="World news thumbnail" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
+          <a href="./src/pages/news-page/detail-pages/detail-page-world.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+            <img src="./src/pages/news-page/images/w-6.avif" alt="European leaders in a diplomatic meeting" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
             <div class="p-4">
-              <p class="text-xs font-bold uppercase tracking-wide text-red-600">World</p>
-              <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Rising star declares eligibility for next draft</h3>
-              <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Scouts expect the announcement to reshape early projections across several teams.</p>
-              <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">Mar 11, 2025</p>
+              <p class="text-xs font-bold uppercase tracking-wide text-red-600">Europe</p>
+              <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Leaders push for renewed talks as Ukraine diplomacy intensifies</h3>
+              <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Fresh calls for negotiation came alongside warnings about security guarantees.</p>
+              <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">12 hours ago</p>
             </div>
-          </article>
+          </a>
         </div>
       </section>
 
@@ -449,49 +470,49 @@
         </header>
 
         <div class="mt-6 sm:mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-          <article class="group md:col-span-2 relative rounded-xl overflow-hidden bg-gray-900 h-56 sm:h-72 md:h-full min-h-56 border border-gray-200 dark:border-gray-800 shadow-sm dark:shadow-none transform transition-all duration-500 hover:-translate-y-1 hover:shadow-md">
-            <img src="..." alt="Player image" class="absolute inset-0 w-full h-full object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
+          <a href="./src/pages/news-page/detail-pages/detail-page-sports.html" class="group md:col-span-2 relative rounded-xl overflow-hidden bg-gray-900 h-56 sm:h-72 md:h-full min-h-56 border border-gray-200 dark:border-gray-800 shadow-sm dark:shadow-none transform transition-all duration-500 hover:-translate-y-1 hover:shadow-md">
+            <img src="./src/pages/news-page/images/sport-1.jpg" alt="Footballer celebrating a World Cup goal" class="absolute inset-0 w-full h-full object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
             <div class="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent"></div>
             <div class="absolute bottom-0 left-0 p-4 sm:p-6 max-w-md">
-              <p class="text-xs font-bold uppercase tracking-wide text-red-600">Matchup</p>
-              <h3 class="mt-1 text-xl sm:text-2xl md:text-3xl font-extrabold uppercase leading-snug text-white">Two division rivals meet in playoff-positioning clash</h3>
-              <p class="mt-2 text-sm text-gray-300 leading-relaxed">The stakes have never been higher as both teams chase momentum before the final stretch.</p>
-              <p class="mt-3 text-xs text-gray-400">Saturday, Mar 15</p>
+              <p class="text-xs font-bold uppercase tracking-wide text-red-600">Sports / Football</p>
+              <h3 class="mt-1 text-xl sm:text-2xl md:text-3xl font-extrabold uppercase leading-snug text-white">Lionel Messi's sublime first touch leads to historic World Cup goal</h3>
+              <p class="mt-2 text-sm text-gray-300 leading-relaxed">Argentina survived a tense knockout night after Messi turned one difficult pass into the moment that changed the match.</p>
+              <p class="mt-3 text-xs text-gray-400">Updated July 4, 2026</p>
             </div>
-          </article>
+          </a>
 
           <div class="grid grid-cols-1 gap-4 md:gap-6">
-            <article class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
-              <img src="..." alt="Sports news thumbnail" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
+            <a href="./src/pages/news-page/detail-pages/detail-page-sports.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+              <img src="./src/pages/news-page/images/sport-2.webp" alt="Kylian Mbappe in a football match" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
               <div class="p-4">
-                <p class="text-xs font-bold uppercase tracking-wide text-red-600">Schedule</p>
-                <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Wednesday showdown adds pressure to standings race</h3>
-                <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">A packed week could decide which teams hold their playoff position.</p>
-                <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">Wednesday, Mar 19</p>
+                <p class="text-xs font-bold uppercase tracking-wide text-red-600">World Cup</p>
+                <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Mbappe strikes again to send France through</h3>
+                <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">France leaned on another clinical finish to grind through a tense round-of-16 test.</p>
+                <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">July 4, 2026</p>
               </div>
-            </article>
+            </a>
 
-            <article class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
-              <img src="..." alt="Sports news thumbnail" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
+            <a href="./src/pages/news-page/detail-pages/detail-page-sports.html" class="group rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 dark:bg-gray-900 dark:border-gray-800 dark:shadow-none transform hover:-translate-y-1">
+              <img src="./src/pages/news-page/images/sport-5.webp" alt="Morocco football team celebrating" class="w-full h-32 md:h-40 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
               <div class="p-4">
-                <p class="text-xs font-bold uppercase tracking-wide text-red-600">Preview</p>
-                <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Coaches prepare rotations for a brutal road stretch</h3>
-                <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">Depth and late-game execution are set to define the next run of fixtures.</p>
-                <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">Mar 11, 2025</p>
+                <p class="text-xs font-bold uppercase tracking-wide text-red-600">Quarter-Finals</p>
+                <h3 class="mt-1 text-sm md:text-lg font-extrabold uppercase leading-snug text-gray-900 dark:text-white">Morocco reach quarter-finals as co-hosts Canada bow out</h3>
+                <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 leading-relaxed">A disciplined performance sent Morocco deeper into the knockout bracket.</p>
+                <p class="mt-3 text-xs text-gray-400 dark:text-gray-500">July 2, 2026</p>
               </div>
-            </article>
+            </a>
           </div>
         </div>
       </section>
 
       <!-- Newsletter -->
       <section data-reveal class="pb-12 sm:pb-16 md:pb-20 border-t border-gray-100 dark:border-gray-800 opacity-0 translate-y-2 transition-all duration-500">
-        <a href="./src/pages/subscribe-page.html" class="group relative rounded-xl bg-slate-100 dark:bg-gray-900 h-64 sm:h-72 md:h-96 overflow-hidden flex items-center transform transition-all duration-500 hover:-translate-y-1 hover:shadow-md">
+        <a href="#subscribe" data-subscribe-open class="group relative rounded-xl bg-slate-100 dark:bg-gray-900 h-64 sm:h-72 md:h-96 overflow-hidden flex items-center transform transition-all duration-500 hover:-translate-y-1 hover:shadow-md">
           <div class="pl-5 sm:pl-8 md:pl-12 z-10">
             <p class="text-xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white uppercase tracking-tight leading-none">Newsletter</p>
             <p class="mt-1 text-xl sm:text-3xl md:text-4xl font-extrabold text-slate-400 dark:text-gray-400 uppercase tracking-tight leading-none">Subscription</p>
           </div>
-          <img src="..." alt="Newsletter subscription photo" class="absolute right-0 bottom-0 h-full w-28 sm:w-44 md:w-64 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
+          <img src="./src/pages/news-page/images/business-1.avif" alt="Newsroom business briefing photo" class="absolute right-0 bottom-0 h-full w-28 sm:w-44 md:w-64 object-cover bg-gray-800 transition-transform duration-500 group-hover:scale-105" />
         </a>
       </section>
     </main>
