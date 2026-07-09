@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All News</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+   <!-- Google Material Symbols -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+</head>
+</head>
+<body>
+      <!-- Header Navigation with Theme Toggle -->
+    <header class="border-b border-gray-200 dark:border-gray-800 sticky top-0 bg-white/80 dark:bg-gray-950/80 backdrop-blur-md z-50">
+     <!-- Main Navigation Bar -->
+    <nav class="bg-brandDark border-b border-zinc-800 relative z-50 select-none bg-[#1C1C1C]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Left Side: Brand Logo -->
+                <div class="flex-shrink-0 flex items-center space-x-2">
+                    <img class="h-16 w-auto" src="../logo/white-logo-up_news-removebg-preview.png" alt="up news logo">
+                </div>
+
+                <!-- Center Section: Menu Links with Dropdown Menu -->
+                <div class="hidden md:flex items-center space-x-1 h-full">
+                    
+                    <!-- Home Link -->
+                    <a href="#" class="px-5 py-2 text-lg font-semibold tracking-wide text-gray-300 hover:text-white transition-colors">
+                        Home
+                    </a>
+
+                    <!-- News Dropdown Trigger Container via CSS Group-Hover -->
+                    <div class="relative group h-full flex items-center">
+                        <button class="px-5 py-2 text-lg font-semibold tracking-wide text-white flex items-center space-x-1 focus:outline-none">
+                            <span>News</span>
+                            <svg class="w-4 h-4 ml-0.5 text-gray-400 group-hover:text-white group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+
+                        <!-- Hover Dropdown Menu Structure -->
+                        <div class="absolute top-[100%] left-0 w-48 bg-[#252525] border border-zinc-800 shadow-xl rounded-md py-2 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:invisible-none group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50">
+                             <a href="./business-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">
+                                Business
+                            </a>
+                            <a href="./sports-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">
+                                Sports
+                            </a>
+                            <a href="./world-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">
+                                World
+                            </a>
+                            <a href="./lifestyle-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">
+                                Lifestyle
+                            </a>
+                            <a href="./news-page/socialite-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">
+                                Socialite
+                            </a>
+                            <a href="./news-page/national-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">
+                                National
+                            </a>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- About Us Link -->
+                    <a href="#" class="px-5 py-2 text-lg font-semibold tracking-wide text-gray-300 hover:text-white transition-colors">
+                        About Us
+                    </a>
+                </div>
+                
+
+                <!-- Right Side Elements: Search, Dark Theme Icon, CTA Button -->
+                <div class="flex items-center space-x-6">
+                    
+                    <!-- Search Icon Button -->
+                    <button type="button" class="text-gray-400 hover:text-white p-1 transition-colors focus:outline-none" aria-label="Search">
+                        <svg class="w-5 h-5 stroke-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </button>
+
+                    <!-- Theme Moon Icon Trigger Toggle Indicator -->
+                    <button type="button" class="text-gray-400 hover:text-white p-1 transition-colors focus:outline-none" aria-label="Toggle dark mode">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                    </button>
+
+                    <!-- Call To Action Button -->
+                    <a href="#" class="bg-red-600 hover:bg-red-700 text-white font-bold text-lg px-6 py-2.5 rounded-sm shadow transition-all duration-150 transform active:scale-95">
+                        Subscribe
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    </header>
+<!-- Sport -->
+<section class="px-6 py-10 hover:bg-gray-100 transition-colors duration-300 rounded-lg cursor-pointer">
+  <div class="max-w-7xl mx-auto">
+    <!-- Center: All News -->
+    <div class="col-span-8 flex justify-center items-center">
+      <h2 class="text-lg font-semibold">
+        <span class="text-black">All</span>
+        <span class="text-red-600">News</span>
+      </h2>
+    </div>
+    <!-- Header -->
+    <header class="grid grid-cols-12 items-center mb-6">
+      <!-- Left: Sports -->
+      <div class="col-span-2 flex items-center">
+        <h2 class="text-2xl font-bold text-gray-900 border-b-2 border-red-600 inline-block pb-1">Sports</h2>
+      </div>
+    </header>
+
+    <!-- Main Grid -->
+    <div class="grid grid-cols-12 gap-6 items-start">
+      <!-- Left Column -->
+      <div class="col-span-4 space-y-3">
+        <p class="text-sm text-orange-600 font-semibold flex items-center gap-2">
+          🏆 FIFA World Cup 2026
+        </p>
+        <h4 class="font-bold text-gray-900 leading-snug hover:text-red-600 transition-colors">
+          Mbappe keeps cool as France survive furnace against Paraguay
+        </h4>
+        <p class="text-xs text-gray-500 flex items-center gap-1">
+          <span class="material-symbols-outlined text-gray-400 text-base">schedule</span>
+          6 hours ago
+        </p>
+      </div>
+
+      <!-- Right Column (Main Image) -->
+      <div class="col-span-8">
+        <img src="../img/mbappe celebrating goals.avif" alt="Mbappe celebrating" 
+             class="rounded-lg w-full h-auto object-cover hover:scale-105 transition-transform duration-300">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Cards -->
+<section class="px-6 py-8 bg-white">
+  <div class="max-w-7xl mx-auto grid grid-cols-2 gap-6">
+    <!-- Card 1 -->
+    <a href="./music-article.html" 
+       class="flex items-start gap-4 bg-white rounded-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+      <div class="flex-1 p-2 hover:bg-gray-50 transition-colors">
+        <h5 class="font-semibold text-gray-900 leading-snug hover:text-red-600 transition-colors">
+          The story behind the music playing at World Cup stadiums
+        </h5>
+        <p class="text-xs text-gray-500 flex items-center gap-1 mt-1">
+          <span class="material-symbols-outlined text-gray-400 text-base">schedule</span>
+          1 hours ago
+        </p>
+      </div>
+      <img src="../img/L3QYU5US5ZKRTPIBC25H4GMARI.avif" alt="Fans cheering at stadium" 
+           class="rounded-lg w-28 h-20 object-cover hover:scale-105 transition-transform duration-300">
+    </a>
+
+    <!-- Card 2 -->
+    <a href="./asia-article.html" 
+       class="flex items-start gap-4 bg-white rounded-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+      <div class="flex-1 p-2 hover:bg-gray-50 transition-colors">
+        <h5 class="font-semibold text-gray-900 leading-snug hover:text-red-600 transition-colors">
+          Lack of individual quality at heart of Asia's poor World Cup showing
+        </h5>
+        <p class="text-xs text-gray-500 flex items-center gap-1 mt-1">
+          <span class="material-symbols-outlined text-gray-400 text-base">schedule</span>
+          22 hours ago
+        </p>
+      </div>
+      <img src="../img/KAJ43I2OAFOXHJODFM2DQGRCN4.avif" alt="Asian player sitting on field" 
+           class="rounded-lg w-28 h-20 object-cover hover:scale-105 transition-transform duration-300">
+    </a>
+  </div>
+</section>
+<!-- Formula 1 Featured Section -->
+<section class="px-6 py-10 bg-white hover:bg-gray-50 transition-colors duration-300 rounded-lg cursor-pointer">
+  <div class="max-w-7xl mx-auto grid grid-cols-12 gap-6 items-start">
+    <!-- Left Column: Text -->
+    <div class="col-span-5 space-y-3">
+      <p class="text-sm text-red-600 font-semibold flex items-center gap-2">
+        <img src="../logo/F1-log-img.png" alt="F1 logo" class="w-7 h-7 object-contain align-middle">
+        Formula 1
+      </p>
+      <h4 class="font-bold text-gray-900 leading-snug hover:text-red-600 transition-colors">
+        Horner returns to F1 paddock a year after sacking
+      </h4>
+      <p class="text-sm text-gray-600">
+        The International Swimming League will pay more than 300 athletes long‑overdue prize money owed...
+      </p>
+      <p class="text-xs text-gray-500 flex items-center gap-1">
+        <span class="material-symbols-outlined text-gray-400 text-base">schedule</span>
+        2 hours ago
+      </p>
+    </div>
+
+    <!-- Right Column: Image -->
+    <div class="col-span-7">
+      <img src="../img/f1 star.avif" alt="Horner walking through F1 paddock" 
+           class="rounded-lg w-full h-auto object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+  </div>
+</section>
+
+<!-- Formula 1 Cards -->
+<section class="px-6 py-10 bg-white">
+  <div class="max-w-7xl mx-auto grid grid-cols-3 gap-6">
+    
+    <!-- Card 1 -->
+    <a href="./f1-article1.html" 
+       class="bg-white rounded-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer block">
+      <img src="../img/f1 card1.avif" alt="George Russell" 
+           class="rounded-t-lg w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+      <div class="p-4 space-y-2 hover:bg-gray-50 transition-colors">
+        <h5 class="font-semibold text-gray-900 leading-snug hover:text-red-600 transition-colors">
+          Wolff identifies ‘sweet part’ of British GP as Russell still not ‘gelling with the car’
+        </h5>
+        <p class="text-sm text-gray-600">Toto Wolff has recognised that George Russell isn’t fully comfortable...</p>
+        <p class="text-xs text-gray-500 flex items-center gap-1">
+          <span class="material-symbols-outlined text-gray-400 text-base">schedule</span>
+          Jul 07, 2026 10:02am UTC (22 hours ago)
+        </p>
+      </div>
+    </a>
+
+    <!-- Card 2 -->
+    <a href="./f1-article2.html" 
+       class="bg-white rounded-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer block">
+      <img src="../img/f1 card2.avif" alt="McLaren pit crew" 
+           class="rounded-t-lg w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+      <div class="p-4 space-y-2 hover:bg-gray-50 transition-colors">
+        <h5 class="font-semibold text-gray-900 leading-snug hover:text-red-600 transition-colors">
+          When McLaren should see first results of redirected upgrade approach
+        </h5>
+        <p class="text-sm text-gray-600">Team Principal Andrea Stella has confirmed a change of direction...</p>
+        <p class="text-xs text-gray-500 flex items-center gap-1">
+          <span class="material-symbols-outlined text-gray-400 text-base">schedule</span>
+          Jul 07, 2026 1:29pm UTC (19 hours ago)
+        </p>
+      </div>
+    </a>
+
+    <!-- Card 3 -->
+    <a href="./f1-article3.html" 
+       class="bg-white rounded-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer block">
+      <img src="../img/f1 card3.avif" alt="Lewis Hamilton" 
+           class="rounded-t-lg w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+      <div class="p-4 space-y-2 hover:bg-gray-50 transition-colors">
+        <h5 class="font-semibold text-gray-900 leading-snug hover:text-red-600 transition-colors">
+          Vasseur explains Ferrari reasoning behind decision to pit Hamilton under Safety Car
+        </h5>
+        <p class="text-sm text-gray-600">Lewis Hamilton was left to finish third at the British Grand Prix...</p>
+        <p class="text-xs text-gray-500 flex items-center gap-1">
+          <span class="material-symbols-outlined text-gray-400 text-base">schedule</span>
+          Jul 06, 2026 2:38pm UTC
+        </p>
+      </div>
+    </a>
+
+  </div>
+</section>
+<!-- Business Section -->
+<section class="px-6 py-10 bg-white hover:bg-gray-50 transition-colors duration-300 rounded-lg cursor-pointer">
+  <div class="max-w-7xl mx-auto">
+    <!-- Title -->
+    <div class="mb-6">
+      <h2 class="text-2xl font-bold text-gray-900 border-b-2 border-red-600 inline-block pb-1">
+        Business
+      </h2>
+    </div>
+
+    <!-- Main Grid -->
+    <div class="grid grid-cols-12 gap-6 items-start">
+      <!-- Left Column: Main Article -->
+      <a href="./business-article1.html" 
+         class="col-span-8 block bg-white rounded-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+        <img src="../img/truck.avif" alt="Daimler trucks" 
+             class="rounded-lg w-full h-auto object-cover hover:scale-105 transition-transform duration-300">
+        <div class="p-4 space-y-2 hover:bg-gray-50 transition-colors">
+          <h4 class="font-bold text-gray-900 leading-snug hover:text-red-600 transition-colors">
+            Daimler Truck Q2 vehicle sales rise 8% as North America demand recovers
+          </h4>
+          <p class="text-sm text-gray-600">
+            Daimler Truck, one of the world’s biggest truckmakers, reported an 8% increase in second‑quarter vehicle sales driven by North American demand recovery.
+          </p>
+          <p class="text-xs text-gray-500 flex items-center gap-1">
+            <span class="material-symbols-outlined text-gray-400 text-base">schedule</span>
+            1 hour ago
+          </p>
+        </div>
+      </a>
+
+      <!-- Right Column: Side Articles -->
+<div class="col-span-4 space-y-8">
+  
+  <!-- Card 1 -->
+  <a href="./business-article2.html" 
+     class="block bg-white rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+    <img src="../img/byd.avif" alt="BYD car display" 
+         class="rounded-t-xl w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    <div class="p-5 hover:bg-gray-50 transition-colors">
+      <h5 class="font-semibold text-gray-900 text-lg leading-snug hover:text-red-600 transition-colors">
+        BYD’s sales rise for second month, buoyed by exports
+      </h5>
+      <p class="text-sm text-gray-500 flex items-center gap-1 mt-2">
+        <span class="material-symbols-outlined text-gray-400 text-base">schedule</span>
+        8 hours ago
+      </p>
+    </div>
+  </a>
+
+  <!-- Card 2 -->
+  <a href="./business-article3.html" 
+     class="block bg-white rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+    <img src="../img/jeep.avif" alt="Jeep and Hummer display" 
+         class="rounded-t-xl w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    <div class="p-5 hover:bg-gray-50 transition-colors">
+      <h5 class="font-semibold text-gray-900 text-lg leading-snug hover:text-red-600 transition-colors">
+        Automakers tap America’s 250th World Cup to rev up patriotism
+      </h5>
+      <p class="text-sm text-gray-500 flex items-center gap-1 mt-2">
+        <span class="material-symbols-outlined text-gray-400 text-base">schedule</span>
+        July 2, 2026
+      </p>
+    </div>
+  </a>
+
+</div>
+</section>
+<!-- Lifestyle Section -->
+<section class="px-6 py-10 bg-white hover:bg-gray-50 transition-colors duration-300 rounded-lg cursor-pointer">
+  <div class="max-w-7xl mx-auto grid grid-cols-12 gap-6 items-start">
+    
+    <!-- Left Column: Image -->
+    <div class="col-span-6">
+      <img src="../img/news-page-lifestyle-img.avif" alt="FIFA World Cup stadium" 
+           class="rounded-xl w-full h-auto object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+
+    <!-- Right Column: Text -->
+    <div class="col-span-6 space-y-3">
+      <h2 class="text-2xl font-bold text-gray-900 border-b-2 border-red-600 inline-block pb-1">
+        Lifestyle
+      </h2>
+      <h4 class="font-bold text-gray-900 leading-snug hover:text-red-600 transition-colors">
+        What's in a song? The story behind the music playing at World Cup stadiums
+      </h4>
+      <p class="text-sm text-gray-600">
+        Watching the World Cup and hearing the music in the stadium may have left you wondering — how is that chosen? 
+        Is it just coincidence that “Wonderwall” plays after England matches? Are “Freed from Desire” or “Livin’ on a Prayer” always played? And why?
+      </p>
+      <p class="text-xs text-gray-500 flex items-center gap-1">
+        <span class="material-symbols-outlined text-gray-400 text-base">schedule</span>
+        July 2, 2026
+      </p>
+    </div>
+  </div>
+</section>
+<!-- World Section -->
+<section class="px-6 py-10 bg-white hover:bg-gray-50 transition-colors duration-300 rounded-lg cursor-pointer">
+  <div class="max-w-7xl mx-auto grid grid-cols-12 gap-6 items-start">
+    
+    <!-- Left Column: Image -->
+    <div class="col-span-6">
+      <img src="../img/Trump-putin-agreement.avif" alt="Trump and Putin handshake" 
+           class="rounded-xl w-full h-auto object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+    
+    <!-- Right Column: Text -->
+    <div class="col-span-6 space-y-3">
+      <h2 class="text-2xl font-bold text-gray-900 border-b-2 border-red-600 inline-block pb-1">
+        World
+      </h2>
+      <h4 class="font-bold text-gray-900 leading-snug hover:text-red-600 transition-colors">
+        Trump offers to help Putin find deal with Ukraine, also speaks with Zelenskiy
+      </h4>
+      <p class="text-sm text-gray-600">
+        U.S. President Donald Trump, speaking to Russian leader Vladimir Putin by telephone for nearly 90 minutes, offered to help find a solution to the Ukraine war, Kremlin aide Yuri Ushakov said in comments made public early on Sunday.
+      </p>
+      <p class="text-xs text-gray-500 flex items-center gap-1">
+        <span class="material-symbols-outlined text-gray-400 text-base">schedule</span>
+        14 hours ago
+      </p>
+    </div>
+  </div>
+</section>
+<!-- National Section -->
+<section class="px-6 py-10 bg-white hover:bg-gray-50 transition-colors duration-300 rounded-lg cursor-pointer">
+  <div class="max-w-7xl mx-auto grid grid-cols-12 gap-6 items-start">
+    
+    <!-- Left Column: Text -->
+    <div class="col-span-5 space-y-3">
+      <h2 class="text-2xl font-bold text-gray-900 border-b-2 border-red-600 inline-block pb-1">
+        National
+      </h2>
+      <h4 class="font-bold text-gray-900 leading-snug hover:text-red-600 transition-colors">
+        Interior ministry establishes six new Banteay Meanchey ‘waiting villages’ for displaced civilians
+      </h4>
+      <p class="text-sm text-gray-600">
+        The Interior Ministry has announced the creation of six new “waiting villages” in Banteay Meanchey province to temporarily house displaced civilians, offering shelter and basic infrastructure while long-term resettlement plans are developed.
+      </p>
+      <p class="text-xs text-gray-500 flex items-center gap-1">
+        <span class="material-symbols-outlined text-gray-400 text-base">schedule</span>
+        July 2, 2026
+      </p>
+    </div>
+
+    <!-- Right Column: Image -->
+    <div class="col-span-7">
+      <img src="../img/phum-jok-jey.webp" alt="Aerial view of waiting villages in Banteay Meanchey" 
+           class="rounded-xl w-full h-auto object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+  </div>
+</section>
+<!-- Socialite Section -->
+<section class="px-6 py-10 bg-white hover:bg-gray-50 transition-colors duration-300 rounded-lg cursor-pointer">
+  <div class="max-w-7xl mx-auto grid grid-cols-12 gap-6 items-start">
+    
+    <!-- Left Column: Image -->
+    <div class="col-span-7">
+      <img src="../img/tom-holland-zendaya-lede-06162026-615x410.jpg" alt="Tom Holland and Zendaya smiling together" 
+           class="rounded-xl w-full h-auto object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+
+    <!-- Right Column: Text -->
+    <div class="col-span-5 space-y-3">
+      <h2 class="text-2xl font-bold text-gray-900 border-b-2 border-red-600 inline-block pb-1">
+        Socialite
+      </h2>
+      <h4 class="font-bold text-gray-900 leading-snug hover:text-red-600 transition-colors">
+        Tom Holland Confirms He and Zendaya Are Married: “I Found My Person”
+      </h4>
+      <p class="text-sm text-gray-600">
+        Tom Holland officially confirms he and Zendaya are married in a new Esquire UK interview, ending months of speculation with heartfelt remarks about finding his lifelong partner.
+      </p>
+      <p class="text-xs text-gray-500 flex items-center gap-1">
+        <span class="material-symbols-outlined text-gray-400 text-base">schedule</span>
+        July 3, 2026
+      </p>
+    </div>
+  </div>
+</section>
+<!-- footer -->
+    <!-- Structural Platform Footer matching image_c2c2dc.png exactly -->
+    <footer class="bg-[#1C1C1C] text-gray-300 pt-16 pb-8 border-t border-zinc-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 xl:gap-12 pb-12 border-b border-zinc-700">
+                
+                <!-- Column 1: Brand Info -->
+                <div class="lg:col-span-4 space-y-6">
+                    <div class="flex items-center space-x-2">
+                        <!-- <div class="text-white font-black tracking-tighter text-3xl flex flex-col items-center border-2 border-white px-3 py-1 rounded-full w-20 h-20 justify-center">
+                            <span class="text-base leading-none">UP</span>
+                            <span class="text-lg leading-none font-extrabold tracking-normal">NEWS</span>
+
+                        </div> -->
+                    <img class="h-40 w-auto object-contain" src="../../image/white-logo-up_news-removebg-preview.png" alt="white logo up news">
+                    </div>
+                    <p class="text-lg text-gray-400 leading-relaxed max-w-sm">
+                        Up News is dedicated to bringing you transparent, fast, and deeply meaningful coverage of today's most critical headlines. We bridge the gap between unfolding events and insightful analysis to keep you thoroughly informed.
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="lg:col-span-2 space-y-4">
+                    <h4 class="text-white font-bold uppercase tracking-wider text-lg">Quick Link</h4>
+                    <ul class="space-y-3 text-lg">
+                        <li><a href="#" class="hover:text-white transition">Home</a></li>
+                        <li><a href="#" class="hover:text-white transition">News</a></li>
+                        <li><a href="#" class="hover:text-white transition">About Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact Details -->
+                <div class="lg:col-span-3 space-y-4">
+                    <h4 class="text-white font-bold uppercase tracking-wider text-lg">Address & Contact</h4>
+                    <ul class="space-y-4 text-lg">
+                        <li class="flex items-start space-x-3">
+                            <svg class="w-5 h-5 text-gray-400 mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            <span class="text-gray-400">#40, St 273, Sangkat Boeung Kak II, Khan Toul Kork, Phnom Penh, Cambodia</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-gray-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                            <span class="text-gray-400">(+855) 95-990-910</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-gray-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <span class="text-gray-400">info.istad@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!-- Column 4: Sponsors -->
+                <div class="lg:col-span-3 space-y-4">
+                    <h4 class="text-white font-bold uppercase tracking-wider text-lg">Our Sponsors</h4>
+                    <div class="flex items-center space-x-3 pt-2">
+                        <!-- References the file image_c2c2dc.png verbatim -->
+                        <img src="../../image/istad-logo.png" alt="iSTAD Sponsors Logos" class="h-48 w-auto object-contain">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Sub-Footer Bar -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-lg">
+                <div class="text-gray-500">
+                    &copy; 2026 Up News. All rights reserved.
+                </div>
+                
+                <!-- Social Channels Links -->
+                <div class="flex items-center space-x-6">
+                    <a href="#" class="flex items-center space-x-2 text-gray-400 hover:text-white transition">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-1-.65-.35-1 .22-1.62.15-.15 2.73-2.5 2.78-2.7.01-.03.01-.15-.06-.21-.07-.06-.17-.04-.25-.02-.11.02-1.83 1.16-5.16 3.42-.49.34-.93.5-1.33.49-.44-.01-1.29-.25-1.92-.45-.77-.25-1.39-.39-1.34-.83.03-.23.35-.46.97-.71 3.82-1.66 6.37-2.75 7.63-3.27 3.63-1.49 4.38-1.75 4.87-1.76.11 0 .35.03.51.16.13.11.17.26.19.37z"/></svg>
+                        <span>Telegram</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-2 text-gray-400 hover:text-white transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        <span>Email</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-2 text-gray-400 hover:text-white transition">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8.02 9.71v-6.87H7.54V12h2.48V9.8c0-2.45 1.45-3.81 3.69-3.81 1.08 0 2.2.19 2.2.19v2.42h-1.24c-1.21 0-1.59.75-1.59 1.52V12h2.73l-.44 2.84h-2.29v6.87C18.56 20.87 22 16.84 22 12z"/></svg>
+                        <span>Facebook</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+</body>
+</html>
