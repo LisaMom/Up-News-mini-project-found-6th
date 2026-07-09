@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UP News - Business Information</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+    };
+  </script>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
+    body {
+      font-family: "Plus Jakarta Sans", sans-serif;
+    }
+    .serif-text {
+      font-family: "Playfair Display", serif;
+    }
+  </style>
+</head>
+<body class="bg-[#fff7f5] text-[#2c2523] dark:bg-[#120d0c] dark:text-gray-200 transition-colors duration-300 antialiased">
+
+  <header class="border-b border-zinc-800 sticky top-0 bg-[#1C1C1C] z-50 select-none">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <div class="flex-shrink-0 flex items-center space-x-2">
+          <img class="h-16 w-auto object-contain" src="./asset/white-logo-up_news-removebg-preview.png" alt="up news logo">
+        </div>
+
+        <div class="hidden md:flex items-center space-x-1 h-full">
+          <a href="./home-page.html" class="px-5 py-2 text-lg font-semibold tracking-wide text-gray-300 hover:text-white transition-colors">
+            Home
+          </a>
+
+          <div class="relative group h-full flex items-center">
+            <button class="px-5 py-2 text-lg font-semibold tracking-wide text-white flex items-center space-x-1 focus:outline-none">
+              <span>News</span>
+              <svg class="w-4 h-4 ml-0.5 text-gray-400 group-hover:text-white group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+
+            <div class="absolute top-[100%] left-0 w-48 bg-[#252525] border border-zinc-800 shadow-xl rounded-md py-2 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50">
+              <a href="./news-page/business-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">Business</a>
+              <a href="./news-page/sports-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">Sports</a>
+              <a href="./news-page/world-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">World</a>
+              <a href="./news-page/lifestyle-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">Lifestyle</a>
+              <a href="./news-page//socialite-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">Socialite</a>
+              <a href="./news-page/national-page.html" class="block px-4 py-2.5 text-lg text-gray-300 hover:bg-zinc-800 hover:text-white transition-colors">National</a>
+            </div>
+          </div>
+
+          <a href="./about-page.html" class="px-5 py-2 text-lg font-semibold tracking-wide text-gray-300 hover:text-white transition-colors">
+            About Us
+          </a>
+        </div>
+
+        <div class="flex items-center space-x-6">
+          <button type="button" class="text-gray-400 hover:text-white p-1 transition-colors focus:outline-none" aria-label="Search">
+            <svg class="w-5 h-5 stroke-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </button>
+
+          <button id="theme-toggle" type="button" class="text-gray-400 hover:text-white p-1 transition-colors focus:outline-none" aria-label="Toggle dark mode">
+            <i id="theme-toggle-icon" class="fa-solid fa-moon text-lg"></i>
+          </button>
+
+          <a href="./subscribe-page.html" class="bg-red-600 hover:bg-red-700 text-white font-bold text-lg px-6 py-2.5 rounded-sm shadow transition-all duration-150 transform active:scale-95">
+            Subscribe
+          </a>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <header class="relative bg-stone-900 overflow-hidden min-h-[340px] md:min-h-[420px] flex items-center justify-center">
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/3183158/pexels-photo-3183158.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');"></div>
+    <div class="absolute inset-0 bg-black/60 backdrop-brightness-95"></div>
+
+    <div class="relative max-w-4xl mx-auto px-6 w-full text-center py-12 z-10">
+      <span class="bg-[#e03a1d] text-white text-[10px] uppercase font-bold tracking-widest px-2.5 py-1 rounded inline-block">
+        Business / Market Information
+      </span>
+      <h1 class="text-white text-3xl md:text-5xl font-black tracking-tight mt-4 mb-3 uppercase drop-shadow-md">
+        Global Markets Pivot on New Trade & Enterprise Standards
+      </h1>
+      <p class="text-gray-200 text-xs md:text-sm max-w-2xl mx-auto font-medium opacity-90 drop-shadow">
+        An in-depth analysis of shifting commercial frameworks, monetary policies, and tactical adjustments driving industrial shifts this quarter.
+      </p>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-6 py-8">
+    
+    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between border-b border-stone-200 dark:border-stone-800 pb-4 mb-8 gap-4">
+      <div class="text-xs text-stone-400 tracking-wide uppercase space-x-2">
+        <a href="./news-page.html" class="hover:underline">News</a> <span>/</span>
+        <a href="./news-page/business-page.html" class="hover:underline">Business</a> <span>/</span>
+        <span class="text-[#e03a1d] font-semibold">Market Analysis</span>
+      </div>
+      <div class="flex items-center space-x-3">
+        <div class="w-8 h-8 rounded-full bg-stone-300 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=100" alt="Author" class="w-full h-full object-cover" />
+        </div>
+        <div>
+          <h5 class="text-xs font-bold text-stone-800 dark:text-stone-200">By Lucas Milhomem</h5>
+          <p class="text-[10px] text-stone-400">Senior Business Correspondent &bull; 5 Min Read</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="bg-[#17252A] text-white rounded-lg p-6 shadow-xl mb-8 border border-slate-800">
+      <div class="text-center text-[10px] uppercase tracking-widest text-teal-400 font-bold mb-4">Market Close Summary &bull; Key Data</div>
+      <div class="grid grid-cols-3 items-center text-center">
+        
+        <div class="flex flex-col items-center">
+          <span class="font-bold text-xs tracking-wider text-slate-400 uppercase mb-1">Index Growth</span>
+          <span class="font-bold text-sm tracking-wide text-white">GLOBAL BZ</span>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="text-3xl font-black tracking-wider text-emerald-400">+4.2%</div>
+          <div class="text-[10px] text-stone-400 mt-2 flex items-center gap-1">
+            <i class="fa-solid fa-chart-line text-emerald-400"></i> Fiscal Q3 Report
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <span class="font-bold text-xs tracking-wider text-slate-400 uppercase mb-1">Trading Volume</span>
+          <span class="font-bold text-sm tracking-wide text-white">8.4B USD</span>
+        </div>
+
+      </div>
+    </section>
+
+    <article class="prose max-w-none text-stone-800 dark:text-stone-300 text-sm md:text-base leading-relaxed space-y-6">
+      <p class="font-semibold text-lg text-stone-900 dark:text-white first-letter:text-4xl first-letter:font-black first-letter:mr-2 first-letter:float-left first-letter:text-[#e03a1d]">
+        In one of the most critical fiscal adjustments this season, corporate enterprises dedicated themselves to optimizing supply chain structures until a steady stabilization arrived in regional workflows.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, ab? Autem aliquid quia nemo delectus deleniti aperiam sint laboriosam totam. Sunt, explicabo. Ipsum quisquam vel expedita fugit. Maiores, suscipit magnam?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dolor magni nisi explicabo, nostrum minus hic rerum ut id fuga labore distinctio ex aperiam repudiandae, eos illo aliquid! Ad, harum!
+      </p>
+
+      <p>
+        A sharp rise in foreign direct investments during late hours yesterday broke the stagnation that had held firmly since the initial launch of the economic policy updates. Companies had various opportunities to consolidate debts during regulatory evaluations, notably boosting investment asset margins across key trading sectors over recent windows.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi quod, adipisci labore natus animi neque! Sed, odio doloribus, ab obcaecati, necessitatibus accusamus fuga quis veniam explicabo reiciendis iure omnis architecto?
+      </p>
+
+      <blockquote class="border-l-4 border-[#e03a1d] bg-stone-100 dark:bg-stone-900/50 p-6 my-6 italic rounded-r">
+        <p class="serif-text text-xl text-stone-900 dark:text-white font-medium">
+          "We stayed resilient through market shifts. We knew sustainable progress would unfold if enterprise structures kept pace with evolving compliance frameworks."
+        </p>
+        <cite class="block text-xs uppercase tracking-wider font-bold text-[#e03a1d] mt-2 not-italic">
+          &mdash; Chief Financial Officer, Global Enterprise Summit
+        </cite>
+      </blockquote>
+
+      <div class="my-8">
+        <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Business Strategy" class="rounded-lg shadow-md w-full object-cover max-h-[400px]" />
+        <span class="text-xs text-stone-400 mt-2 block italic text-center">Corporate boardrooms collaborating to formulate agile strategies amid dynamic sector changes.</span>
+      </div>
+    </article>
+
+    <div class="flex flex-wrap gap-2 mt-8 pt-4 border-t border-stone-200 dark:border-stone-800">
+      <span class="bg-stone-200 dark:bg-stone-800 text-stone-700 dark:text-stone-300 text-xs px-2.5 py-1 rounded font-medium">Business 2026</span>
+      <span class="bg-stone-200 dark:bg-stone-800 text-stone-700 dark:text-stone-300 text-xs px-2.5 py-1 rounded font-medium">Global Markets</span>
+    </div>
+  </main>
+
+  <section class="bg-stone-100 dark:bg-[#191312] py-12 px-6 border-t border-stone-200 dark:border-stone-800 transition-colors duration-300">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-stone-900 dark:text-white font-bold uppercase tracking-wider text-xs mb-6 border-l-4 border-[#e03a1d] pl-2">
+        More From Business Information
+      </h3>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="bg-white dark:bg-[#241b19] rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+          <img src="https://images.pexels.com/photos/6801874/pexels-photo-6801874.jpeg?auto=compress&cs=tinysrgb&w=600" alt="News thumbnail" class="w-full h-40 object-cover" />
+          <div class="p-4">
+            <span class="text-[#e03a1d] text-[10px] uppercase font-bold tracking-wider">Reports</span>
+            <h4 class="text-stone-900 dark:text-gray-200 font-bold text-sm mt-1 hover:text-[#e03a1d] dark:hover:text-[#e03a1d] cursor-pointer line-clamp-2">
+              Everything to know regarding upcoming Q4 financial changes
+            </h4>
+          </div>
+        </div>
+
+        <div class="bg-white dark:bg-[#241b19] rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+          <img src="https://images.pexels.com/photos/7567443/pexels-photo-7567443.jpeg?auto=compress&cs=tinysrgb&w=600" alt="News thumbnail" class="w-full h-40 object-cover" />
+          <div class="p-4">
+            <span class="text-[#e03a1d] text-[10px] uppercase font-bold tracking-wider">Analysis</span>
+            <h4 class="text-stone-900 dark:text-gray-200 font-bold text-sm mt-1 hover:text-[#e03a1d] dark:hover:text-[#e03a1d] cursor-pointer line-clamp-2">
+              How tactical risk asset distributions are shifting commercial strategies
+            </h4>
+          </div>
+        </div>
+
+        <div class="bg-white dark:bg-[#241b19] rounded-lg overflow-hidden shadow-sm hover:shadow-md transition sm:col-span-2 md:col-span-1">
+          <img src="https://images.pexels.com/photos/5900222/pexels-photo-5900222.jpeg?auto=compress&cs=tinysrgb&w=600" alt="News thumbnail" class="w-full h-40 object-cover" />
+          <div class="p-4">
+            <span class="text-[#e03a1d] text-[10px] uppercase font-bold tracking-wider">Market Overview</span>
+            <h4 class="text-stone-900 dark:text-gray-200 font-bold text-sm mt-1 hover:text-[#e03a1d] dark:hover:text-[#e03a1d] cursor-pointer line-clamp-2">
+              Grading corporate asset trends from current trade indexes
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-[#1C1C1C] text-gray-300 pt-16 pb-8 border-t border-zinc-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 xl:gap-12 pb-12 border-b border-zinc-700">
+          
+        <div class="lg:col-span-4 space-y-6">
+          <div class="flex items-center space-x-2">
+            <img class="h-28 w-auto object-contain" src="./asset/white-logo-up_news-removebg-preview.png" alt="white logo up news">
+          </div>
+          <p class="text-sm text-gray-400 leading-relaxed max-w-sm">
+            Up News is dedicated to bringing you transparent, fast, and deeply meaningful coverage of today's most critical headlines. We bridge the gap between unfolding events and insightful analysis to keep you thoroughly informed.
+          </p>
+        </div>
+
+        <div class="lg:col-span-2 space-y-4">
+          <h4 class="text-white font-bold uppercase tracking-wider text-sm">Quick Link</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="./home-page.html" class="hover:text-white transition">Home</a></li>
+            <li><a href="./news-page.html" class="hover:text-white transition">News</a></li>
+            <li><a href="./about-page.html" class="hover:text-white transition">About Us</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-3 space-y-4">
+          <h4 class="text-white font-bold uppercase tracking-wider text-sm">Address & Contact</h4>
+          <ul class="space-y-4 text-sm">
+            <li class="flex items-start space-x-3">
+              <svg class="w-5 h-5 text-gray-400 mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+              <span class="text-gray-400">#40, St 273, Sangkat Boeung Kak II, Khan Toul Kork, Phnom Penh, Cambodia</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <svg class="w-5 h-5 text-gray-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+              <span class="text-gray-400">(+855) 95-990-910</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <svg class="w-5 h-5 text-gray-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+              <span class="text-gray-400">info.istad@gmail.com</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-3 space-y-4">
+          <h4 class="text-white font-bold uppercase tracking-wider text-sm">Our Sponsors</h4>
+          <div class="flex items-center space-x-3 pt-2">
+            <img src="./asset/istad-logo 1.png" alt="iSTAD Sponsors Logos" class="h-16 w-auto object-contain">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
+        <div class="text-gray-500">
+          &copy; 2026 Up News. All rights reserved.
+        </div>
+        
+        <div class="flex items-center space-x-6">
+          <a href="#" class="flex items-center space-x-2 text-gray-400 hover:text-white transition">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-1-.65-.35-1 .22-1.62.15-.15 2.73-2.5 2.78-2.7.01-.03.01-.15-.06-.21-.07-.06-.17-.04-.25-.02-.11.02-1.83 1.16-5.16 3.42-.49.34-.93.5-1.33.49-.44-.01-1.29-.25-1.92-.45-.77-.25-1.39-.39-1.34-.83.03-.23.35-.46.97-.71 3.82-1.66 6.37-2.75 7.63-3.27 3.63-1.49 4.38-1.75 4.87-1.76.11 0 .35.03.51.16.13.11.17.26.19.37z"/></svg>
+            <span>Telegram</span>
+          </a>
+          <a href="#" class="flex items-center space-x-2 text-gray-400 hover:text-white transition">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            <span>Email</span>
+          </a>
+          <a href="#" class="flex items-center space-x-2 text-gray-400 hover:text-white transition">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8.02 9.71v-6.87H7.54V12h2.48V9.8c0-2.45 1.45-3.81 3.69-3.81 1.08 0 2.2.19 2.2.19v2.42h-1.24c-1.21 0-1.59.75-1.59 1.52V12h2.73l-.44 2.84h-2.29v6.87C18.56 20.87 22 16.84 22 12z"/></svg>
+            <span>Facebook</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    const themeToggleBtn = document.getElementById("theme-toggle");
+    const themeToggleIcon = document.getElementById("theme-toggle-icon");
+
+    if (
+      localStorage.getItem("color-theme") === "dark" ||
+      (!("color-theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
+      themeToggleIcon.classList.replace("fa-moon", "fa-sun");
+    } else {
+      document.documentElement.classList.remove("dark");
+      themeToggleIcon.classList.replace("fa-sun", "fa-moon");
+    }
+
+    themeToggleBtn.addEventListener("click", function () {
+      if (document.documentElement.classList.contains("dark")) {
+        document.documentElement.classList.remove("dark");
+        localStorage.setItem("color-theme", "light");
+        themeToggleIcon.classList.replace("fa-sun", "fa-moon");
+      } else {
+        document.documentElement.classList.add("dark");
+        localStorage.setItem("color-theme", "dark");
+        themeToggleIcon.classList.replace("fa-moon", "fa-sun");
+      }
+    });
+  </script>
+</body>
+</html>
